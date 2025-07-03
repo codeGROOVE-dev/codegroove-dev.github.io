@@ -139,32 +139,49 @@
 
             .pain-point {
                 font-family: "Arial", "Helvetica", sans-serif;
-                font-size: 2rem;
+                font-size: 2.5rem;
                 font-weight: bold;
                 color: black;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 transform: rotate(1deg);
                 display: inline-block;
+                text-shadow: 3px 3px 0 white;
             }
 
             .content-section {
-                margin-bottom: 40px;
+                margin-bottom: 50px;
             }
+
+            .mystery-reveal {
+                background: white;
+                padding: 30px;
+                border: 4px solid black;
+                border-bottom: 8px solid black;
+                border-right: 8px solid black;
+                box-shadow: 8px 8px 0 black;
+                margin: 40px 0;
+                transform: rotate(-1deg);
+                position: relative;
+            }
+
 
             .stat-highlight {
                 font-family: "Arial", "Helvetica", sans-serif;
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 font-weight: bold;
                 color: black;
                 background: white;
-                padding: 15px 25px;
-                border: 3px solid black;
-                border-bottom: 6px solid black;
-                border-right: 6px solid black;
+                padding: 20px 30px;
+                border: 4px solid black;
+                border-bottom: 8px solid black;
+                border-right: 8px solid black;
                 display: inline-block;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 transform: skew(-5deg);
+                box-shadow: 6px 6px 0 black;
+                position: relative;
             }
+
 
             .benefit-text {
                 font-family: "Arial", "Helvetica", sans-serif;
@@ -181,13 +198,21 @@
 
             .user-type {
                 background: white;
-                padding: 20px;
-                border: 3px solid black;
-                border-bottom: 6px solid black;
-                border-right: 6px solid black;
+                padding: 25px;
+                border: 4px solid black;
+                border-bottom: 8px solid black;
+                border-right: 8px solid black;
                 flex: 1;
                 text-align: center;
+                position: relative;
+                transition: transform 0.2s ease;
             }
+
+            .user-type:hover {
+                transform: translate(-3px, -3px);
+                box-shadow: 6px 6px 0 black;
+            }
+
 
             .user-type h3 {
                 font-family: "Arial", "Helvetica", sans-serif;
@@ -198,36 +223,44 @@
 
             .cta-section {
                 background: white;
-                padding: 40px;
-                border: 4px solid black;
-                border-bottom: 8px solid black;
-                border-right: 8px solid black;
-                box-shadow: 8px 8px 0 black;
+                padding: 50px;
+                border: 5px solid black;
+                border-bottom: 10px solid black;
+                border-right: 10px solid black;
+                box-shadow: 12px 12px 0 black;
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 50px;
+                position: relative;
+                transform: rotate(0.5deg);
             }
+
 
             .cta-button {
                 font-family: "Arial", "Helvetica", sans-serif;
-                font-size: 1.3rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 background: #ffff00;
                 color: black;
-                padding: 18px 36px;
-                border: 4px solid black;
-                border-bottom: 6px solid black;
-                border-right: 6px solid black;
+                padding: 22px 44px;
+                border: 5px solid black;
+                border-bottom: 8px solid black;
+                border-right: 8px solid black;
                 cursor: pointer;
                 text-decoration: none;
                 display: inline-block;
-                margin: 20px 0;
-                transition: transform 0.2s ease;
+                margin: 25px 0;
+                transition: all 0.2s ease;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                position: relative;
             }
 
             .cta-button:hover {
-                transform: translate(-2px, -2px);
-                box-shadow: 6px 6px 0 black;
+                transform: translate(-3px, -3px);
+                box-shadow: 8px 8px 0 black;
+                background: white;
             }
+
 
             .social-proof {
                 font-family: "Arial", "Helvetica", sans-serif;
@@ -299,7 +332,15 @@
                     font-size: 1.4rem;
                 }
                 .pain-point {
-                    font-size: 1.6rem;
+                    font-size: 1.8rem;
+                }
+                .mystery-reveal {
+                    transform: rotate(0deg);
+                    padding: 20px;
+                }
+                .cta-section {
+                    transform: rotate(0deg);
+                    padding: 30px;
                 }
                 .user-types {
                     flex-direction: column;
@@ -309,6 +350,96 @@
                 }
             }
         </style>
+        <script>
+            function sendEmail() {
+                // Obfuscated email address
+                const parts = ['lets-go-faster-plz', 'codegroove', 'dev'];
+                const email = parts[0] + '@' + parts[1] + '.' + parts[2];
+                
+                const subject = 'Early Access Request - CodeGroove';
+                const body = 'Hi CodeGroove team,\n\nI\'m interested in getting early access to your developer tools.\n\nThanks!';
+                
+                const mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                
+                showPopup(email, mailtoLink);
+            }
+
+            function showPopup(email, mailtoLink) {
+                // Create popup overlay
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    z-index: 1000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                `;
+
+                // Create popup content
+                const popup = document.createElement('div');
+                popup.style.cssText = `
+                    background: #FFFF00;
+                    border: 5px solid black;
+                    border-bottom: 10px solid black;
+                    border-right: 10px solid black;
+                    box-shadow: 12px 12px 0 black;
+                    padding: 40px;
+                    max-width: 500px;
+                    text-align: center;
+                    font-family: "Arial", "Helvetica", sans-serif;
+                    transform: rotate(-1deg);
+                `;
+
+                popup.innerHTML = `
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; color: black;">
+                        Get Early Access
+                    </h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; color: black;">
+                        Contact us at <a href="${mailtoLink}" style="color: black; font-weight: bold; text-decoration: underline;">${email}</a> and we'll contact you when we're ready to share something.
+                    </p>
+                    <button onclick="closePopup()" style="
+                        font-family: 'Arial', 'Helvetica', sans-serif;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        background: white;
+                        color: black;
+                        padding: 12px 24px;
+                        border: 3px solid black;
+                        border-bottom: 5px solid black;
+                        border-right: 5px solid black;
+                        cursor: pointer;
+                        transition: transform 0.2s ease;
+                    " onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='4px 4px 0 black';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='none';">
+                        Got it
+                    </button>
+                `;
+
+                overlay.appendChild(popup);
+                document.body.appendChild(overlay);
+
+                // Close popup when clicking outside
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === overlay) {
+                        closePopup();
+                    }
+                });
+
+                // Store reference for closing
+                window.currentPopup = overlay;
+            }
+
+            function closePopup() {
+                if (window.currentPopup) {
+                    document.body.removeChild(window.currentPopup);
+                    window.currentPopup = null;
+                }
+            }
+        </script>
     </head>
     <body>
         <!-- Geometric background accents -->
@@ -329,34 +460,32 @@
                 <div class="content-section">
                     <div class="pain-point">Out-ship your competitors.</div>
                     <div class="stat-highlight">
-                        We figured out something others missed.
+                        85%+ improvement in developer velocity.
                     </div>
                     <div class="benefit-text">
-                        What if code quality didn't slow you down? Reviews that
-                        happen at the speed of thought. The right things get
-                        attention, everything else flows through.
+                        Code quality doesn't have to slow you down. Reviews happen fast without interrupting your flow. Focus on building instead of waiting.
                     </div>
                 </div>
 
                 <div class="waveform-border"></div>
 
-                <div class="content-section">
+                <div class="mystery-reveal">
                     <div class="benefit-text">
-                        The breakthrough everyone's been waiting for. Ship daily
-                        without breaking things. Scale review quality with team
-                        size. It's not what you think.
+                        Tools that amplify what you're already good at. Ship faster without compromising quality. Scale your impact as your team grows.
                     </div>
+                </div>
 
+                <div class="content-section">
                     <div class="user-types">
                         <div class="user-type">
                             <h3>Open Source Teams</h3>
                             <p>
-                                The thing that's been missing from your workflow
+                                Keep contributors engaged with instant feedback
                             </p>
                         </div>
                         <div class="user-type">
                             <h3>Large Enterprises</h3>
-                            <p>What Google figured out but never shared</p>
+                            <p>Scale your development velocity, not your overhead</p>
                         </div>
                     </div>
                 </div>
@@ -373,11 +502,10 @@
                             margin-bottom: 15px;
                         "
                     >
-                        The 10x developer multiplier. Available sooner than you
-                        think.
+                        Fast reviews. Preserved flow. Better code.
                     </h2>
-                    <a href="#" class="cta-button">Get Early Access</a>
-                    <div class="social-proof">Join your competition.</div>
+                    <a href="#" class="cta-button" onclick="sendEmail(); return false;">Get Early Access</a>
+                    <div class="social-proof">Join developers building the future of code review</div>
                 </div>
             </div>
         </div>
