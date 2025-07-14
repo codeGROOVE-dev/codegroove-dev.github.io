@@ -30,8 +30,8 @@ function sendEmail() {
     const parts = ["ohai", "codegroove", "dev"];
     const email = parts[0] + "@" + parts[1] + "." + parts[2];
     
-    const subject = "Let's talk about shipping 90% faster";
-    const body = "Hi codeGROOVE team,\n\nI'm interested in learning how we can reduce our push-to-merge cycle time from 4 days to 3.5 hours and ship 90% faster.\n\nThanks!";
+    const subject = "Let's talk about making dev life better";
+    const body = "Hi codeGROOVE team,\n\nI'm interested in learning how we can reduce our push-to-merge cycle time from 4 days to 3.5 hours and bring back the fun to software development.\n\nThanks!";
     
     const mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     
@@ -78,7 +78,7 @@ function showPopup(email, mailtoLink) {
             Let's Talk
         </h3>
         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; color: var(--color-secondary);">
-            Email us at <a href="${mailtoLink}" style="color: var(--color-secondary); font-weight: bold;">${email}</a> to learn how we can help you ship 90% faster.
+            Email us at <a href="${mailtoLink}" style="color: var(--color-secondary); font-weight: bold;">${email}</a> to learn how we can help you ship faster and have more fun doing it.
         </p>
         <button onclick="closePopup()" class="cta-button-small" style="
             background: var(--color-white);
@@ -139,10 +139,16 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([onclick])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Skip if it's just #
+        if (href === '#') {
+            return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
