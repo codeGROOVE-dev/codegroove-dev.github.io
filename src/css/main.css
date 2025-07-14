@@ -557,7 +557,7 @@ a:hover {
 /* Page Specific Styles */
 .page-header {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    padding: calc(var(--spacing-section) * 1.2) 0 calc(var(--spacing-section) * 0.8);
+    padding: calc(var(--spacing-section) * 0.6) 0 calc(var(--spacing-section) * 0.5);
     margin-bottom: 0;
     position: relative;
     text-align: center;
@@ -566,18 +566,18 @@ a:hover {
 .page-header::after {
     content: '';
     position: absolute;
-    bottom: -60px;
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 120px;
+    width: 60%;
+    height: 60px;
     background: radial-gradient(ellipse at center top, var(--color-primary-light), transparent);
     pointer-events: none;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .page-header h1 {
-    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    margin-bottom: calc(var(--spacing-unit) * 1);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
