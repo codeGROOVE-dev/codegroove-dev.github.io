@@ -24,9 +24,9 @@
 
 /* CSS Variables */
 :root {
-    --color-primary: #ffff00;
-    --color-primary-light: #ffff99;
-    --color-primary-soft: #ffffcc;
+    --color-primary: #fff01a;
+    --color-primary-light: #fff492;
+    --color-primary-soft: #fffbd4;
     --color-secondary: #000000;
     --color-white: #ffffff;
     --color-gray-light: #fafafa;
@@ -154,11 +154,11 @@ a:hover {
 /* Header and Navigation */
 .site-header {
     background: var(--color-primary);
+    opacity: 0.95;
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 0, 0.95);
 }
 
 .main-nav {
@@ -372,16 +372,20 @@ a:hover {
 
 @keyframes discoGlow {
     0%, 100% {
-        filter: drop-shadow(0 0 20px rgba(255, 255, 0, 0.5))
-                drop-shadow(0 0 40px rgba(255, 255, 0, 0.3));
+        filter: drop-shadow(0 0 20px rgba(255, 240, 26, 0.5))
+                drop-shadow(0 0 40px rgba(255, 240, 26, 0.3));
     }
-    33% {
-        filter: drop-shadow(0 0 25px rgba(155, 89, 182, 0.6))
-                drop-shadow(0 0 50px rgba(155, 89, 182, 0.3));
+    25% {
+        filter: drop-shadow(0 0 25px rgba(138, 43, 226, 0.6))
+                drop-shadow(0 0 50px rgba(138, 43, 226, 0.3));
     }
-    66% {
-        filter: drop-shadow(0 0 25px rgba(78, 205, 196, 0.6))
-                drop-shadow(0 0 50px rgba(78, 205, 196, 0.3));
+    50% {
+        filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))
+                drop-shadow(0 0 60px rgba(255, 255, 255, 0.4));
+    }
+    75% {
+        filter: drop-shadow(0 0 25px rgba(255, 105, 180, 0.6))
+                drop-shadow(0 0 50px rgba(255, 105, 180, 0.3));
     }
 }
 
