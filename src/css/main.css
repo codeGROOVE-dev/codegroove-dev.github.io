@@ -455,6 +455,54 @@ a:hover {
     overflow: hidden;
 }
 
+/* Unified Groove Card - Monochrome Funky Style */
+.groove-card {
+    background: var(--color-white);
+    border: 3px solid var(--color-secondary);
+    border-bottom: 6px solid var(--color-secondary);
+    border-right: 6px solid var(--color-secondary);
+    border-radius: 0; /* Sharp corners for funky look */
+    padding: calc(var(--spacing-unit) * 2.5);
+    box-shadow: 6px 6px 0 var(--color-secondary); /* Hard black shadow */
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: visible; /* Allow elements to break bounds */
+}
+
+.groove-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 var(--color-secondary);
+}
+
+/* Optional: Add slight rotation for extra funkiness */
+.groove-card:nth-child(odd) {
+    transform: rotate(-0.5deg);
+}
+
+.groove-card:nth-child(even) {
+    transform: rotate(0.5deg);
+}
+
+.groove-card:nth-child(odd):hover {
+    transform: rotate(-0.5deg) translate(-2px, -2px);
+}
+
+.groove-card:nth-child(even):hover {
+    transform: rotate(0.5deg) translate(-2px, -2px);
+}
+
+/* Groove card typography enhancements */
+.groove-card h3 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.groove-card p {
+    line-height: 1.7;
+}
+
 .card::before {
     content: '';
     position: absolute;
