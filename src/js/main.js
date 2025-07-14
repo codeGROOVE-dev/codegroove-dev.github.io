@@ -30,8 +30,8 @@ function sendEmail() {
     const parts = ["ohai", "codegroove", "dev"];
     const email = parts[0] + "@" + parts[1] + "." + parts[2];
     
-    const subject = "Let's talk about making dev life better";
-    const body = "Hi codeGROOVE team,\n\nI'm interested in learning how we can reduce our push-to-merge cycle time from 4 days to 3.5 hours and bring back the fun to software development.\n\nThanks!";
+    const subject = "Early Access Request - CodeGroove";
+    const body = "Hi codeGROOVE team,\n\nI'm interested in getting early access to your developer tools.\n\nThanks!";
     
     const mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     
@@ -75,10 +75,10 @@ function showPopup(email, mailtoLink) {
     
     popup.innerHTML = `
         <h3 style="font-family: var(--font-primary); font-size: 2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-secondary);">
-            Let's Talk
+            Join Early Access
         </h3>
         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; color: var(--color-secondary);">
-            Email us at <a href="${mailtoLink}" style="color: var(--color-secondary); font-weight: bold;">${email}</a> to learn how we can help you ship faster and have more fun doing it.
+            Contact us at <a href="${mailtoLink}" style="color: var(--color-secondary); font-weight: bold;">${email}</a> and we'll give you first access to tools that will change how your team ships code.
         </p>
         <button onclick="closePopup()" class="cta-button-small" style="
             background: var(--color-white);
