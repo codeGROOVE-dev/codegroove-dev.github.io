@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - codeGROOVE</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/png" href="/media/logo.png">
+    <link rel="alternate" type="application/atom+xml" title="codeGROOVE Blog" href="/feed.xml">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="container">
+                <nav class="main-nav">
+                    <a href="/" class="logo-link">
+                        <img src="/media/logo.svg" alt="codeGROOVE" class="nav-logo">
+                        <span class="brand-name">codeGROOVE</span>
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="/about/" {% if page.url == '/about/' %}class="active"{% endif %}>About</a></li>
+                        <li><a href="/products/" {% if page.url == '/products/' %}class="active"{% endif %}>Products</a></li>
+                        <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}class="active"{% endif %}>Blog</a></li>
+                        <li><a href="/open-source/" {% if page.url == '/open-source/' %}class="active"{% endif %}>Open Source</a></li>
+                        <li><a href="/security/" {% if page.url == '/security/' %}class="active"{% endif %}>Security</a></li>
+                        <li><a href="/contact/" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a></li>
+                    </ul>
+                    <button class="nav-toggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            {{ content | safe }}
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content" style="text-align: center; grid-template-columns: 1fr;">
+                    <div>
+                        <p style="font-size: 0.875rem; margin-bottom: 1rem;">
+                            <a href="/about/">About</a> · 
+                            <a href="/products/">Products</a> · 
+                            <a href="/blog/">Blog</a> · 
+                            <a href="/open-source/">Open Source</a> · 
+                            <a href="/security/">Security</a> · 
+                            <a href="/contact/">Contact</a>
+                        </p>
+                        <p style="font-size: 0.875rem;">&copy; 2024 codeGROOVE</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Geometric background accents -->
+    <div class="bg-accent bg-accent-1"></div>
+    <div class="bg-accent bg-accent-2"></div>
+    <div class="bg-accent bg-accent-3"></div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

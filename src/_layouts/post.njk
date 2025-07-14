@@ -1,0 +1,108 @@
+---
+layout: base.njk
+---
+
+<article class="blog-post">
+    <section class="page-header">
+        <div class="container">
+            <div class="blog-meta" style="font-size: 1.1rem; margin-bottom: 1rem;">
+                {{ date | dateReadable }}
+            </div>
+            <h1>{{ title }}</h1>
+            {% if excerpt %}
+            <p class="tagline">{{ excerpt }}</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <div class="blog-content">
+                {{ content | safe }}
+            </div>
+
+            <div class="funk-divider"></div>
+
+            <div class="blog-footer mt-4">
+                <div class="highlight-box text-center">
+                    <h3>Ready to ship 90% faster?</h3>
+                    <p>Let's discuss how codeGROOVE can transform your development velocity.</p>
+                    <a href="#" class="cta-button-small mt-2" onclick="sendEmail(); return false;">Get in Touch</a>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <a href="/blog/" class="cta-button-small">← Back to Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+
+<style>
+.blog-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.blog-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid var(--color-primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: var(--color-gray-light);
+    padding: 1.5rem;
+    border: 3px solid var(--color-secondary);
+    border-bottom: 6px solid var(--color-secondary);
+    border-right: 6px solid var(--color-secondary);
+    transform: rotate(-0.5deg);
+}
+
+.blog-content code {
+    background: var(--color-gray-light);
+    padding: 0.2em 0.4em;
+    border: 1px solid var(--color-secondary);
+    font-family: monospace;
+}
+
+.blog-content pre {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--color-secondary);
+    border-bottom: 6px solid var(--color-secondary);
+    border-right: 6px solid var(--color-secondary);
+}
+
+.blog-content pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+</style>
