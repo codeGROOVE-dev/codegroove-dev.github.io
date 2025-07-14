@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-title: Why Developer Tools Need to Respect Flow State
+title: Test Blog Entry
 date: 2024-01-15
 excerpt: Modern development is death by a thousand interruptions. Here's why protecting developer flow state should be the top priority for any tool.
 tags: post
