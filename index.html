@@ -282,6 +282,8 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 position: relative;
+                min-height: 44px;
+                min-width: 44px;
             }
 
             .cta-button:hover {
@@ -321,6 +323,56 @@
                 transform: skew(-10deg);
             }
 
+            /* Focus styles for keyboard navigation */
+            :focus-visible {
+                outline: 4px solid #000;
+                outline-offset: 2px;
+                box-shadow: 0 0 0 6px rgba(255, 255, 0, 0.5);
+            }
+
+            button:focus-visible,
+            a:focus-visible {
+                outline: 4px solid #000;
+                outline-offset: 4px;
+                background: rgba(255, 255, 0, 0.3);
+                box-shadow: 0 0 0 8px rgba(255, 255, 0, 0.5);
+            }
+
+            /* Remove default focus outline for mouse users */
+            :focus:not(:focus-visible) {
+                outline: none;
+            }
+
+            /* Tablet styles */
+            @media (max-width: 1024px) {
+                .container {
+                    padding: 25px 20px;
+                    gap: 35px;
+                }
+                
+                h1 {
+                    font-size: 3.5rem;
+                }
+                
+                .tagline {
+                    font-size: 1.5rem;
+                }
+                
+                .pain-point {
+                    font-size: 2rem;
+                }
+                
+                .main-content {
+                    padding: 25px;
+                }
+                
+                .cta-button {
+                    font-size: 1.3rem;
+                    padding: 20px 40px;
+                }
+            }
+
+            /* Mobile styles */
             @media (max-width: 768px) {
                 .container {
                     grid-template-columns: 1fr;
@@ -353,11 +405,30 @@
                     transform: rotate(0deg);
                     padding: 30px;
                 }
+                .cta-button {
+                    min-width: 44px;
+                    min-height: 44px;
+                    padding: 16px 32px;
+                    font-size: 1.3rem;
+                }
                 .user-types {
                     flex-direction: column;
                 }
+                .user-type {
+                    min-height: 44px;
+                    padding: 24px;
+                }
                 .bg-accent {
                     display: none;
+                }
+                
+                /* Ensure all interactive elements are 44x44 minimum */
+                button, a {
+                    min-height: 44px;
+                    min-width: 44px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         </style>
@@ -400,27 +471,36 @@
 
                 // Create popup content
                 const popup = document.createElement("div");
+                popup.setAttribute("role", "dialog");
+                popup.setAttribute("aria-labelledby", "popup-title");
+                popup.setAttribute("aria-modal", "true");
+                
+                // Responsive popup styles
+                const isMobile = window.innerWidth <= 768;
                 popup.style.cssText = `
                     background: #FFFF00;
                     border: 5px solid black;
-                    border-bottom: 10px solid black;
-                    border-right: 10px solid black;
-                    box-shadow: 12px 12px 0 black;
-                    padding: 40px;
-                    max-width: 500px;
+                    border-bottom: ${isMobile ? '6px' : '10px'} solid black;
+                    border-right: ${isMobile ? '6px' : '10px'} solid black;
+                    box-shadow: ${isMobile ? '6px 6px' : '12px 12px'} 0 black;
+                    padding: ${isMobile ? '20px' : '40px'};
+                    max-width: ${isMobile ? '95%' : '500px'};
+                    width: 90%;
+                    max-height: 90vh;
+                    overflow-y: auto;
                     text-align: center;
                     font-family: "Arial", "Helvetica", sans-serif;
-                    transform: rotate(-1deg);
+                    transform: ${isMobile ? 'rotate(0deg)' : 'rotate(-1deg)'};
                 `;
 
                 popup.innerHTML = `
-                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; color: black;">
+                    <h2 id="popup-title" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; color: black;">
                         Get Early Access
-                    </h3>
+                    </h2>
                     <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; color: black;">
                         Contact us at <a href="${mailtoLink}" style="color: black; font-weight: bold; text-decoration: underline;">${email}</a> and we'll give you first access to tools that will change how your team ships code.
                     </p>
-                    <button onclick="closePopup()" style="
+                    <button id="popup-close-btn" onclick="closePopup()" style="
                         font-family: 'Arial', 'Helvetica', sans-serif;
                         font-size: 1.1rem;
                         font-weight: bold;
@@ -440,6 +520,22 @@
                 overlay.appendChild(popup);
                 document.body.appendChild(overlay);
 
+                // Save previously focused element
+                window.previouslyFocused = document.activeElement;
+
+                // Focus the close button
+                setTimeout(() => {
+                    document.getElementById('popup-close-btn').focus();
+                }, 100);
+
+                // Handle escape key
+                function handleEscape(e) {
+                    if (e.key === 'Escape') {
+                        closePopup();
+                    }
+                }
+                document.addEventListener('keydown', handleEscape);
+
                 // Close popup when clicking outside
                 overlay.addEventListener("click", function (e) {
                     if (e.target === overlay) {
@@ -449,17 +545,40 @@
 
                 // Store reference for closing
                 window.currentPopup = overlay;
+                window.escapeHandler = handleEscape;
             }
 
             function closePopup() {
                 if (window.currentPopup) {
                     document.body.removeChild(window.currentPopup);
                     window.currentPopup = null;
+                    
+                    // Remove escape handler
+                    if (window.escapeHandler) {
+                        document.removeEventListener('keydown', window.escapeHandler);
+                        window.escapeHandler = null;
+                    }
+                    
+                    // Restore focus to previously focused element
+                    if (window.previouslyFocused) {
+                        window.previouslyFocused.focus();
+                        window.previouslyFocused = null;
+                    }
                 }
             }
         </script>
     </head>
     <body>
+        <!-- Skip navigation link for screen readers and keyboard users -->
+        <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px; z-index: 999; padding: 1rem; background: #000; color: #ffff00; text-decoration: none; font-weight: bold;">Skip to main content</a>
+        <style>
+            .skip-link:focus {
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 1001;
+            }
+        </style>
         <!-- Geometric background accents -->
         <div class="bg-accent bg-accent-1"></div>
         <div class="bg-accent bg-accent-2"></div>
@@ -467,14 +586,14 @@
 
         <div class="container">
             <div class="hero-left">
-                <img src="media/logo.png" alt="CodeGroove Logo" class="logo" />
+                <img src="media/logo.png" alt="CodeGroove - Quality tools for open source engineers" class="logo" />
                 <h1>codeGROOVE</h1>
                 <div class="tagline">
                     Open-source friendly developer tools that scale
                 </div>
             </div>
 
-            <div class="hero-right">
+            <main id="main-content" class="hero-right">
                 <div class="pain-point">Out-ship your competition.</div>
 
                 <div class="main-content">
@@ -530,15 +649,16 @@
                         >
                             Keep your engineers in the groove.
                         </h2>
-                        <a
-                            href="#"
+                        <button
                             class="cta-button"
-                            onclick="sendEmail(); return false;"
-                            >Get Early Access</a
+                            onclick="sendEmail()"
+                            type="button"
+                            aria-label="Get early access to CodeGroove developer tools"
+                            >Get Early Access</button
                         >
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </body>
 </html>

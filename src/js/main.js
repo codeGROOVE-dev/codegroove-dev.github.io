@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navToggle) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            const isActive = navMenu.classList.contains('active');
+            
+            // Update aria-expanded
+            navToggle.setAttribute('aria-expanded', isActive);
             
             // Animate hamburger menu
             const spans = navToggle.querySelectorAll('span');
-            spans[0].style.transform = navMenu.classList.contains('active') ? 'rotate(-45deg) translate(-5px, 6px)' : '';
-            spans[1].style.opacity = navMenu.classList.contains('active') ? '0' : '1';
-            spans[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : '';
+            spans[0].style.transform = isActive ? 'rotate(-45deg) translate(-5px, 6px)' : '';
+            spans[1].style.opacity = isActive ? '0' : '1';
+            spans[2].style.transform = isActive ? 'rotate(45deg) translate(-5px, -6px)' : '';
         });
     }
 
@@ -21,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!isClickInside && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+            
+            // Reset hamburger animation
+            const spans = navToggle.querySelectorAll('span');
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = '';
         }
     });
 });
@@ -58,6 +69,10 @@ function showPopup(email, mailtoLink) {
     // Create popup content
     const popup = document.createElement('div');
     popup.className = 'email-popup';
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-labelledby', 'popup-title');
+    popup.setAttribute('aria-modal', 'true');
+    
     popup.style.cssText = `
         background: var(--color-primary);
         border: 5px solid var(--color-secondary);
@@ -74,15 +89,17 @@ function showPopup(email, mailtoLink) {
     `;
     
     popup.innerHTML = `
-        <h3 style="font-family: var(--font-primary); font-size: 2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-secondary);">
+        <h2 id="popup-title" style="font-family: var(--font-primary); font-size: 2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-secondary);">
             Join Early Access
-        </h3>
+        </h2>
         <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px; color: var(--color-secondary);">
             Contact us at <a href="${mailtoLink}" style="color: var(--color-secondary); font-weight: bold;">${email}</a> and we'll give you first access to tools that will change how your team ships code.
         </p>
-        <button onclick="closePopup()" class="cta-button-small" style="
+        <button id="popup-close-btn" onclick="closePopup()" class="cta-button-small" style="
             background: var(--color-white);
             color: var(--color-secondary);
+            min-width: 44px;
+            min-height: 44px;
         ">
             Got it
         </button>
@@ -90,6 +107,22 @@ function showPopup(email, mailtoLink) {
     
     overlay.appendChild(popup);
     document.body.appendChild(overlay);
+    
+    // Save previously focused element
+    window.previouslyFocused = document.activeElement;
+    
+    // Focus the close button
+    setTimeout(() => {
+        document.getElementById('popup-close-btn').focus();
+    }, 100);
+    
+    // Handle escape key
+    function handleEscape(e) {
+        if (e.key === 'Escape') {
+            closePopup();
+        }
+    }
+    document.addEventListener('keydown', handleEscape);
     
     // Close popup when clicking outside
     overlay.addEventListener('click', function(e) {
@@ -100,6 +133,7 @@ function showPopup(email, mailtoLink) {
     
     // Store reference for closing
     window.currentPopup = overlay;
+    window.escapeHandler = handleEscape;
 }
 
 function closePopup() {
@@ -108,6 +142,18 @@ function closePopup() {
         setTimeout(() => {
             document.body.removeChild(window.currentPopup);
             window.currentPopup = null;
+            
+            // Remove escape handler
+            if (window.escapeHandler) {
+                document.removeEventListener('keydown', window.escapeHandler);
+                window.escapeHandler = null;
+            }
+            
+            // Restore focus to previously focused element
+            if (window.previouslyFocused) {
+                window.previouslyFocused.focus();
+                window.previouslyFocused = null;
+            }
         }, 300);
     }
 }
