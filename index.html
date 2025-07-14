@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CodeGroove - Quality Tools for Open Source Engineers</title>
+        <title>codeGROOVE - Quality Tools for Open Source Engineers</title>
         <style>
             @font-face {
                 font-family: "Ojuju Bold";
@@ -58,6 +58,7 @@
                 top: 15%;
                 right: 10%;
                 transform: rotate(12deg);
+                animation: float1 8s ease-in-out infinite;
             }
 
             .bg-accent-2 {
@@ -66,6 +67,7 @@
                 bottom: 20%;
                 right: 2%;
                 transform: rotate(-15deg);
+                animation: float2 10s ease-in-out infinite;
             }
 
             .bg-accent-3 {
@@ -74,6 +76,22 @@
                 top: 50%;
                 left: 2%;
                 transform: rotate(45deg);
+                animation: float3 6s ease-in-out infinite;
+            }
+            
+            @keyframes float1 {
+                0%, 100% { transform: rotate(12deg) translateY(0px); }
+                50% { transform: rotate(15deg) translateY(-20px); }
+            }
+            
+            @keyframes float2 {
+                0%, 100% { transform: rotate(-15deg) translateX(0px); }
+                50% { transform: rotate(-12deg) translateX(15px); }
+            }
+            
+            @keyframes float3 {
+                0%, 100% { transform: rotate(45deg) scale(1); }
+                50% { transform: rotate(50deg) scale(1.1); }
             }
 
             .container {
@@ -108,12 +126,25 @@
             }
 
             @keyframes pulse {
-                0%,
-                100% {
-                    transform: scale(1);
+                0% {
+                    transform: scale(1) rotate(0deg);
+                    box-shadow: 8px 8px 0 black;
+                }
+                25% {
+                    transform: scale(1.02) rotate(-2deg);
+                    box-shadow: 10px 10px 0 black;
                 }
                 50% {
-                    transform: scale(1.05);
+                    transform: scale(1.05) rotate(1deg);
+                    box-shadow: 12px 12px 0 black;
+                }
+                75% {
+                    transform: scale(1.02) rotate(-1deg);
+                    box-shadow: 10px 10px 0 black;
+                }
+                100% {
+                    transform: scale(1) rotate(0deg);
+                    box-shadow: 8px 8px 0 black;
                 }
             }
 
@@ -438,9 +469,9 @@
                 const parts = ["lets-go-faster-plz", "codegroove", "dev"];
                 const email = parts[0] + "@" + parts[1] + "." + parts[2];
 
-                const subject = "Early Access Request - CodeGroove";
+                const subject = "Early Access Request - codeGROOVE";
                 const body =
-                    "Hi CodeGroove team,\n\nI'm interested in getting early access to your developer tools.\n\nThanks!";
+                    "Hi codeGROOVE team,\n\nI'm interested in getting early access to your developer tools.\n\nThanks!";
 
                 const mailtoLink =
                     "mailto:" +
@@ -586,7 +617,7 @@
 
         <div class="container">
             <div class="hero-left">
-                <img src="media/logo.png" alt="CodeGroove - Quality tools for open source engineers" class="logo" />
+                <img src="media/logo.png" alt="codeGROOVE - Quality tools for open source engineers" class="logo" />
                 <h1>codeGROOVE</h1>
                 <div class="tagline">
                     Open-source friendly developer tools that scale
@@ -594,21 +625,18 @@
             </div>
 
             <main id="main-content" class="hero-right">
-                <div class="pain-point">Out-ship your competition.</div>
+                <div class="pain-point">Ship faster. Ship better. Stay in the groove.</div>
 
                 <div class="main-content">
                     <div class="benefit-text">
                         <span class="highlight"
-                            >Keep developers in flow state while maintaining
-                            velocity.</span
+                            >Developer tools that understand the rhythm of great code.</span
                         >
-                        Built to scale from large enterprises to one-person
-                        open-source projects. Eliminate context switching and
-                        workflow interruptions. Work with your existing tools
-                        and processes, not around them.
+                        We're building the future where code review accelerates your team, 
+                        not slows it down. Where AI and humans collaborate in perfect harmony. 
+                        Where the simple path is always the obvious path.
                         <strong
-                            >Focus on problems worth solving, not workflow
-                            friction.</strong
+                            >Join us in the groove.</strong
                         >
                     </div>
 
@@ -653,7 +681,7 @@
                             class="cta-button"
                             onclick="sendEmail()"
                             type="button"
-                            aria-label="Get early access to CodeGroove developer tools"
+                            aria-label="Get early access to codeGROOVE developer tools"
                             >Get Early Access</button
                         >
                     </div>
