@@ -43,22 +43,31 @@
         header .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 30px 20px;
+            padding: 16px 20px;
         }
         
         .site-title {
             font-family: "Passion One", sans-serif;
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            margin-bottom: 15px;
-            transform: skewX(-5deg);
+            margin-bottom: 8px;
+            transform: skewX(-8deg) rotate(-1deg);
+            display: inline-block;
+            animation: funkWobble 8s ease-in-out infinite;
+        }
+        
+        @keyframes funkWobble {
+            0%, 100% { transform: skewX(-8deg) rotate(-1deg); }
+            25% { transform: skewX(-10deg) rotate(-1.5deg); }
+            50% { transform: skewX(-6deg) rotate(-0.5deg); }
+            75% { transform: skewX(-9deg) rotate(-1.2deg); }
         }
         
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 16px;
             flex-wrap: wrap;
         }
         
@@ -66,9 +75,9 @@
             font-family: "Space Mono", monospace;
             color: var(--black);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             padding: 2px 0;
             border-bottom: 2px solid transparent;
         }
@@ -82,50 +91,66 @@
             flex: 1;
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 32px 20px;
             width: 100%;
         }
         
         h1 {
             font-family: "Passion One", sans-serif;
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 400;
-            line-height: 0.9;
-            margin-bottom: 40px;
+            line-height: 0.95;
+            margin-bottom: 24px;
             letter-spacing: 0px;
             text-transform: uppercase;
         }
         
         h2 {
             font-family: "Passion One", sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 400;
-            margin: 60px 0 20px 0;
+            margin: 32px 0 16px 0;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-top: 1px solid var(--grey);
-            padding-top: 20px;
+            letter-spacing: 1.2px;
+            border-top: 3px dashed var(--black);
+            padding-top: 12px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '♫';
+            position: absolute;
+            right: 0;
+            top: 12px;
+            color: var(--yellow);
+            font-size: 18px;
+            animation: funkSpin 4s linear infinite;
+        }
+        
+        @keyframes funkSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         h3 {
             font-family: "Space Mono", monospace;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
-            margin: 30px 0 15px 0;
-            letter-spacing: 0.5px;
+            margin: 20px 0 12px 0;
+            letter-spacing: 0.3px;
         }
         
         p {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         
         ul, ol {
-            margin: 20px 0 30px 0;
-            padding-left: 30px;
+            margin: 16px 0 20px 0;
+            padding-left: 24px;
         }
         
         li {
-            margin: 10px 0;
+            margin: 8px 0;
         }
         
         a {
@@ -142,10 +167,10 @@
         pre {
             background: var(--black);
             color: var(--white);
-            padding: 20px;
+            padding: 16px;
             overflow-x: auto;
-            margin: 30px 0;
-            font-size: 14px;
+            margin: 20px 0;
+            font-size: 13px;
             line-height: 1.4;
         }
         
@@ -164,8 +189,8 @@
         .hero {
             background: var(--black);
             color: var(--white);
-            padding: 80px 40px;
-            margin: 0 -20px 40px -20px;
+            padding: 48px 32px;
+            margin: 0 -20px 24px -20px;
             position: relative;
             overflow: hidden;
         }
@@ -179,6 +204,12 @@
             opacity: 0.3;
             font-size: 48px;
             letter-spacing: -10px;
+            animation: slideGroove 8s linear infinite;
+        }
+        
+        @keyframes slideGroove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
         }
         
         .hero h1,
@@ -202,31 +233,47 @@
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            gap: 20px;
+            margin: 24px 0;
         }
         
         .product {
-            border: 2px solid var(--black);
-            padding: 30px;
+            border: 3px solid var(--black);
+            border-bottom-width: 5px;
+            border-right-width: 5px;
+            padding: 20px;
             background: var(--yellow);
+            position: relative;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: rotate(0.3deg);
+        }
+        
+        .product:nth-child(even) {
+            transform: rotate(-0.3deg);
+        }
+        
+        .product:hover {
+            transform: translate(-3px, -3px) rotate(0deg) scale(1.02);
+            border-bottom-width: 6px;
+            border-right-width: 6px;
         }
         
         .product h3 {
             font-family: "Passion One", sans-serif;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 400;
-            margin: 0 0 15px 0;
+            margin: 0 0 12px 0;
             letter-spacing: 0px;
         }
         
         .groove-card {
             border: 3px solid var(--black);
-            padding: 30px;
-            margin: 30px 0;
+            padding: 20px;
+            margin: 20px 0;
             position: relative;
             background: var(--white);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: rotate(-0.5deg);
         }
         
         .groove-card::before {
@@ -238,11 +285,27 @@
             bottom: -8px;
             background: var(--yellow);
             z-index: -1;
-            transform: rotate(-1deg);
+            transform: rotate(-1.5deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .groove-card::after {
+            content: '»';
+            position: absolute;
+            top: -8px;
+            right: 10px;
+            font-size: 24px;
+            color: var(--black);
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
         }
         
         .groove-card:hover {
-            transform: translate(-4px, -4px);
+            transform: translate(-4px, -4px) rotate(0.5deg) scale(1.02);
         }
         
         .groove-card:hover::before {
@@ -250,6 +313,7 @@
             left: 12px;
             right: -12px;
             bottom: -12px;
+            transform: rotate(-2deg);
         }
         
         .funk-highlight {
@@ -264,32 +328,35 @@
             display: inline-block;
             background: var(--black);
             color: var(--yellow);
-            padding: 20px 40px;
+            padding: 14px 28px;
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 20px;
+            letter-spacing: 1.5px;
+            font-size: 18px;
             font-weight: 400;
-            margin: 30px 0;
-            border: 4px solid var(--black);
-            transition: all 0.2s ease;
-            transform: skewX(-10deg);
+            margin: 20px 0;
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0 var(--yellow);
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: skewX(-10deg) rotate(-1deg);
+            position: relative;
         }
         
         .cta:hover {
             background: var(--yellow);
             color: var(--black);
-            transform: skewX(-10deg) scale(1.05);
+            transform: skewX(-10deg) rotate(1deg) scale(1.05) translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--black);
         }
         
         blockquote {
             font-family: "Space Mono", monospace;
-            border-left: 8px solid var(--yellow);
-            padding-left: 30px;
-            margin: 40px 0;
+            border-left: 6px solid var(--yellow);
+            padding-left: 20px;
+            margin: 24px 0;
             font-style: italic;
             color: var(--black);
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             letter-spacing: 0px;
             position: relative;
@@ -307,13 +374,17 @@
         
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            border: 3px solid var(--black);
+            background: var(--white);
+            transform: rotate(-0.2deg);
         }
         
         th, td {
             text-align: left;
-            padding: 12px;
+            padding: 10px;
             border-bottom: 1px solid var(--grey);
         }
         
@@ -333,7 +404,7 @@
         }
         
         .logo-img {
-            margin: 40px 0;
+            margin: 24px 0;
             opacity: 0.8;
             transition: opacity 0.2s ease;
         }
@@ -346,10 +417,10 @@
             font-family: "Space Mono", monospace;
             background: var(--black);
             color: var(--white);
-            padding: 60px 20px;
+            padding: 32px 20px;
             text-align: center;
-            font-size: 14px;
-            line-height: 1.8;
+            font-size: 13px;
+            line-height: 1.6;
             position: relative;
         }
         
@@ -375,11 +446,11 @@
         }
         
         .footer-links {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
-            margin: 0 10px;
+            margin: 0 8px;
         }
         
         /* Utility Classes */
@@ -396,60 +467,111 @@
         }
         
         .mt-60 {
-            margin-top: 60px;
+            margin-top: 32px;
         }
         
         /* Mobile Responsive */
         @media (max-width: 600px) {
             body {
                 font-size: 14px;
+                line-height: 1.6;
             }
             
             header .container {
-                padding: 20px;
+                padding: 12px 16px;
             }
             
             .site-title {
                 font-size: 20px;
-                letter-spacing: 2px;
+                letter-spacing: 0.3px;
+                margin-bottom: 6px;
             }
             
             main {
-                padding: 40px 20px;
+                padding: 24px 16px;
             }
             
             h1 {
-                font-size: 28px;
+                font-size: 32px;
+                margin-bottom: 16px;
             }
             
             h2 {
-                font-size: 16px;
-                margin: 40px 0 15px 0;
+                font-size: 18px;
+                margin: 24px 0 12px 0;
+                padding-top: 8px;
+            }
+            
+            h3 {
+                margin: 16px 0 8px 0;
+            }
+            
+            p {
+                margin-bottom: 12px;
             }
             
             .hero {
-                padding: 40px 20px;
+                padding: 32px 20px;
+                margin: 0 -16px 20px -16px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
             }
             
             .hero p {
-                font-size: 16px;
+                font-size: 15px;
             }
             
             .products {
                 grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .product {
+                padding: 16px;
+            }
+            
+            .groove-card {
+                padding: 16px;
+                margin: 16px 0;
             }
             
             .cta {
                 display: block;
                 text-align: center;
+                padding: 12px 20px;
+                font-size: 16px;
+                margin: 16px 0;
             }
             
             nav ul {
-                gap: 10px;
+                gap: 8px 12px;
             }
             
             nav a {
                 font-size: 12px;
+                padding: 4px 0;
+            }
+            
+            blockquote {
+                padding-left: 16px;
+                margin: 20px 0;
+                font-size: 15px;
+            }
+            
+            footer {
+                padding: 24px 16px;
+                font-size: 12px;
+            }
+            
+            ul, ol {
+                margin: 12px 0 16px 0;
+                padding-left: 20px;
+            }
+            
+            li {
+                margin: 6px 0;
             }
         }
         
