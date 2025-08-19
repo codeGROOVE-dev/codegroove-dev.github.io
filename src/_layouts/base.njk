@@ -5,67 +5,498 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - codeGROOVE</title>
     <meta name="description" content="{{ description }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200;300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" type="image/png" href="/media/logo.png">
-    <link rel="alternate" type="application/atom+xml" title="codeGROOVE Blog" href="/feed.xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --yellow: #FFE838;
+            --black: #000000;
+            --grey: #808080;
+            --white: #FFFFFF;
+            --max-width: 720px;
+        }
+        
+        body {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--black);
+            background: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background: var(--yellow);
+            border-bottom: 4px solid var(--black);
+        }
+        
+        header .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .site-title {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            transform: skewX(-5deg);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 2px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav a:hover,
+        nav a[aria-current="page"] {
+            border-bottom: 2px solid var(--black);
+        }
+        
+        main {
+            flex: 1;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 0.9;
+            margin-bottom: 40px;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 60px 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-top: 1px solid var(--grey);
+            padding-top: 20px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        ul, ol {
+            margin: 20px 0 30px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        a {
+            color: var(--black);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        
+        a:hover {
+            background: var(--yellow);
+            text-decoration: none;
+        }
+        
+        pre {
+            background: var(--black);
+            color: var(--white);
+            padding: 20px;
+            overflow-x: auto;
+            margin: 30px 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        code {
+            background: var(--grey);
+            color: var(--white);
+            padding: 2px 6px;
+            font-size: 14px;
+        }
+        
+        pre code {
+            background: transparent;
+            padding: 0;
+        }
+        
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 40px;
+            margin: 0 -20px 40px -20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '»»»»»»»»';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--yellow);
+            opacity: 0.3;
+            font-size: 48px;
+            letter-spacing: -10px;
+        }
+        
+        .hero h1,
+        .hero h2 {
+            color: var(--yellow);
+            border: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        
+        .hero a {
+            color: var(--yellow);
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .product {
+            border: 2px solid var(--black);
+            padding: 30px;
+            transition: transform 0.2s ease;
+        }
+        
+        .product:hover {
+            background: var(--yellow);
+            transform: translateY(-4px);
+        }
+        
+        .groove-card {
+            border: 3px solid var(--black);
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .groove-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: -8px;
+            bottom: -8px;
+            background: var(--yellow);
+            z-index: -1;
+            transform: rotate(-1deg);
+        }
+        
+        .groove-card:hover {
+            transform: translate(-4px, -4px);
+        }
+        
+        .groove-card:hover::before {
+            top: 12px;
+            left: 12px;
+            right: -12px;
+            bottom: -12px;
+        }
+        
+        .funk-highlight {
+            background: var(--yellow);
+            padding: 2px 8px;
+            display: inline-block;
+            margin: 2px 0;
+        }
+        
+        .cta {
+            display: inline-block;
+            background: var(--black);
+            color: var(--yellow);
+            padding: 20px 40px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 30px 0;
+            border: 4px solid var(--black);
+            transition: all 0.2s ease;
+            transform: skewX(-10deg);
+        }
+        
+        .cta:hover {
+            background: var(--yellow);
+            color: var(--black);
+            transform: skewX(-10deg) scale(1.05);
+        }
+        
+        blockquote {
+            border-left: 8px solid var(--yellow);
+            padding-left: 30px;
+            margin: 40px 0;
+            font-style: normal;
+            color: var(--black);
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            position: relative;
+        }
+        
+        blockquote::before {
+            content: '"';
+            position: absolute;
+            left: -5px;
+            top: -20px;
+            font-size: 80px;
+            color: var(--yellow);
+            opacity: 0.5;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--grey);
+        }
+        
+        th {
+            background: var(--black);
+            color: var(--white);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .logo-img {
+            margin: 40px 0;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+        
+        .logo-img:hover {
+            opacity: 1;
+        }
+        
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '♪ ♫ ♪';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--yellow);
+            font-size: 24px;
+            letter-spacing: 10px;
+        }
+        
+        footer a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+            background: transparent;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            margin: 0 10px;
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-muted {
+            color: var(--grey);
+        }
+        
+        .mb-0 {
+            margin-bottom: 0;
+        }
+        
+        .mt-60 {
+            margin-top: 60px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            
+            header .container {
+                padding: 20px;
+            }
+            
+            .site-title {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+            
+            main {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 16px;
+                margin: 40px 0 15px 0;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .products {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta {
+                display: block;
+                text-align: center;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+            
+            nav a {
+                font-size: 12px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            header, footer {
+                display: none;
+            }
+            
+            main {
+                padding: 0;
+                max-width: 100%;
+            }
+            
+            a {
+                text-decoration: none;
+                color: var(--black);
+            }
+            
+            .hero {
+                background: transparent;
+                color: var(--black);
+                border: 1px solid var(--black);
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="site-header">
-            <div class="container">
-                <nav class="main-nav">
-                    <a href="/" class="logo-link" aria-label="codeGROOVE home">
-                        <img src="/media/logo.svg" alt="" class="nav-logo" aria-hidden="true">
-                        <span class="brand-name">codeGROOVE</span>
-                    </a>
-                    <ul class="nav-menu" id="nav-menu" role="navigation" aria-label="Main navigation">
-                        <li><a href="/products/" {% if page.url == '/products/' %}class="active" aria-current="page"{% endif %}>Products</a></li>
-                        <li><a href="/open-source/" {% if page.url == '/open-source/' %}class="active" aria-current="page"{% endif %}>Open Source</a></li>
-                        <li><a href="/security/" {% if page.url == '/security/' %}class="active" aria-current="page"{% endif %}>Security</a></li>
-                        <li><a href="/about/" {% if page.url == '/about/' %}class="active" aria-current="page"{% endif %}>About</a></li>
-                        <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}class="active" aria-current="page"{% endif %}>Blog</a></li>
-                        <li><a href="/contact/" {% if page.url == '/contact/' %}class="active" aria-current="page"{% endif %}>Contact</a></li>
-                    </ul>
-                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </nav>
-            </div>
-        </header>
+    <header>
+        <div class="container">
+            <div class="site-title">codeGROOVE</div>
+            <nav role="navigation" aria-label="Main">
+                <ul>
+                    <li><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+                    <li><a href="/products/" {% if page.url == '/products/' %}aria-current="page"{% endif %}>Products</a></li>
+                    <li><a href="/open-source/" {% if page.url == '/open-source/' %}aria-current="page"{% endif %}>Open Source</a></li>
+                    <li><a href="/security/" {% if page.url == '/security/' %}aria-current="page"{% endif %}>Security</a></li>
+                    <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+                    <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>Blog</a></li>
+                    <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <main class="main-content">
-            {{ content | safe }}
-        </main>
+    <main>
+        {{ content | safe }}
+    </main>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="footer-content" style="text-align: center; grid-template-columns: 1fr;">
-                    <div>
-                        <p style="font-size: 0.875rem; margin-bottom: 1rem;">
-                            <a href="/products/">Products</a> · 
-                            <a href="/open-source/">Open Source</a> · 
-                            <a href="/about/">About</a> · 
-                            <a href="/blog/">Blog</a> · 
-                            <a href="/security/">Security</a> · 
-                            <a href="/contact/">Contact</a>
-                        </p>
-                        <p style="font-size: 0.875rem;">&copy; 2024 codeGROOVE</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Geometric background accents -->
-    <div class="bg-accent bg-accent-1"></div>
-    <div class="bg-accent bg-accent-2"></div>
-    <div class="bg-accent bg-accent-3"></div>
-
-    <script src="/js/main.js"></script>
+    <footer>
+        <div class="footer-links">
+            <a href="/products/">Products</a>
+            <a href="/open-source/">Open Source</a>
+            <a href="/security/">Security</a>
+            <a href="/about/">About</a>
+            <a href="/blog/">Blog</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div>
+            <p>© 2024 codeGROOVE · North Cackalacky</p>
+            <p class="text-muted">Built by engineers who got tired of waiting for reviews</p>
+        </div>
+    </footer>
 </body>
 </html>
