@@ -127,6 +127,12 @@
             animation: funkSpin 4s linear infinite;
         }
         
+        /* Larger musical note on contact page */
+        .page-contact h2::after {
+            font-size: 54px;
+            top: 6px;
+        }
+        
         @keyframes funkSpin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -196,20 +202,27 @@
         }
         
         .hero::before {
-            content: '»»»»»»»»';
+            content: '>>-->';
             position: absolute;
             top: 20px;
-            left: 20px;
+            left: -100px;
             color: var(--yellow);
-            opacity: 0.3;
+            opacity: 0.4;
             font-size: 48px;
-            letter-spacing: -10px;
-            animation: slideGroove 1.5s linear infinite;
+            letter-spacing: 0px;
+            animation: slideGroove 0.9s linear forwards;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        
+        /* Hide arrow animation on contact page */
+        .page-contact .hero::before {
+            display: none;
         }
         
         @keyframes slideGroove {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(40px); }
+            0% { left: -100px; }
+            100% { left: calc(100% - 180px); }
         }
         
         .hero h1,
@@ -248,11 +261,23 @@
             transform: rotate(0.3deg);
         }
         
+        .product-clickable {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        
+        .product-clickable:hover {
+            background: transparent;
+        }
+        
         .product:nth-child(even) {
             transform: rotate(-0.3deg);
         }
         
-        .product:hover {
+        .product:hover,
+        .product-clickable:hover .product {
             transform: translate(-3px, -3px) rotate(0deg) scale(1.02);
             border-bottom-width: 6px;
             border-right-width: 6px;
@@ -605,7 +630,7 @@
         }
     </style>
 </head>
-<body>
+<body{% if title == 'Contact' %} class="page-contact"{% endif %}>
     <header>
         <div class="container">
             <div class="site-title">codeGROOVE</div>
