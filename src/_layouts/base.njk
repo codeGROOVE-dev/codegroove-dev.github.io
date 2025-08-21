@@ -14,18 +14,21 @@
 <body{% if page.url == '/' %} class="page-home"{% elif title == 'Contact' %} class="page-contact"{% endif %}>
     <header>
         <div class="header-container">
-            <div class="site-title">codeGROOVE</div>
-            <nav role="navigation" aria-label="Main">
-                <ul>
-                    <li><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
-                    <li><a href="/products/" {% if page.url.startsWith('/products/') %}aria-current="page"{% endif %}>Products</a></li>
-                    <li><a href="/oss/" {% if page.url == '/oss/' %}aria-current="page"{% endif %}>Open Source</a></li>
-                    <li><a href="/security/" {% if page.url == '/security/' %}aria-current="page"{% endif %}>Security</a></li>
-                    <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-                    <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>Blog</a></li>
-                    <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
-                </ul>
-            </nav>
+            <img src="/media/logo.png" alt="codeGROOVE logo" class="header-logo">
+            <div class="header-content">
+                <div class="site-title">codeGROOVE</div>
+                <nav role="navigation" aria-label="Main">
+                    <ul>
+                        <li><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+                        <li><a href="/products/" {% if page.url.startsWith('/products/') %}aria-current="page"{% endif %}>Products</a></li>
+                        <li><a href="/oss/" {% if page.url == '/oss/' %}aria-current="page"{% endif %}>Open Source</a></li>
+                        <li><a href="/security/" {% if page.url == '/security/' %}aria-current="page"{% endif %}>Security</a></li>
+                        <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+                        <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>Blog</a></li>
+                        <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 

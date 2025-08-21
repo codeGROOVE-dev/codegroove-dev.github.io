@@ -45,7 +45,7 @@
     --spacing-section: 6rem;
 
     /* Layout */
-    --container-max: 720px;
+    --container-max: 800px;
     --container-padding: 1.25rem;
 
     /* Borders & Shadows */
@@ -180,9 +180,36 @@ header {
 }
 
 .header-container {
-    max-width: var(--container-max);
+    max-width: calc(var(--container-max) + 80px);
     margin: 0 auto;
-    padding: var(--spacing-md) var(--container-padding);
+    padding: 0 var(--container-padding);
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-lg);
+    min-height: 80px;
+}
+
+.header-logo {
+    width: 60px;
+    height: 100%;
+    object-fit: contain;
+    padding: var(--spacing-sm) 0;
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.2));
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+    display: none;
+}
+
+.header-logo:hover {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-sm) 0;
 }
 
 .site-title {
@@ -190,7 +217,7 @@ header {
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    margin-bottom: -1em;
+    margin-bottom: var(--spacing-xs);
     transform: skewX(-8deg) rotate(-1deg);
     display: inline-block;
     animation: funkWobble 8s ease-in-out infinite;
@@ -731,6 +758,25 @@ img {
         margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
     }
 
+    .header-container {
+        min-height: auto;
+        gap: var(--spacing-md);
+    }
+
+    .header-logo {
+        width: 45px;
+        padding: var(--spacing-xs) 0;
+    }
+
+    .header-content {
+        padding: var(--spacing-xs) 0;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-xs);
+    }
+
     .hero {
         padding: var(--spacing-2xl) var(--spacing-lg);
     }
@@ -780,6 +826,14 @@ img {
 }
 
 @media (max-width: 480px) {
+    .header-container {
+        gap: var(--spacing-sm);
+    }
+
+    .header-logo {
+        width: 40px;
+    }
+
     .site-title {
         font-size: 1.25rem;
     }
