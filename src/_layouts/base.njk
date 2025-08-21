@@ -215,9 +215,13 @@
             font-weight: bold;
         }
         
-        /* Hide arrow animation on contact page */
-        .page-contact .hero::before {
+        /* Only show arrow animation on homepage */
+        .hero::before {
             display: none;
+        }
+        
+        .page-home .hero::before {
+            display: block;
         }
         
         @keyframes slideGroove {
@@ -630,7 +634,7 @@
         }
     </style>
 </head>
-<body{% if title == 'Contact' %} class="page-contact"{% endif %}>
+<body{% if page.url == '/' %} class="page-home"{% elif title == 'Contact' %} class="page-contact"{% endif %}>
     <header>
         <div class="container">
             <div class="site-title">codeGROOVE</div>

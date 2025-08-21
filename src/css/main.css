@@ -507,6 +507,38 @@ a:hover {
     line-height: 1.7;
 }
 
+/* Consistent Product Page Card Styles */
+.card-subtle {
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.card-subtle-small {
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-emphasis {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 12px;
+    padding: 48px;
+}
+
+.card-emphasis-strong {
+    background: linear-gradient(135deg, rgba(255,215,0,0.12) 0%, rgba(255,255,255,0.04) 100%);
+    border-radius: 12px;
+    padding: 48px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
 .card::before {
     content: '';
     position: absolute;
