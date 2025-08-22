@@ -115,12 +115,17 @@ h1 {
 
 h2 {
     font-size: var(--font-size-2xl);
-    margin: var(--spacing-2xl) 0 var(--spacing-md) 0;
+    margin: var(--spacing-section) 0 var(--spacing-xl) 0;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     border-top: 3px dashed var(--color-secondary);
-    padding-top: var(--spacing-sm);
+    padding-top: var(--spacing-lg);
     position: relative;
+}
+
+/* First h2 after content should have less top margin */
+main > h2:first-of-type {
+    margin-top: var(--spacing-2xl);
 }
 
 /* Musical note decoration */
@@ -361,11 +366,12 @@ footer::before {
     border-bottom-width: var(--border-width-thick);
     border-right-width: var(--border-width-thick);
     padding: var(--spacing-lg);
-    background: var(--color-primary);
+    background: var(--color-white);
     position: relative;
     transition: var(--transition-base);
     transform: rotate(0.3deg);
     margin: var(--spacing-lg) 0;
+    box-shadow: 4px 4px 0 var(--color-primary);
 }
 
 .groove-card:nth-child(even) {
@@ -376,6 +382,7 @@ footer::before {
     transform: translate(-3px, -3px) rotate(0deg) scale(1.02);
     border-bottom-width: var(--border-width-thick);
     border-right-width: var(--border-width-thick);
+    box-shadow: 6px 6px 0 var(--color-primary);
 }
 
 .groove-card h3 {
@@ -384,6 +391,23 @@ footer::before {
     font-weight: 400;
     margin: 0 0 var(--spacing-sm) 0;
     letter-spacing: 0;
+}
+
+/* Hero card variant with proper contrast */
+.groove-card--hero {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    box-shadow: 4px 4px 0 var(--color-primary);
+}
+
+.groove-card--hero:hover {
+    box-shadow: 6px 6px 0 var(--color-primary);
+}
+
+/* Accent card with yellow highlight but good contrast */
+.groove-card--accent {
+    background: var(--color-white);
+    border-left: 6px solid var(--color-primary);
 }
 
 /* Product Cards */
@@ -399,10 +423,11 @@ footer::before {
     border-bottom-width: 5px;
     border-right-width: 5px;
     padding: var(--spacing-lg);
-    background: var(--color-primary);
+    background: var(--color-white);
     position: relative;
     transition: var(--transition-base);
     transform: rotate(0.3deg);
+    box-shadow: 4px 4px 0 var(--color-primary);
 }
 
 .product:nth-child(even) {
@@ -413,6 +438,7 @@ footer::before {
     transform: translate(-3px, -3px) rotate(0deg) scale(1.02);
     border-bottom-width: 6px;
     border-right-width: 6px;
+    box-shadow: 6px 6px 0 var(--color-primary);
 }
 
 .product h3 {
@@ -882,8 +908,9 @@ img {
 
 /* Focus styles */
 :focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid var(--color-secondary);
     outline-offset: 2px;
+    background: var(--color-primary);
 }
 
 /* Skip to content link */
