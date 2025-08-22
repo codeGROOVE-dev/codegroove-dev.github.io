@@ -410,6 +410,276 @@ footer::before {
     border-left: 6px solid var(--color-primary);
 }
 
+/* Hub page specific styles */
+.hub-hero-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.hub-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: var(--spacing-md);
+    color: var(--color-gray-dark);
+}
+
+.hub-hero-highlight {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+}
+
+.math-card {
+    background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,255,255,0.02) 100%);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+}
+
+.math-card h3 {
+    font-size: 1.75rem;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.5px;
+    color: var(--color-secondary);
+}
+
+.math-card p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+}
+
+.math-highlight {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.math-subtext {
+    font-size: 1.125rem;
+    color: var(--color-gray);
+}
+
+.hub-section-title {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 4rem 0;
+}
+
+.feature-card {
+    background: var(--color-gray-light);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.feature-card h4 {
+    color: var(--color-secondary);
+    font-size: 1.125rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.feature-card p {
+    margin-top: 0.75rem;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0 4rem 0;
+}
+
+.stat-card {
+    background: var(--color-gray-light);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.stat-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.deployment-stats {
+    background: var(--color-gray-light);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.deployment-stats h3 {
+    font-size: 1.5rem;
+    margin: 0 0 2.5rem 0;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.stat-item .stat-number {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.stat-item .stat-label {
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    color: var(--color-gray-dark);
+}
+
+.pricing-table {
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+    border-collapse: collapse;
+}
+
+.pricing-table thead tr {
+    border-bottom: 2px solid #E0E0E0;
+}
+
+.pricing-table th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.pricing-table td {
+    padding: 1.25rem 1rem;
+    color: var(--color-gray-dark);
+}
+
+.pricing-table .recommended-row {
+    background: rgba(255, 232, 56, 0.1);
+}
+
+.pricing-table .plan-name {
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.pricing-table .recommended-badge {
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+}
+
+.promise-card {
+    background: linear-gradient(135deg, rgba(255,215,0,0.12) 0%, rgba(255,255,255,0.04) 100%);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.promise-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.promise-card p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+}
+
+.promise-highlight {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.cta-section p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: var(--color-gray);
+}
+
+.cta-buttons {
+    margin-bottom: 3rem;
+}
+
+.cta-buttons .cta-button-small {
+    margin-right: 1.25rem;
+}
+
+.final-message {
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    color: var(--color-gray-dark);
+}
+
+/* Contact page styles */
+.contact-hero-title {
+    color: var(--color-primary);
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: -2px;
+}
+
+.contact-hero-text {
+    font-size: 1.25rem;
+    margin-top: var(--spacing-lg);
+}
+
+.contact-highlight {
+    color: var(--color-primary);
+}
+
+.demo-card {
+    background: var(--color-white);
+    border: 3px solid var(--color-secondary);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-lg) 0;
+}
+
+.demo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-lg);
+}
+
+.demo-text {
+    font-size: 1.125rem;
+}
+
+.contact-email {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
 /* Product Cards */
 .products {
     display: grid;
