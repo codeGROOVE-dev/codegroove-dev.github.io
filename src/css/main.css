@@ -410,6 +410,18 @@ footer::before {
     border-left: 6px solid var(--color-primary);
 }
 
+/* Yellow card variant - HIG compliant with proper contrast */
+.groove-card--yellow {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border: 3px solid var(--color-secondary);
+    box-shadow: 6px 6px 0 var(--color-secondary);
+}
+
+.groove-card--yellow:hover {
+    box-shadow: 8px 8px 0 var(--color-secondary);
+}
+
 /* Hub page specific styles */
 .hub-hero-title {
     font-size: 2.25rem;
@@ -717,6 +729,17 @@ footer::before {
     font-weight: 400;
     margin: 0 0 var(--spacing-sm) 0;
     letter-spacing: 0;
+}
+
+/* Yellow product card variant */
+.product--yellow {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    box-shadow: 4px 4px 0 var(--color-secondary);
+}
+
+.product--yellow:hover {
+    box-shadow: 6px 6px 0 var(--color-secondary);
 }
 
 /* CTA Button */
