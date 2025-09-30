@@ -319,7 +319,7 @@ body {
 .content-hero ul {
     font-size: 18px;
     line-height: 1.6;
-    margin: 20px 0 20px 30px;
+    margin: 0;
     color: var(--white);
 }
 
@@ -439,6 +439,148 @@ body {
     color: var(--black);
     text-align: center;
     font-weight: 600;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.pricing-tier {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #3a3a3a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-tier:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-tier-featured {
+    border: 3px solid var(--yellow);
+    position: relative;
+}
+
+.pricing-tier-featured::before {
+    content: "⭐ POPULAR";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--cyan);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.pricing-tier-header {
+    background: var(--black);
+    padding: 28px 24px 24px;
+    text-align: center;
+}
+
+.pricing-tier-featured .pricing-tier-header {
+    background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+}
+
+.pricing-tier-name {
+    font-family: "Passion One", cursive;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--yellow);
+    margin: 0 0 16px 0;
+    letter-spacing: 0.5px;
+}
+
+.pricing-tier-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    color: var(--white);
+}
+
+.pricing-price-currency {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.pricing-price-amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+}
+
+.pricing-price-period {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-left: 4px;
+}
+
+.pricing-tier-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-tier-description {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a !important;
+    margin: 0 0 20px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    flex: 1;
+}
+
+.pricing-features li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #1a1a1a !important;
+    margin: 0 0 12px 0;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+}
+
+.pricing-features li::before {
+    content: "✓ ";
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.pricing-features li:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-features li strong {
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 8px;
 }
 
 /* Content Pages */
