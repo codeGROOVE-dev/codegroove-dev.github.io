@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - codeGROOVE</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="icon" type="image/png" href="/media/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body{% if page.url == '/' %} class="page-home"{% elif title == 'Contact' %} class="page-contact"{% endif %}>
+    <header>
+        <div class="header-container">
+            <img src="/media/logo.png" alt="codeGROOVE logo" class="header-logo">
+            <div class="header-content">
+                <div class="site-title">codeGROOVE</div>
+                <nav role="navigation" aria-label="Main">
+                    <ul>
+                        <li><a href="/products/" {% if page.url.startsWith('/products/') %}aria-current="page"{% endif %}>products.</a></li>
+                        <li><a href="/oss/" {% if page.url == '/oss/' %}aria-current="page"{% endif %}>open source.</a></li>
+                        <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>about.</a></li>
+                        <li><a href="/security/" {% if page.url == '/security/' %}aria-current="page"{% endif %}>security.</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/products/">Products</a>
+            <a href="/oss/">Open Source</a>
+            <a href="/security/">Security</a>
+            <a href="/about/">About</a>
+            <a href="/blog/">Blog</a>
+            <a href="/contact/">Contact</a>
+        </div>
+        <div>
+            <p>© 2025 codeGROOVE · North Cackalacky</p>
+            <p class="text-muted">Built by engineers who got tired of waiting for reviews</p>
+        </div>
+    </footer>
+</body>
+</html>

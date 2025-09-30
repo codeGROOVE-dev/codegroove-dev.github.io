@@ -16,6 +16,9 @@
     /* Colors */
     --color-primary: #ffe838;
     --color-primary-light: #fff176;
+    --color-cyan: #38ffe8;
+    --color-cyan-light: #5ce1e6;
+    --color-yellow-cta: #ffde59;
     --color-secondary: #000000;
     --color-white: #ffffff;
     --color-gray: #808080;
@@ -345,6 +348,113 @@ footer::before {
     color: var(--color-primary);
 }
 
+/* Canva-style Hero Section */
+.hero--canva {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    margin: 0 calc(-1 * var(--container-padding)) var(--spacing-2xl)
+        calc(-1 * var(--container-padding));
+    position: relative;
+    overflow: hidden;
+    background: var(--color-white);
+}
+
+/* Full page hero - takes entire viewport */
+.hero--fullpage {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-yellow-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: var(--color-primary);
+    z-index: 1;
+}
+
+.hero-yellow-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    background: var(--color-primary);
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+    transform: rotate(-5.5deg);
+    z-index: 2;
+}
+
+.hero-content-box {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+    background: var(--color-secondary);
+    border: 6px solid var(--color-cyan);
+    border-radius: 15px;
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    color: var(--color-white);
+}
+
+.hero-title-canva {
+    font-family: "Arimo", var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.3;
+    color: var(--color-white);
+    border: none;
+}
+
+.hero-features {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    margin: var(--spacing-lg) 0;
+}
+
+.hero-features p {
+    margin: var(--spacing-sm) 0;
+    opacity: 1;
+}
+
+.feature-cyan {
+    color: var(--color-cyan-light);
+    font-weight: 700;
+}
+
+.hero-cta-text {
+    color: var(--color-yellow-cta);
+    font-weight: 700;
+    font-style: italic;
+    margin-top: var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    opacity: 1;
+}
+
 /* Hero arrow animation (homepage only) */
 .page-home .hero::before {
     content: ">>>------>";
@@ -444,7 +554,11 @@ footer::before {
 }
 
 .math-card {
-    background: linear-gradient(135deg, rgba(255,215,0,0.08) 0%, rgba(255,255,255,0.02) 100%);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.08) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
     border-radius: 12px;
     padding: 3rem;
     margin-bottom: 4rem;
@@ -571,7 +685,7 @@ footer::before {
 }
 
 .pricing-table thead tr {
-    border-bottom: 2px solid #E0E0E0;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .pricing-table th {
@@ -602,7 +716,11 @@ footer::before {
 }
 
 .promise-card {
-    background: linear-gradient(135deg, rgba(255,215,0,0.12) 0%, rgba(255,255,255,0.04) 100%);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 215, 0, 0.12) 0%,
+        rgba(255, 255, 255, 0.04) 100%
+    );
     border-radius: 12px;
     padding: 3rem;
     text-align: center;
@@ -1105,6 +1223,28 @@ img {
     }
 
     .hero p {
+        font-size: var(--font-size-base);
+    }
+
+    .hero--canva {
+        min-height: auto;
+        padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+
+    .hero-content-box {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+        max-width: 100%;
+    }
+
+    .hero-title-canva {
+        font-size: 1.5rem;
+    }
+
+    .hero-features {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-cta-text {
         font-size: var(--font-size-base);
     }
 

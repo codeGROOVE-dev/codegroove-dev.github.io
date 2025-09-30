@@ -1,54 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - codeGROOVE</title>
-    <meta name="description" content="{{ description }}">
-    <link rel="icon" type="image/png" href="/media/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - codeGROOVE</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body{% if page.url == '/' %} class="page-home"{% elif title == 'Contact' %} class="page-contact"{% endif %}>
-    <header>
-        <div class="header-container">
-            <img src="/media/logo.png" alt="codeGROOVE logo" class="header-logo">
-            <div class="header-content">
-                <div class="site-title">codeGROOVE</div>
-                <nav role="navigation" aria-label="Main">
-                    <ul>
-                        <li><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
-                        <li><a href="/products/" {% if page.url.startsWith('/products/') %}aria-current="page"{% endif %}>Products</a></li>
-                        <li><a href="/oss/" {% if page.url == '/oss/' %}aria-current="page"{% endif %}>Open Source</a></li>
-                        <li><a href="/security/" {% if page.url == '/security/' %}aria-current="page"{% endif %}>Security</a></li>
-                        <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-                        <li><a href="/blog/" {% if page.url.startsWith('/blog/') %}aria-current="page"{% endif %}>Blog</a></li>
-                        <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+<body>
+  <nav class="nav">
+    <div class="nav-accent-angle"></div>
+    <div class="nav-logo">
+      <a href="/">codeGROOVE</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/products/">products</a></li>
+      <li><a href="/oss/">oss</a></li>
+      <li><a href="/about/">about</a></li>
+      <li><a href="/security/">security</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        {{ content | safe }}
-    </main>
-
-    <footer>
-        <div class="footer-links">
-            <a href="/products/">Products</a>
-            <a href="/oss/">Open Source</a>
-            <a href="/security/">Security</a>
-            <a href="/about/">About</a>
-            <a href="/blog/">Blog</a>
-            <a href="/contact/">Contact</a>
-        </div>
-        <div>
-            <p>© 2025 codeGROOVE · North Cackalacky</p>
-            <p class="text-muted">Built by engineers who got tired of waiting for reviews</p>
-        </div>
-    </footer>
+  <main>
+    {{ content | safe }}
+  </main>
 </body>
 </html>
