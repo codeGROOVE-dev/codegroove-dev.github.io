@@ -9,30 +9,52 @@ title: Security
   <div class="content-hero-inner">
     <h1>SECURITY</h1>
 
-    <p>Report issues:</p>
-    <ul>
-      <li>Email: <a href="mailto:security@codegroove.dev">security@codegroove.dev</a></li>
-      <li>Urgent: Signal +1 678-608-0428</li>
-    </ul>
+    <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+        <img src="/assets/goose-security-keys.png" alt="Security Goose with Keys" style="width: 150px; height: 150px; flex-shrink: 0;" />
+        <div style="flex: 1; min-width: 250px;">
+          <p style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #333;">WE TAKE SECURITY SERIOUSLY. (SERIOUSLY!)</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Our team has previously run security programs at companies like Google and Chainguard. We understand the stakes.</p>
+        </div>
+      </div>
+    </div>
 
-    <h2>OUR APPROACH</h2>
-    <p>Simple systems are easier to audit, understand, and verify. We minimize what we collect, encrypt everything, and delete it quickly.</p>
+    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">OUR SECURITY PRINCIPLES</h2>
 
-    <h2>COMPLIANCE</h2>
-    <p>We're working on SOC 2 Type 2, until then, we can provide security questionaire responses in <a href="https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4">CAIQ v4</a> format.</p>
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Data Minimization</h3>
+        <p>We only collect what we absolutely need. GitHub metadata only—no code access required. Data is automatically deleted after 30 days.</p>
+      </div>
 
-    <h2>WHAT WE STORE</h2>
-    <ul>
-      <li>GitHub metadata only (no code)</li>
-      <li>Deleted after 30 days</li>
-      <li>Encrypted at rest and in transit</li>
-    </ul>
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Supply Chain Security</h3>
+        <p>We avoid external dependencies wherever possible and rely on Chainguard Images to keep our containers svelte.</p>
+      </div>
 
-    <h2>WHAT WE DON'T DO</h2>
-    <ul>
-      <li>Sell your data</li>
-      <li>Share with third parties</li>
-      <li>Keep it longer than necessary</li>
-    </ul>
+      <div style="margin-bottom: 30px;">
+        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Encryption & Privacy</h3>
+        <p>All data is encrypted at rest and in transit. We never sell your data or share it with third parties. We don't keep it longer than necessary.</p>
+      </div>
+
+      <div style="margin-bottom: 0;">
+        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Simple is Secure</h3>
+        <p>We believe simple systems are easier to audit, understand, and verify. Our architecture prioritizes clarity over complexity.</p>
+      </div>
+    </div>
+
+    <div style="background: var(--black); border: 8px solid var(--yellow); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">COMPLIANCE & POLICIES</h2>
+      <p>We're working on SOC 2 Type 2 certification. In the meantime, we can provide security questionnaire responses in <a href="https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4">CAIQ v4</a> format.</p>
+      <ul>
+        <li><strong>Corporate Security Policy:</strong> <a href="https://github.com/codeGROOVE-dev/policy/blob/main/CORPORATE.md">github.com/codeGROOVE-dev/policy/CORPORATE.md</a></li>
+        <li><strong>Privacy Policy:</strong> <a href="https://github.com/codeGROOVE-dev/policy/blob/main/PRIVACY.md">github.com/codeGROOVE-dev/policy/PRIVACY.md</a></li>
+      </ul>
+    </div>
+
+    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">REPORT A SECURITY ISSUE</h2>
+      <p style="margin-bottom: 0;">Found something interesting? Check out <a href="/.well-known/security.txt">/.well-known/security.txt</a> [<a href="https://www.rfc-editor.org/rfc/rfc9116.html">RFC 9116</a>]</p>
+    </div>
   </div>
 </section>
