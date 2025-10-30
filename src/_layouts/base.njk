@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} - codeGROOVE</title>
+  <meta name="description" content="{{ description or 'codeGROOVE builds developer productivity tools that eliminate code review latency. 20X faster PR merges with turn-based tracking.' }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }} - codeGROOVE">
+  <meta property="og:description" content="{{ description or 'codeGROOVE builds developer productivity tools that eliminate code review latency. 20X faster PR merges with turn-based tracking.' }}">
+  <meta property="og:image" content="https://codegroove.dev/assets/hero-bg.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎸</text></svg>">
+
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <nav class="nav">

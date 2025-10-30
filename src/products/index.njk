@@ -1,23 +1,20 @@
 ---
 layout: base.njk
 title: Products
+permalink: /products/index.html
+eleventyExcludeFromCollections: true
 ---
 
-<section class="hero hero-left">
-  <img src="/assets/hero-bg.jpg" alt="" class="hero-bg" />
+<script>
+  window.location.replace("/products/ready-to-review/");
+</script>
 
-  <div class="hero-content product-box">
-    <a href="/products/ready-to-review/" class="product-link">
-      <h1 class="hero-title">READY TO REVIEW</h1>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=/products/ready-to-review/">
+</noscript>
 
-      <p class="hero-highlight">15X lower code review latency.</p>
-      <ul class="hero-list">
-        <li>Automated review assignments.</li>
-        <li>Real-time notifications.</li>
-        <li>Team leaderboards.</li>
-      </ul>
-
-      <p class="hero-cta">Learn more →</p>
-    </a>
+<section class="content-hero">
+  <div class="content-hero-inner">
+    <p>Redirecting to <a href="/products/ready-to-review/">Ready to Review</a>...</p>
   </div>
 </section>

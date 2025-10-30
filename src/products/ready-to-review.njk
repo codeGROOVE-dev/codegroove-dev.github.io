@@ -4,45 +4,78 @@ title: Ready to Review
 ---
 
 <section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="" class="content-hero-bg" />
+  <img src="/assets/hero-bg.jpg" alt="Abstract technical background pattern" class="content-hero-bg" />
 
   <div class="content-hero-inner">
     <h1>READY TO REVIEW</h1>
 
-    <div class="info-box">
-      <p class="info-box-highlight">Automation that shepherds PRs from push to merge</p>
-      <p>Eliminates ambiguity. Everyone knows whose turn it is at every moment.</p>
-    </div>
-
-    <h2>THE PROBLEM</h2>
-    <div class="info-box">
-      <p>PRs get stuck because nobody knows whose turn it is. Authors don't know when to ping reviewers. Reviewers don't know when changes are ready. Everyone wastes time guessing.</p>
-      <p><strong>For a 20-person team, this burns $1M annually in lost productivity.</strong></p>
-    </div>
-
-    <div class="screenshot-grid">
-      <div class="screenshot-item">
-        <img src="/assets/screenshots/r2r-800.png" alt="Ready to Review dashboard showing PR status and assignments" />
-        <p class="screenshot-caption">Real-time PR tracking - know whose turn it is</p>
-      </div>
-      <div class="screenshot-item">
-        <img src="/assets/screenshots/stats-800.png" alt="Team statistics and review metrics" />
-        <p class="screenshot-caption">Team insights - see bottlenecks, celebrate contributors</p>
+    <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+        <picture style="flex-shrink: 0;">
+          <source srcset="/assets/review-goose.webp" type="image/webp">
+          <img src="/assets/review-goose.png" alt="Review Goose managing pull requests" style="width: 150px; height: 150px; flex-shrink: 0;" />
+        </picture>
+        <div style="flex: 1; min-width: 250px;">
+          <p style="margin: 0 0 10px 0; font-size: 20px; font-weight: 700; color: #333;">A PR lifecycle manager that shepherds every pull request from push to merge</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Ready to Review is backed by a deterministic state machine that constantly analyzes PRs to identify the action and actor most likely to push each PR forward. From hand-picking reviewers based on code context to notifying people exactly when they need to act — it eliminates ambiguity at every step.</p>
+        </div>
       </div>
     </div>
 
-    <h2>HOW IT WORKS</h2>
-    <div class="info-box">
-      <ul>
-        <li><strong>Automatic assignment</strong> - Routes to experts who modified the same lines you changed, balanced by workload and availability</li>
-        <li><strong>Turn-based tracking</strong> - Crystal clear whose turn it is: author or reviewer</li>
-        <li><strong>Timezone awareness</strong> - Assigns to people in their active hours</li>
-        <li><strong>Slack + desktop alerts</strong> - Real-time notifications when it's your turn</li>
-        <li><strong>Team metrics</strong> - Identify bottlenecks, measure improvement</li>
+    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">THE PROBLEM</h2>
+      <p>PRs take <strong>4.5 days to merge</strong> on average because GitHub notifications suck and nobody knows who's responsible for getting a PR across the line at any given moment. <strong>For a 20-person team, that's $1M annually</strong> in lost productivity.</p>
+      <p>Ready-to-Review brings this average down to <strong>45 minutes</strong>, saving you a boatload of time and money. Don't believe us? <a href="https://cost.github.codegroove.app/?mode=org">Measure the cost savings for your org</a> (public repos) or run <a href="https://github.com/codeGROOVE-dev/prcost">prcost</a> locally for private repos.</p>
+    </div>
+
+    <h2>SCREENSHOTS</h2>
+    <div class="screenshot-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="screenshot-item">
+        <picture>
+          <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
+          <img src="/assets/screenshots/slack-screenshot.png" alt="Slack channel notifications with real-time status updates" loading="lazy" />
+        </picture>
+        <p class="screenshot-caption">Slack channel notifications with real-time status updates</p>
+      </div>
+      <div class="screenshot-item">
+        <picture>
+          <source srcset="/assets/screenshots/slack-screenshot-home.webp" type="image/webp">
+          <img src="/assets/screenshots/slack-screenshot-home.png" alt="Slack app home showing user dashboard" loading="lazy" />
+        </picture>
+        <p class="screenshot-caption">App home showing your personal dashboard</p>
+      </div>
+      <div class="screenshot-item">
+        <picture>
+          <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
+          <img src="/assets/screenshots/goose-screenshot.png" alt="Native desktop notifications from Goose" loading="lazy" />
+        </picture>
+        <p class="screenshot-caption">Native notifications (macOS, Linux, Windows)</p>
+      </div>
+      <div class="screenshot-item">
+        <picture>
+          <source srcset="/assets/screenshots/r2r-800.webp" type="image/webp">
+          <img src="/assets/screenshots/r2r-800.png" alt="Ready to Review dashboard showing PR status and assignments" loading="lazy" />
+        </picture>
+        <p class="screenshot-caption">Web dashboard - track all PRs at a glance</p>
+      </div>
+    </div>
+
+    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">HOW IT WORKS</h2>
+
+      <p>At the core of Ready to Review is a <strong>deterministic state machine</strong> that constantly analyzes every PR to determine the optimal next action and actor. It understands the full PR lifecycle — from initial assignment through reviews, change requests, updates, approvals, and merge.</p>
+
+      <h3 style="color: var(--yellow); margin-top: 30px; margin-bottom: 15px;">Key Capabilities</h3>
+      <ul style="margin: 0; padding-left: 20px;">
+        <li style="margin-bottom: 12px;"><strong>Context-aware reviewer selection</strong> - Automatically assigns PRs to the engineers who last modified the same code you're changing, balanced by current workload and availability</li>
+        <li style="margin-bottom: 12px;"><strong>Turn-based tracking</strong> - Crystal clear whose turn it is at every moment: author or reviewer. No more guessing, no more ping spam</li>
+        <li style="margin-bottom: 12px;"><strong>Timezone intelligence</strong> - Assigns reviewers during their active hours and adjusts notifications based on work patterns</li>
+        <li style="margin-bottom: 12px;"><strong>Multi-channel notifications</strong> - Native desktop notifications via <a href="https://github.com/codeGROOVE-dev/goose">Goose</a> (macOS, Linux, Windows) that auto-open PRs and play a delightful goose noise when you're responsible for the next move, plus Slack integration for team coordination</li>
+        <li style="margin-bottom: 12px;"><strong>Lifecycle management</strong> - Tracks PRs from creation through merge, identifying bottlenecks and nudging the right people at the right time</li>
+        <li style="margin-bottom: 0;"><strong>Team analytics</strong> - Identify patterns, celebrate contributors, measure real improvement</li>
       </ul>
-      <div>
-      <p><strong>Result: 15X reduction in code review latency</strong></p>
-      </div>
+
+      <p style="margin-top: 30px; margin-bottom: 0;"><strong>Result: 20X faster code reviews — but don't take our word for it, <a href="https://cost.github.codegroove.app/?mode=org">measure your own improvement</a></strong></p>
     </div>
 
     <h2>PRICING</h2>
@@ -94,6 +127,7 @@ title: Ready to Review
           <p class="pricing-tier-description">For engineering teams that move fast</p>
           <ul class="pricing-features">
             <li><strong>Everything in Super-fan, plus:</strong></li>
+            <li>Org-specific dashboard and workspace</li>
             <li>Real-time notifications for org repos</li>
             <li>Team leaderboards & insights</li>
             <li>Priority support</li>
@@ -122,13 +156,15 @@ title: Ready to Review
 
     <div class="info-box" style="margin-top: 40px;">
       <p class="info-box-highlight">All plans are billed through the GitHub Marketplace</p>
-      <p>Start with Community (free forever) and upgrade anytime. No credit card required to get started.</p>
+      <p>Start with Community (free forever) and upgrade anytime. Paid plans include a 2-week free trial. No credit card required to get started.</p>
     </div>
 
     <h2>GET STARTED</h2>
-    <div class="info-box">
-      <p>Sign up at <a href="https://dash.ready-to-review.dev">dash.ready-to-review.dev</a></p>
-      <p>Questions? Email <a href="mailto:go-faster@codegroove.dev">go-faster@codegroove.dev</a></p>
+    <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px;">
+      <p style="font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--white);">Ready to merge 20X faster?</p>
+      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">Sign up takes 2 minutes. Free for open source projects, forever.</p>
+      <a href="https://github.com/apps/ready-to-review-beta" style="display: inline-block; background: var(--cyan); color: var(--black); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);">Start Now →</a>
+      <p style="margin-top: 30px; font-size: 16px; color: var(--white);">Questions? Email <a href="mailto:go-faster@codegroove.dev" style="color: var(--cyan); text-decoration: underline;">go-faster@codegroove.dev</a></p>
     </div>
   </div>
 </section>
