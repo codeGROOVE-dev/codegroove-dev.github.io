@@ -14,47 +14,37 @@ title: Security
         <img src="/assets/goose-security-keys.png" alt="Security Goose with Keys" style="width: 150px; height: 150px; flex-shrink: 0;" />
         <div style="flex: 1; min-width: 250px;">
           <p style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #333;">WE TAKE SECURITY SERIOUSLY. (SERIOUSLY!)</p>
-          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Our team has previously run security programs at companies like Google and Chainguard. We understand the stakes.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Our team previously ran security programs at companies like Google and Chainguard. We get it.</p>
         </div>
       </div>
     </div>
 
     <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
       <h2 style="margin-top: 0;">OUR SECURITY PRINCIPLES</h2>
-
-      <div style="margin-bottom: 30px;">
-        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Data Minimization</h3>
-        <p>We only collect what we absolutely need. GitHub metadata only—no code access required. Data is automatically deleted after 30 days.</p>
-      </div>
-
-      <div style="margin-bottom: 30px;">
-        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Supply Chain Security</h3>
-        <p>We avoid external dependencies wherever possible and rely on Chainguard Images to keep our containers svelte.</p>
-      </div>
-
-      <div style="margin-bottom: 30px;">
-        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Encryption & Privacy</h3>
-        <p>All data is encrypted at rest and in transit. We never sell your data or share it with third parties. We don't keep it longer than necessary.</p>
-      </div>
-
-      <div style="margin-bottom: 0;">
-        <h3 style="margin-bottom: 10px; color: var(--yellow); padding-bottom: 8px; border-bottom: 3px solid var(--yellow); display: inline-block;">Simple is Secure</h3>
-        <p>We believe simple systems are easier to audit, understand, and verify. Our architecture prioritizes clarity over complexity.</p>
-      </div>
+      <ul style="font-size: 16px; line-height: 1.8;">
+<li><strong>Zero Trust</strong>: Hardware-backed cryptographic identity and encryption are our security perimeter</li>
+<li><strong>Defense in depth</strong>: Every layer fails—we rely on overlapping controls (<a href="https://en.wikipedia.org/wiki/Swiss_cheese_model">swiss cheese model</a>)</li>
+<li><strong>Ephemeral secrets</strong>: All secrets leak eventually. We prefer <a href="https://openid.net/developers/how-connect-works/">OIDC</a>/<a href="https://oauth.net/2/">OAuth</a>, When unavoidable, we rely on runtime KMS fetch — never disk or <a href="https://man7.org/linux/man-pages/man7/environ.7.html">environ(7)</a>.</li>
+<li><strong>Minimal data surface</strong>: Less data = less risk. Metadata cache only (21-day TTL), 0 persistent user data</li>
+<li><strong>Minimal supply chain</strong>: Most services have 0-1 external deps. We use <a href="https://github.com/ko-build/ko">ko</a>+<a href="https://images.chainguard.dev/">Chainguard Images</a></li>
+<li><strong>No data monetization</strong>: We never sell your data. Third-party sharing limited to operational requirements/li>
+<li><strong>Radical transparency</strong>: Audit our code anytime—if it's not open-source yet, just ask!</li>
+     </ul>
     </div>
 
     <div style="background: var(--black); border: 8px solid var(--yellow); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
       <h2 style="margin-top: 0;">COMPLIANCE & POLICIES</h2>
-      <p>We're working on SOC 2 Type 2 certification. In the meantime, we can provide security questionnaire responses in <a href="https://cloudsecurityalliance.org/artifacts/cloud-controls-matrix-v4">CAIQ v4</a> format.</p>
       <ul>
-        <li><strong>Corporate Security Policy:</strong> <a href="https://github.com/codeGROOVE-dev/policy/blob/main/CORPORATE.md">github.com/codeGROOVE-dev/policy/CORPORATE.md</a></li>
-        <li><strong>Privacy Policy:</strong> <a href="https://github.com/codeGROOVE-dev/policy/blob/main/PRIVACY.md">github.com/codeGROOVE-dev/policy/PRIVACY.md</a></li>
+        <li><a href="https://github.com/codeGROOVE-dev/policy/blob/main/CORPORATE.md">Corporate Security Policies</a></li>
+        <li><a href="https://github.com/codeGROOVE-dev/policy/blob/main/PRIVACY.md">Privacy Policy</a></li>
       </ul>
+      <p>We're not yet SOC 2, but we've overseen the process for other large companies and will consider it later.</p>
     </div>
 
     <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0;">REPORT A SECURITY ISSUE</h2>
-      <p style="margin-bottom: 0;">Found something interesting? Check out <a href="/.well-known/security.txt">/.well-known/security.txt</a> [<a href="https://www.rfc-editor.org/rfc/rfc9116.html">RFC 9116</a>]</p>
+      <h2 style="margin-top: 0;">CONTACT US</h2>
+      <p>Find a vulnerability? Check out our <a href="/.well-known/security.txt">security.txt</a>.</p>
+      <p style="margin-bottom: 0;">We could literally talk all day long about security. If you are interested, <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89">set up a call!</a></p>
     </div>
   </div>
 </section>

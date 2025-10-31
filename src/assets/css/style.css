@@ -200,6 +200,23 @@ body {
     margin-top: 20px;
 }
 
+.hero-button {
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--black);
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);
+}
+
+.hero-clickable:hover .hero-button {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(92, 225, 230, 0.6);
+}
+
 /* Product Box Styles */
 .product-box {
     cursor: pointer;
@@ -318,11 +335,23 @@ body {
     font-size: 18px;
     line-height: 1.6;
     margin: 0;
+    padding-left: 0;
+    list-style: none;
     color: var(--white);
 }
 
 .content-hero li {
     margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.content-hero li::before {
+    content: "❧";
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-size: 20px;
 }
 
 .content-hero a {

@@ -1,6 +1,8 @@
-Contact: https://github.com/codeGROOVE-dev/vulnerability-reports
-EmergencyContact: sgnl://signal.me/#p/+16786080428
-Expires: 2025-12-31T23:59:59.000Z
+Contact: https://calendar.app.google/TbQmeX8iWnvx6Ci89
+Contact: tel:16786080428
+Contact: https://github.com/codeGROOVE-dev/security/issues/new
+Expires: 2027-01-01T05:00:00.000Z
 Acknowledgments: https://codegroove.dev/security
-Preferred-Languages: en
+Preferred-Languages: en,sv
 Canonical: https://codegroove.dev/.well-known/security.txt
+Policy: https://github.com/codeGROOVE-dev/security/blob/main/REPORT-POLICY.md
