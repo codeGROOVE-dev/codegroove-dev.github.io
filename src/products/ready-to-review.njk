@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Ready to Review
+title: Ready to Review - Eliminate PR coordination overhead
 ---
 
 <section class="content-hero">
@@ -16,16 +16,31 @@ title: Ready to Review
           <img src="/assets/review-goose.png" alt="Review Goose managing pull requests" style="width: 150px; height: 150px; flex-shrink: 0;" />
         </picture>
         <div style="flex: 1; min-width: 250px;">
-          <p style="margin: 0 0 10px 0; font-size: 20px; font-weight: 700; color: #333;">A PR lifecycle manager that shepherds every pull request from push to merge</p>
-          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Ready to Review is backed by a deterministic state machine that constantly analyzes PRs to identify the action and actor most likely to push each PR forward. From hand-picking reviewers based on code context to notifying people exactly when they need to act — it eliminates ambiguity at every step.</p>
+          <p style="margin: 0 0 10px 0; font-size: 20px; font-weight: 700; color: #333;">Eliminate PR coordination overhead</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Ready to Review runs a deterministic state machine over every pull request to automatically determine the optimal next action and the right person to take it. From intelligent reviewer assignment to turn-based clarity, it eliminates the coordination overhead that keeps PRs in limbo.</p>
         </div>
       </div>
     </div>
 
     <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
       <h2 style="margin-top: 0;">THE PROBLEM</h2>
-      <p>PRs take <strong>4.5 days to merge</strong> on average because GitHub notifications suck and nobody knows who's responsible for getting a PR across the line at any given moment. <strong>For a 20-person team, that's $1M annually</strong> in lost productivity.</p>
-      <p>Ready-to-Review brings this average down to <strong>45 minutes</strong>, saving you a boatload of time and money. Don't believe us? <a href="https://cost.github.codegroove.app/?mode=org">Measure the cost savings for your org</a> (public repos) or run <a href="https://github.com/codeGROOVE-dev/prcost">prcost</a> locally for private repos.</p>
+      <p style="font-size: 18px; margin-bottom: 20px;"><strong>Most engineering teams lose 10-15% of throughput to PR coordination overhead.</strong> For a 20-person team, that's roughly <strong>$1M annually</strong> in lost productivity.</p>
+
+      <p><strong>Root cause:</strong> PRs take 4.5 days to merge on average because GitHub's notification system creates ambiguity—nobody knows who's responsible for moving a PR forward at any given moment.</p>
+
+      <p><strong>The impact:</strong> Ready-to-Review brings merge time down to <strong>under an hour</strong> (20X faster), eliminating coordination overhead and reclaiming that lost throughput.</p>
+
+      <p style="margin-bottom: 0;"><a href="https://cost.github.codegroove.app/?mode=org">Calculate your team's cost savings →</a></p>
+    </div>
+
+    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0;">OUR SOLUTION</h2>
+      <ul style="font-size: 16px; line-height: 1.8;">
+        <li><strong>Intelligent reviewer assignment</strong>: Analyzes your diff to find engineers who last modified the specific lines you're changing, balanced by current workload. No more random assignments or hunting for context.</li>
+        <li><strong>Turn-based clarity</strong>: Always knows whose turn it is (author or reviewer) and what needs to happen next. Review it, fix tests, respond to feedback, or merge. No guessing, no ping spam.</li>
+        <li><strong>Multi-channel notifications</strong>: Native desktop alerts via <a href="https://github.com/codeGROOVE-dev/goose">Goose</a> (macOS, Linux, Windows) that auto-open PRs when you're needed, plus Slack integration for team coordination. Get notified at the right moment, not constantly.</li>
+        <li><strong>Full lifecycle tracking</strong>: Manages PRs from creation through merge, identifying bottlenecks and nudging the right people at the right time. Complete visibility across your entire organization without configuration.</li>
+      </ul>
     </div>
 
     <h2>SCREENSHOTS</h2>
@@ -60,19 +75,21 @@ title: Ready to Review
       </div>
     </div>
 
+    <div style="background: var(--black); border: 8px solid var(--yellow); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
+      <h2 style="margin-top: 0; color: var(--yellow);">WHAT MAKES THIS DIFFERENT</h2>
+      <p style="font-size: 18px; line-height: 1.6;">Unlike analytics dashboards that just show you the problem, Ready-to-Review <strong>actively manages your PR workflow</strong>. It makes intelligent decisions about who should act next and ensures they know about it — without overwhelming anyone.</p>
+      <p style="margin-bottom: 0; font-size: 18px; line-height: 1.6;">Built by engineers who got tired of watching PRs sit idle while everyone assumes someone else is handling it.</p>
+    </div>
+
+    <h2>HOW IT WORKS</h2>
     <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0;">HOW IT WORKS</h2>
+      <p>At the core of Ready to Review is a <strong>deterministic state machine</strong> that constantly analyzes every PR to determine who should act next and what they should do. It understands the full PR lifecycle — from initial assignment through reviews, change requests, updates, approvals, and merge.</p>
 
-      <p>At the core of Ready to Review is a <strong>deterministic state machine</strong> that constantly analyzes every PR to determine the optimal next action and actor. It understands the full PR lifecycle — from initial assignment through reviews, change requests, updates, approvals, and merge.</p>
-
-      <h3 style="color: var(--yellow); margin-top: 30px; margin-bottom: 15px;">Key Capabilities</h3>
+      <h3 style="color: var(--yellow); margin-top: 30px; margin-bottom: 15px;">Additional Capabilities</h3>
       <ul style="margin: 0; padding-left: 20px;">
-        <li style="margin-bottom: 12px;"><strong>Context-aware reviewer selection</strong> - Automatically assigns PRs to the engineers who last modified the same code you're changing, balanced by current workload and availability</li>
-        <li style="margin-bottom: 12px;"><strong>Turn-based tracking</strong> - Crystal clear whose turn it is at every moment: author or reviewer. No more guessing, no more ping spam</li>
         <li style="margin-bottom: 12px;"><strong>Timezone intelligence</strong> - Assigns reviewers during their active hours and adjusts notifications based on work patterns</li>
-        <li style="margin-bottom: 12px;"><strong>Multi-channel notifications</strong> - Native desktop notifications via <a href="https://github.com/codeGROOVE-dev/goose">Goose</a> (macOS, Linux, Windows) that auto-open PRs and play a delightful goose noise when you're responsible for the next move, plus Slack integration for team coordination</li>
-        <li style="margin-bottom: 12px;"><strong>Lifecycle management</strong> - Tracks PRs from creation through merge, identifying bottlenecks and nudging the right people at the right time</li>
-        <li style="margin-bottom: 0;"><strong>Team analytics</strong> - Identify patterns, celebrate contributors, measure real improvement</li>
+        <li style="margin-bottom: 12px;"><strong>Team analytics</strong> - Identify patterns, celebrate contributors, measure real improvement with leaderboards and insights</li>
+        <li style="margin-bottom: 0;"><strong>Security-conscious</strong> - Minimal permissions required, select just the GitHub repos you want to enable access to</li>
       </ul>
 
       <p style="margin-top: 30px; margin-bottom: 0;"><strong>Result: 20X faster code reviews — but don't take our word for it, <a href="https://cost.github.codegroove.app/?mode=org">measure your own improvement</a></strong></p>
@@ -82,7 +99,7 @@ title: Ready to Review
     <div class="pricing-grid">
       <div class="pricing-tier">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name">Community</h3>
+          <h3 class="pricing-tier-name">Grass Roots</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-amount">Free</span>
           </div>
@@ -109,9 +126,8 @@ title: Ready to Review
         <div class="pricing-tier-body">
           <p class="pricing-tier-description">For individual developers</p>
           <ul class="pricing-features">
-            <li><strong>Everything in Community, plus:</strong></li>
-            <li>Support for private repositories anywhere</li>
-            <li>Real-time notifications for personal repos</li>
+            <li><strong>Everything in Grass Roots, plus:</strong></li>
+            <li>Support for private repos</li>
           </ul>
         </div>
       </div>
@@ -126,9 +142,8 @@ title: Ready to Review
         <div class="pricing-tier-body">
           <p class="pricing-tier-description">For engineering teams that move fast</p>
           <ul class="pricing-features">
-            <li><strong>Everything in Super-fan, plus:</strong></li>
-            <li>Org-specific dashboard and workspace</li>
-            <li>Real-time notifications for org repos</li>
+            <li><strong>Support for private repos</strong></li>
+            <li>Org-specific workspace</li>
             <li>Team leaderboards & insights</li>
             <li>Priority support</li>
           </ul>
@@ -143,12 +158,11 @@ title: Ready to Review
           </div>
         </div>
         <div class="pricing-tier-body">
-          <p class="pricing-tier-description">Enterprise-grade for security-conscious orgs</p>
+          <p class="pricing-tier-description">Extra support for complicated orgs</p>
           <ul class="pricing-features">
             <li><strong>Everything in Main Stage, plus:</strong></li>
             <li>Custom contracts & DPAs</li>
             <li>Security questionnaire support</li>
-            <li>Dedicated account manager</li>
           </ul>
         </div>
       </div>

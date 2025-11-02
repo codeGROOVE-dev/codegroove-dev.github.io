@@ -598,7 +598,7 @@ body {
 .pricing-tier-name {
     font-family: "Passion One", cursive;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--yellow);
     margin: 0 0 16px 0;
     letter-spacing: 0.5px;
