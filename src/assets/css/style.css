@@ -1,4 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap");
+/* Passion One Font - Self-hosted */
+@font-face {
+    font-family: "Passion One";
+    src: url("/assets/fonts/PassionOne-Regular.woff2") format("woff2"),
+         url("/assets/fonts/PassionOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Passion One";
+    src: url("/assets/fonts/PassionOne-Bold.woff2") format("woff2"),
+         url("/assets/fonts/PassionOne-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Passion One";
+    src: url("/assets/fonts/PassionOne-Black.woff2") format("woff2"),
+         url("/assets/fonts/PassionOne-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --yellow: #ffe838;
