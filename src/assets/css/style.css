@@ -882,7 +882,9 @@ button,
 /* Responsive */
 @media (max-width: 768px) {
     .nav {
-        height: 32px;
+        height: 34px;
+        min-height: 34px;
+        margin-bottom: 8px;
     }
 
     .nav-logo {
@@ -893,29 +895,36 @@ button,
     }
 
     .nav-logo a {
-        font-size: 17px;
-        letter-spacing: 1px;
-        transform: skewX(-20deg);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        transform: skewX(-10deg);
+        min-height: 34px;
+        display: flex;
+        align-items: center;
     }
 
     .nav-accent-angle {
-        width: 8em;
-        height: 2em;
+        width: 8.5em;
+        height: 34px;
     }
 
     .nav-links {
         position: relative;
         right: auto;
-        gap: 8px;
-        font-size: 11px;
+        gap: 4px;
+        font-size: 12px;
         margin-left: auto;
-        margin-right: 10px;
-        height: 32px;
+        margin-right: 8px;
+        height: 34px;
     }
 
     .nav-links a {
-        padding: 4px 8px;
-        min-height: 32px;
+        padding: 8px 12px;
+        min-height: 34px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-links .bracket {
@@ -924,13 +933,17 @@ button,
 
     .hero {
         justify-content: center;
-        padding: 60px 20px 40px;
+        padding: 46px 16px 46px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
     }
 
     .hero-content {
         margin: 0;
-        padding: 24px;
+        padding: 20px;
         max-width: 100%;
+        border-width: 4px;
     }
 
     .hero-title {
@@ -956,31 +969,49 @@ button,
     }
 
     .content-hero {
-        padding: 60px 20px 40px;
+        padding: 54px 16px 40px;
     }
 
     .content-hero h1 {
         font-size: 40px;
+        margin-bottom: 16px;
     }
 
     .content-hero h2 {
-        font-size: 28px;
+        font-size: 26px;
+        margin: 32px 0 16px;
+    }
+
+    .content-hero p {
+        margin-bottom: 16px;
     }
 
     .content-page {
-        padding: 100px 20px 40px;
+        padding: 80px 16px 40px;
     }
 
     .content-page h1 {
         font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .content-page h2 {
+        font-size: 28px;
+        margin: 32px 0 16px;
+    }
+
+    .product-hero {
+        padding: 80px 16px 40px;
     }
 
     .product-hero h1 {
         font-size: 40px;
+        margin-bottom: 16px;
     }
 
     .product-hero .subtitle {
         font-size: 20px;
+        margin-bottom: 32px;
     }
 
     .founder-section {
@@ -996,19 +1027,82 @@ button,
 
     .pricing-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
+        margin: 32px 0;
     }
 
     .screenshot-grid {
-        gap: 20px;
+        gap: 16px;
+        margin: 32px 0;
     }
 
     .groove-card {
         padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Button and CTA optimizations */
+    .cta-button,
+    .hero-button,
+    [role="button"] {
+        padding: 12px 24px;
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    .content-hero a[style*="padding: 16px 32px"] {
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+    }
+
+    /* Info box optimizations */
+    .info-box {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .info-box-highlight {
+        font-size: 18px;
+    }
+
+    /* Feature grid and card optimizations */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 40px 0;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+    }
+
+    /* Pricing tier body optimization */
+    .pricing-tier-body {
+        padding: 20px;
+    }
+
+    .pricing-tier-description {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .pricing-features li {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
     /* Override inline styles on mobile for R2R page boxes */
-    .content-hero-inner > div[style*="padding: 30px"] {
+    .content-hero-inner > div[style*="padding: 30px"],
+    .content-hero-inner > div[style*="padding: 40px"] {
         padding: 20px !important;
     }
 
@@ -1017,19 +1111,114 @@ button,
     }
 
     .content-hero-inner div[style*="gap: 30px"] {
-        gap: 20px !important;
+        gap: 16px !important;
     }
 
-    .content-hero-inner img[style*="width: 150px"] {
-        width: 120px !important;
-        height: 120px !important;
+    /* Responsive image sizing */
+    .content-hero-inner img[style*="width: 150px"],
+    .content-hero-inner picture + div img {
+        width: 100px !important;
+        height: 100px !important;
+        max-width: 100px !important;
+    }
+
+    /* Responsive font sizing - more aggressive scaling */
+    .content-hero-inner p[style*="font-size: 32px"] {
+        font-size: 24px !important;
     }
 
     .content-hero-inner p[style*="font-size: 24px"] {
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
 
-    .content-hero-inner p[style*="font-size: 18px"] {
+    .content-hero-inner p[style*="font-size: 20px"] {
+        font-size: 17px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 18px"],
+    .content-hero-inner ul[style*="font-size: 16px"] li {
+        font-size: 15px !important;
+    }
+
+    /* Fix min-width constraints */
+    .content-hero-inner div[style*="min-width: 250px"] {
+        min-width: 0 !important;
+        flex: 1 1 100%;
+    }
+
+    /* Border adjustments for mobile */
+    .content-hero-inner div[style*="border: 8px"] {
+        border-width: 4px !important;
+    }
+
+    /* Pricing tier font scaling */
+    .pricing-tier-name {
+        font-size: 24px !important;
+    }
+
+    .pricing-price-amount {
+        font-size: 40px !important;
+    }
+
+    .pricing-price-currency,
+    .pricing-price-period {
         font-size: 16px !important;
+    }
+}
+
+/* Extra small screens (iPhone SE, etc) */
+@media (max-width: 374px) {
+    .nav-logo a {
+        font-size: 16px;
+    }
+
+    .nav-accent-angle {
+        width: 8em;
+    }
+
+    .nav-links {
+        gap: 2px;
+        font-size: 11px;
+        margin-right: 4px;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+    }
+
+    .hero-content {
+        padding: 16px;
+    }
+
+    .content-hero-inner > div[style*="padding: 30px"],
+    .content-hero-inner > div[style*="padding: 20px"],
+    .content-hero-inner > div[style*="padding: 40px"] {
+        padding: 16px !important;
+    }
+
+    .content-hero-inner img[style*="width: 150px"],
+    .content-hero-inner picture + div img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 32px"] {
+        font-size: 22px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 24px"] {
+        font-size: 17px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 20px"] {
+        font-size: 16px !important;
+    }
+
+    .pricing-tier-name {
+        font-size: 22px !important;
+    }
+
+    .pricing-price-amount {
+        font-size: 36px !important;
     }
 }
