@@ -9,31 +9,52 @@ title: About
   <div class="content-hero-inner">
     <h1>ABOUT</h1>
 
-    <h2>BUILT BY ENGINEERS WHO KNOW THE PAIN</h2>
+    <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+        <img src="/assets/goose-lab-techs.png" alt="Origin story" style="width: 150px; height: 150px; flex-shrink: 0;" />
+        <div style="flex: 1; min-width: 250px;">
+          <p style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #333;">STARTED AT GOOGLE. FINISHED HERE.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Ready to Review started as a prototype within Google's developer experience team. The triage automation ideas eventually shipped as <a href="https://github.com/google/triage-party" style="color: #333; text-decoration: underline;">Triage Party</a>, but the turn-based notification system—the piece that actually solves review latency—needed more than 20% time. So we built it properly.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>WHO WE ARE</h2>
 
     <div class="founder-section">
       <img src="/assets/tstromberg.jpg" alt="Thomas Stromberg" class="founder-portrait" />
       <div class="founder-bio">
         <p><strong>Thomas Stromberg</strong> — 30 years in open source. Formerly with Google, Kubernetes, Chainguard, and Equinix. Led engineering teams as both technical lead and manager.</p>
-        <p>Based out of beautiful Chapel Hill, North Carolina, started codeGROOVE after being tired of slow code reviews.</p>
+        <p>Based in Chapel Hill, NC. Started codeGROOVE after being tired of slow code reviews.</p>
         <p>Contact: <a href="mailto:t@codegroove.dev">t@codeGROOVE.dev</a> or +1 678-608-0428</p>
       </div>
     </div>
 
-    <h2>OUR PHILOSOPHY</h2>
-
-    <div class="groove-card groove-card--yellow">
-      <ul style="margin: 0; padding-left: 20px;">
-        <li style="margin-bottom: 16px;"><strong>Review latency kills velocity.</strong> A 20-person team loses $1M annually in wait time.</li>
-
-        <li style="margin-bottom: 16px;"><strong>Tools should be invisible.</strong> No training, no meetings, no process changes.</li>
-
-        <li style="margin-bottom: 16px;"><strong>Turn-based tracking works.</strong> When ownership is clear, PRs move 20X faster.</li>
-
-        <li style="margin-bottom: 0;"><strong>Engineers leave teams with ineffective workflows.</strong> Fix the tooling, keep the talent.</li>
-      </ul>
+    <div class="groove-card groove-card--yellow" style="display: flex; align-items: flex-start; gap: 30px;">
+      <img src="/assets/nugget.jpg" alt="Nugget" class="founder-portrait" />
+      <div class="founder-bio">
+        <p><strong>Nugget</strong> — Chief Dog Officer. Responsible for perimeter security (barking at suspicious delivery drivers), mandatory morale breaks (walk time is non-negotiable), and reminding the team that no bug is too difficult to solve after sniffing around the block.</p>
+        <p>Contact: WOOF WOOF WOOF. (She's always available. Especially if you have treats.)</p>
+      </div>
     </div>
 
+    <h2>WHY WE EXIST</h2>
+
+    <p>Code review latency is the invisible tax on engineering velocity. A 20-person team loses $1M/year in wait time. Engineers get blocked, context-switch, lose flow state. The best ones leave.</p>
+
+    <p>We've lived this problem at scale—from 2-person startups to Google-sized orgs. We know what works: intelligent assignment, turn-based tracking, zero-friction notifications. The tools existed in fragments. We're building them properly.</p>
+
+    <h2>OPEN SOURCE FIRST</h2>
+
+    <p>Our core tools are open source and free forever for OSS projects. We reinvest 10% of profits into the projects we depend on: FreeBSD, GhostBSD, NetBSD, Bluefin Linux, golangci-lint, and OSU Open Source Lab.</p>
+
+    <p>Check our work: <a href="https://github.com/codeGROOVE-dev">github.com/codeGROOVE-dev</a></p>
+
+    <h2>WHAT WE'RE BUILDING</h2>
+
+    <p><strong>Ready to Review</strong> — Intelligent PR assignment and turn-based tracking. Cuts review latency by 20X. Eliminates "who's blocking this?" hunts. 30-second GitHub integration. <a href="/products/ready-to-review/">Learn more →</a></p>
+
+    <p><strong>Goose</strong> — Auto-detects when PRs stall. Notifies the right person at the right time without micromanaging. <a href="https://github.com/codeGROOVE-dev/goose">View on GitHub →</a></p>
 
      </div>
 </section>
