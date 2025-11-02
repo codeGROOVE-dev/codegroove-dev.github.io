@@ -20,7 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <nav class="nav">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-accent-angle"></div>
     <div class="nav-logo">
       <a href="/"><span class="logo-prefix">≡</span>codeGROOVE</a>
@@ -33,7 +34,7 @@
     </ul>
   </nav>
 
-  <main>
+  <main id="main-content">
     {{ content | safe }}
   </main>
 </body>

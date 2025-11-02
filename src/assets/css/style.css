@@ -104,7 +104,10 @@ body {
     text-decoration: none;
     transition: color 0.2s;
     display: block;
-    padding: 8px 0;
+    padding: 8px 12px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a:hover {
@@ -114,6 +117,37 @@ body {
 .nav-links .bracket {
     color: #888;
     opacity: 0.75;
+}
+
+/* Accessibility: Focus Indicators */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 2px;
+}
+
+/* Ensure sufficient touch target size for interactive elements */
+button,
+[role="button"] {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Skip to content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cyan);
+    color: var(--black);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    z-index: 200;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 /* Hero Section */
@@ -528,6 +562,12 @@ body {
 .screenshot-item a {
     display: block;
     cursor: pointer;
+}
+
+.screenshot-item a:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .screenshot-item img {

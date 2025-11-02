@@ -3,11 +3,11 @@ layout: base.njk
 title: Ready to Review - Eliminate PR coordination overhead
 ---
 
-<section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="Abstract technical background pattern" class="content-hero-bg" />
+<section class="content-hero" aria-labelledby="page-title">
+  <img src="/assets/hero-bg.jpg" alt="" role="presentation" class="content-hero-bg" />
 
   <div class="content-hero-inner">
-    <h1>READY TO REVIEW</h1>
+    <h1 id="page-title">READY TO REVIEW</h1>
 
     <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
@@ -45,42 +45,42 @@ title: Ready to Review - Eliminate PR coordination overhead
 
     <h2>SCREENSHOTS</h2>
     <div class="screenshot-grid">
-      <div class="screenshot-item">
-        <a href="/assets/screenshots/slack-screenshot.png" target="_blank" rel="noopener noreferrer">
+      <figure class="screenshot-item">
+        <a href="/assets/screenshots/slack-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Slack channel notifications screenshot (opens in new tab)">
           <picture>
             <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
-            <img src="/assets/screenshots/slack-screenshot.png" alt="Slack channel notifications with real-time status updates" loading="lazy" />
+            <img src="/assets/screenshots/slack-screenshot.png" alt="Slack channel showing Ready to Review bot posting PR status updates including CI checks and reviewer assignments" loading="lazy" />
           </picture>
         </a>
-        <p class="screenshot-caption">Slack channel notifications with real-time status updates</p>
-      </div>
-      <div class="screenshot-item">
-        <a href="/assets/screenshots/slack-screenshot-home.png" target="_blank" rel="noopener noreferrer">
+        <figcaption class="screenshot-caption">Slack channel notifications with real-time status updates</figcaption>
+      </figure>
+      <figure class="screenshot-item">
+        <a href="/assets/screenshots/slack-screenshot-home.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Slack app home screenshot (opens in new tab)">
           <picture>
             <source srcset="/assets/screenshots/slack-screenshot-home.webp" type="image/webp">
-            <img src="/assets/screenshots/slack-screenshot-home.png" alt="Slack app home showing user dashboard" loading="lazy" />
+            <img src="/assets/screenshots/slack-screenshot-home.png" alt="Slack app home displaying personal dashboard with assigned PRs, review requests, and activity summary" loading="lazy" />
           </picture>
         </a>
-        <p class="screenshot-caption">App home showing your personal dashboard</p>
-      </div>
-      <div class="screenshot-item">
-        <a href="/assets/screenshots/goose-screenshot.png" target="_blank" rel="noopener noreferrer">
+        <figcaption class="screenshot-caption">App home showing your personal dashboard</figcaption>
+      </figure>
+      <figure class="screenshot-item">
+        <a href="/assets/screenshots/goose-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Goose desktop notifications screenshot (opens in new tab)">
           <picture>
             <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
-            <img src="/assets/screenshots/goose-screenshot.png" alt="Native desktop notifications from Goose" loading="lazy" />
+            <img src="/assets/screenshots/goose-screenshot.png" alt="Native desktop notification from Goose showing PR review request with one-click action to open in browser" loading="lazy" />
           </picture>
         </a>
-        <p class="screenshot-caption">Native notifications (macOS, Linux, Windows)</p>
-      </div>
-      <div class="screenshot-item">
-        <a href="/assets/screenshots/r2r-800.png" target="_blank" rel="noopener noreferrer">
+        <figcaption class="screenshot-caption">Native notifications (macOS, Linux, Windows)</figcaption>
+      </figure>
+      <figure class="screenshot-item">
+        <a href="/assets/screenshots/r2r-800.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Ready to Review web dashboard screenshot (opens in new tab)">
           <picture>
             <source srcset="/assets/screenshots/r2r-800.webp" type="image/webp">
-            <img src="/assets/screenshots/r2r-800.png" alt="Ready to Review dashboard showing PR status and assignments" loading="lazy" />
+            <img src="/assets/screenshots/r2r-800.png" alt="Ready to Review web dashboard displaying list of pull requests with status indicators, assigned reviewers, and next action needed" loading="lazy" />
           </picture>
         </a>
-        <p class="screenshot-caption">Web dashboard - track all PRs at a glance</p>
-      </div>
+        <figcaption class="screenshot-caption">Web dashboard - track all PRs at a glance</figcaption>
+      </figure>
     </div>
 
     <div style="background: var(--black); border: 8px solid var(--yellow); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
@@ -103,11 +103,11 @@ title: Ready to Review - Eliminate PR coordination overhead
       <p style="margin-top: 30px; margin-bottom: 0;"><strong>Result: 20X faster code reviews — but don't take our word for it, <a href="https://cost.github.codegroove.app/?mode=org">measure your own improvement</a></strong></p>
     </div>
 
-    <h2>PRICING</h2>
-    <div class="pricing-grid">
-      <div class="pricing-tier">
+    <h2 id="pricing-section">PRICING</h2>
+    <div class="pricing-grid" role="list" aria-labelledby="pricing-section">
+      <article class="pricing-tier" role="listitem" aria-labelledby="tier-grassroots">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name">Grass Roots</h3>
+          <h3 class="pricing-tier-name" id="tier-grassroots">Grass Roots</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-amount">Free</span>
           </div>
@@ -122,11 +122,11 @@ title: Ready to Review - Eliminate PR coordination overhead
             <li>Leaderboard</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <div class="pricing-tier pricing-tier-featured">
+      <article class="pricing-tier pricing-tier-featured" role="listitem" aria-labelledby="tier-superfan">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name">Super-fan</h3>
+          <h3 class="pricing-tier-name" id="tier-superfan">Super-fan</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">1</span><span class="pricing-price-period">/mo</span>
           </div>
@@ -138,11 +138,11 @@ title: Ready to Review - Eliminate PR coordination overhead
             <li>Support for private repos</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <div class="pricing-tier pricing-tier-featured">
+      <article class="pricing-tier pricing-tier-featured" role="listitem" aria-labelledby="tier-mainstage">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name">Main Stage</h3>
+          <h3 class="pricing-tier-name" id="tier-mainstage">Main Stage</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">6</span><span class="pricing-price-period">/mo</span>
           </div>
@@ -156,11 +156,11 @@ title: Ready to Review - Eliminate PR coordination overhead
             <li>Priority support</li>
           </ul>
         </div>
-      </div>
+      </article>
 
-      <div class="pricing-tier">
+      <article class="pricing-tier" role="listitem" aria-labelledby="tier-funkmaster">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name">Funk Master</h3>
+          <h3 class="pricing-tier-name" id="tier-funkmaster">Funk Master</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">12</span><span class="pricing-price-period">/mo</span>
           </div>
@@ -173,7 +173,7 @@ title: Ready to Review - Eliminate PR coordination overhead
             <li>Security questionnaire support</li>
           </ul>
         </div>
-      </div>
+      </article>
     </div>
 
     <div class="info-box" style="margin-top: 40px;">
@@ -185,7 +185,7 @@ title: Ready to Review - Eliminate PR coordination overhead
     <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px;">
       <p style="font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--white);">Ready to merge 20X faster?</p>
       <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">Sign up takes 30 seconds. Free for open source projects, forever.</p>
-      <a href="https://github.com/apps/ready-to-review-beta" style="display: inline-block; background: var(--cyan); color: var(--black); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);">Start Now →</a>
+      <a href="https://github.com/apps/ready-to-review-beta" role="button" aria-label="Install Ready to Review GitHub App" style="display: inline-block; background: var(--cyan); color: var(--black); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);">Start Now →</a>
       <p style="margin-top: 30px; font-size: 16px; color: var(--white);">Questions? Email <a href="mailto:go-faster@codegroove.dev" style="color: var(--cyan); text-decoration: underline;">go-faster@codegroove.dev</a></p>
     </div>
   </div>
