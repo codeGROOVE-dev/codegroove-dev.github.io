@@ -1222,3 +1222,13 @@ button,
         font-size: 36px !important;
     }
 }
+
+/* Text-browser separator - invisible in graphical browsers, visible in Lynx */
+hr.text-separator {
+    border: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+}
