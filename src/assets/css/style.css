@@ -41,32 +41,42 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 12.5em;
-    height: 3em;
+    width: 17em;
+    height: 2.25em;
     background: var(--yellow);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     z-index: 101;
     filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 1));
+    transform: skewX(-20deg);
 }
 
 .nav-logo {
     position: absolute;
-    top: 8px;
+    top: 3px;
     left: 13px;
     z-index: 102;
+    height: 27.5px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo a {
     font-family: "Passion One", cursive;
-    font-size: 27.6px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 400;
     color: var(--black);
     text-decoration: none;
-    transform: rotate(-4deg);
+    transform: skewX(-20deg);
     display: inline-block;
     padding: 0;
-    letter-spacing: 0.5px;
+    letter-spacing: 3px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo .logo-prefix {
+    color: #888;
+    opacity: 0.75;
+    margin-right: 5px;
 }
 
 .nav-links {
@@ -77,7 +87,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 35px;
+    gap: 20px;
     height: 27.5px;
     align-items: center;
 }
@@ -99,6 +109,11 @@ body {
 
 .nav-links a:hover {
     color: var(--cyan);
+}
+
+.nav-links .bracket {
+    color: #888;
+    opacity: 0.75;
 }
 
 /* Hero Section */
@@ -311,7 +326,7 @@ body {
     font-family: "Passion One", cursive;
     font-size: 56px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: var(--yellow);
     letter-spacing: 1px;
 }
@@ -785,16 +800,17 @@ body {
 @media (max-width: 768px) {
     .nav-logo {
         left: 10px;
-        top: 10px;
+        top: 2px;
     }
 
     .nav-logo a {
         font-size: 20px;
+        letter-spacing: 2px;
     }
 
     .nav-accent-angle {
-        width: 9em;
-        height: 2.5em;
+        width: 12em;
+        height: 2em;
     }
 
     .nav-links {
