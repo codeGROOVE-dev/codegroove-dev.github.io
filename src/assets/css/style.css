@@ -365,7 +365,7 @@ body {
     content: "❧";
     position: absolute;
     left: 0;
-    color: var(--cyan);
+    color: #888;
     font-size: 20px;
 }
 
