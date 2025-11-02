@@ -67,7 +67,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 15.5em;
+    width: 11.5em;
     height: 2.25em;
     background: var(--yellow);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
@@ -88,14 +88,14 @@ body {
 
 .nav-logo a {
     font-family: "Passion One", cursive;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 400;
     color: var(--black);
     text-decoration: none;
     transform: skewX(-20deg);
     display: inline-block;
     padding: 0;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -881,45 +881,78 @@ button,
 
 /* Responsive */
 @media (max-width: 768px) {
+    .nav {
+        height: 32px;
+    }
+
     .nav-logo {
         left: 10px;
-        top: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
     }
 
     .nav-logo a {
-        font-size: 20px;
-        letter-spacing: 2px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        transform: skewX(-20deg);
     }
 
     .nav-accent-angle {
-        width: 10.5em;
+        width: 8em;
         height: 2em;
     }
 
     .nav-links {
-        right: 15px;
-        gap: 15px;
-        font-size: 12px;
+        position: relative;
+        right: auto;
+        gap: 8px;
+        font-size: 11px;
+        margin-left: auto;
+        margin-right: 10px;
+        height: 32px;
+    }
+
+    .nav-links a {
+        padding: 4px 8px;
+        min-height: 32px;
+    }
+
+    .nav-links .bracket {
+        display: none;
     }
 
     .hero {
         justify-content: center;
-        padding-right: 20px;
+        padding: 60px 20px 40px;
     }
 
     .hero-content {
-        margin: 0 20px;
-        padding: 30px;
+        margin: 0;
+        padding: 24px;
+        max-width: 100%;
     }
 
     .hero-title {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .hero-highlight,
     .hero-list li,
     .hero-cta {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .content-hero {
+        padding: 60px 20px 40px;
+    }
+
+    .content-hero h1 {
+        font-size: 40px;
+    }
+
+    .content-hero h2 {
+        font-size: 28px;
     }
 
     .content-page {
@@ -947,5 +980,44 @@ button,
     .founder-portrait {
         width: 120px;
         height: 120px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .screenshot-grid {
+        gap: 20px;
+    }
+
+    .groove-card {
+        padding: 20px;
+    }
+
+    /* Override inline styles on mobile for R2R page boxes */
+    .content-hero-inner > div[style*="padding: 30px"] {
+        padding: 20px !important;
+    }
+
+    .content-hero-inner > div[style*="margin: 40px 0"] {
+        margin: 24px 0 !important;
+    }
+
+    .content-hero-inner div[style*="gap: 30px"] {
+        gap: 20px !important;
+    }
+
+    .content-hero-inner img[style*="width: 150px"] {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 24px"] {
+        font-size: 20px !important;
+    }
+
+    .content-hero-inner p[style*="font-size: 18px"] {
+        font-size: 16px !important;
     }
 }
