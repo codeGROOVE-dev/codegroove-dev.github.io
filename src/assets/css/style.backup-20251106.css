@@ -231,10 +231,10 @@ button,
     max-width: 550px;
     padding: 30px;
     background: var(--black);
-    border: 6px solid var(--cyan);
+    border: 8px solid var(--cyan);
     border-radius: 20px;
     margin: 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 2px 8px rgba(92, 225, 230, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
@@ -245,7 +245,6 @@ button,
     font-style: italic;
     color: var(--white);
     margin-bottom: 20px;
-    letter-spacing: 1.5px;
 }
 
 .hero-highlight {
@@ -390,12 +389,12 @@ button,
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--yellow);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .content-hero h2 {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 40px 0 20px;
     color: var(--yellow);
     letter-spacing: 0.5px;
