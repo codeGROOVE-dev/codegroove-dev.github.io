@@ -1,129 +1,100 @@
 ---
 layout: base.njk
-title: Ready to Review - Eliminate PR coordination overhead
+title: Ready to Review - PRs merge in an hour, not 4.5 days
 ---
 
-<section class="content-hero" aria-labelledby="page-title">
+<section class="content-hero">
   <img src="/assets/hero-bg.jpg" alt="" role="presentation" class="content-hero-bg" />
 
   <div class="content-hero-inner">
-    <h1 id="page-title">READY TO REVIEW</h1>
+    <h1>READY TO REVIEW</h1>
 
-    <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-        <picture style="flex-shrink: 0;">
-          <source srcset="/assets/review-goose.webp" type="image/webp">
-          <img src="/assets/review-goose.png" alt="Review Goose managing pull requests" style="width: 150px; height: 150px; flex-shrink: 0;" />
-        </picture>
-        <div style="flex: 1; min-width: 250px;">
-          <p style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #333;">ELIMINATE PR COORDINATION OVERHEAD.</p>
-          <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #666;">Clear accountability. Instant visibility. Zero management overhead.</p>
-        </div>
+    <div class="support-hero-card">
+      <picture style="flex-shrink: 0;">
+        <source srcset="/assets/review-goose.webp" type="image/webp">
+        <img src="/assets/review-goose.png" alt="Ready to Review" class="support-hero-image" />
+      </picture>
+      <div class="support-hero-content">
+        <p class="support-hero-title">PRs MERGE IN AN HOUR, NOT 4.5 DAYS</p>
+        <p class="support-hero-text">A deterministic state engine that shepherds pull requests to merge. Always knows whose turn it is. What's blocking progress. Who should act next.</p>
       </div>
     </div>
 
-    <hr class="text-separator" aria-hidden="true">
+    <div class="support-hero-card">
+      <div style="width: 100%;">
+      <h2 style="margin-top: 0; color: #333;">The Problem</h2>
+      <p>GitHub's native PR flow creates ambiguity. Nobody knows whose turn it is. PRs sit for 4.5 days on average (industry standard). Engineers context-switch constantly. Managers ask "what's blocking this?" in every standup.</p>
 
-    <div style="background: var(--black); border: 6px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0;">THE PROBLEM</h2>
-      <p style="font-size: 18px; margin-bottom: 20px;"><strong>Most engineering teams lose 10-15% of throughput to PR coordination overhead.</strong> For a 20-person team, that's <strong>$1M annually</strong> in lost productivity. Or 2-3 engineers worth of capacity just... gone.</p>
+      <p><strong>For a 20-person team, that's $1M annually in lost productivity.</strong> Or 2-3 engineers worth of capacity just... gone.</p>
 
-      <p><strong>Root cause:</strong> GitHub's notification system creates ambiguity. Nobody knows who's responsible for moving a PR forward. So PRs sit for 4.5 days on average.</p>
-
-      <p style="margin-bottom: 0;"><strong>The real cost:</strong> Frustrated engineers. Constant context switching. Endless status questions in stand-ups and Slack. Nobody's happy.</p>
-    </div>
-
-    <hr class="text-separator" aria-hidden="true">
-
-    <div style="background: var(--black); border: 6px solid var(--yellow); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0;">OUR SOLUTION</h2>
-      <p style="font-size: 18px; margin-bottom: 20px;">Ready-to-Review <strong>actively manages your PR workflow</strong>. Merge time drops from 4.5 days to <strong>under an hour</strong>. That's 20X faster. Get that 2-3 engineers worth of capacity back—without hiring.</p>
-      <ul style="font-size: 16px; line-height: 1.8;">
-        <li><strong>Intelligent reviewer assignment</strong>: Routes PRs to engineers who actually touched the code. Balanced by workload. Better reviews. Faster merges.</li>
-        <li><strong>Turn-based clarity</strong>: Always knows whose turn it is. What needs to happen next. No more status meetings. No more Slack ping-pong.</li>
-        <li><strong>Multi-channel notifications</strong>: Native desktop alerts via <a href="https://github.com/codeGROOVE-dev/goose">Goose</a> (macOS, Linux, Windows) and Slack. Get notified at the right moment. Not constantly.</li>
-        <li><strong>Org-wide visibility</strong>: Track every PR across your entire organization. Zero configuration. Spot bottlenecks. Recognize contributors. Measure improvement.</li>
-      </ul>
-      <p style="margin-top: 20px; margin-bottom: 0;"><a href="https://cost.github.codegroove.app/?mode=org">Calculate your team's cost savings →</a></p>
-    </div>
-
-    <hr class="text-separator" aria-hidden="true">
-
-    <div style="background: linear-gradient(135deg, var(--yellow) 0%, #ffd700 100%); border: 6px solid var(--black); border-radius: 20px; padding: 40px; margin: 40px 0; box-shadow: 0 8px 32px rgba(255, 215, 0, 0.5); text-align: center;">
-      <p style="font-size: 32px; font-weight: 900; margin: 0 0 15px 0; color: var(--black); text-transform: uppercase; letter-spacing: 1.5px;">🚀 SHIPPING NOVEMBER 2025</p>
-      <p style="font-size: 20px; margin: 0 0 20px 0; color: var(--black); font-weight: 600;">For engineering teams and open-source projects worldwide.</p>
-      <p style="font-size: 18px; margin: 0; color: var(--black); font-weight: 600;">🎯 Looking for design partners to shape the product</p>
-    </div>
-
-    <hr class="text-separator" aria-hidden="true">
-
-    <h2>HOW IT WORKS</h2>
-    <div style="background: var(--black); border: 6px solid var(--cyan); border-radius: 20px; padding: 30px; margin: 40px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <p style="font-size: 18px; margin-bottom: 20px;">A <strong>deterministic state machine</strong> tracks every PR in your organization. Knows who should act next. Knows what needs to happen. Clear accountability. Zero manual coordination.</p>
-      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px; margin-bottom: 0;">
-        <a href="https://docs.ready-to-review.dev" style="color: var(--cyan); text-decoration: underline; font-weight: 600;">📚 Read the documentation →</a>
-        <a href="https://github.com/codeGROOVE-dev/architecture/blob/main/README.md" style="color: var(--cyan); text-decoration: underline;">View the architectural diagram →</a>
+      <div class="roi-calculator">
+        <h3>Calculate Your GitHub Org's Savings</h3>
+        <p>See what PR coordination overhead costs your GitHub organization—and how much you'll save. Uses public repos only. For private repos, run <a href="https://github.com/codeGROOVE-dev/prcost">prcost</a> locally.</p>
+        <form class="roi-form" action="https://cost.github.codegroove.app/" method="get" target="_blank">
+          <input type="hidden" name="sample" value="50">
+          <input type="hidden" name="days" value="60">
+          <input type="hidden" name="mode" value="org">
+          <div class="roi-form-group">
+            <label for="github-org" class="roi-form-label">Your GitHub Organization</label>
+            <input
+              type="text"
+              id="github-org"
+              name="org"
+              class="roi-form-input"
+              placeholder="kubernetes"
+              required
+              aria-label="GitHub organization name"
+            />
+          </div>
+          <button type="submit" class="roi-form-button">Calculate Cost</button>
+        </form>
       </div>
 
-      <h3 style="color: var(--yellow); margin-top: 30px; margin-bottom: 15px;">BUILT FOR SCALE</h3>
-      <ul style="margin: 0; padding-left: 20px;">
-        <li style="margin-bottom: 12px;"><strong>Global teams</strong>: Timezone-aware. Assigns reviewers during their active hours. Works for distributed teams.</li>
-        <li style="margin-bottom: 12px;"><strong>Analytics</strong>: Team leaderboards. Contributor recognition. Bottleneck identification. Track velocity improvements.</li>
-        <li style="margin-bottom: 12px;"><strong>Zero config</strong>: Works with your existing GitHub workflow. No training. No process changes. Install and go.</li>
-        <li style="margin-bottom: 0;"><strong>Security-first</strong>: Minimal GitHub permissions. Choose which repos to monitor. No code access required.</li>
-      </ul>
+      <h2>How It Works</h2>
+      <p>A deterministic state machine tracks every PR in your organization—shepherding them from open to merged. At each stage, it knows what needs to happen next and who should do it.</p>
+
+      <h3>When a PR Opens</h3>
+      <p>If the author or CODEOWNERS hasn't already assigned reviewers, the system does it automatically based on who actually touched the code. Git history shows who knows this code and who has recently contributed to it.</p>
+
+      <p>Workload gets balanced automatically. If someone already has 9 active PRs, they're skipped. Assignments respect timezones—reviewers in active hours get priority. Bots get filtered out.</p>
+
+      <p>Result: The right people see it immediately.</p>
+
+      <h3>During Review</h3>
+      <p>Every PR shows exactly whose turn it is and what needs to happen next. The author needs to fix failing tests. The reviewer needs to approve changes. Someone needs to resolve merge conflicts. No ambiguity about who's responsible.</p>
+
+      <p>Notifications go out only when the state changes—when CI fails, when review is requested, when changes get pushed. Not for every comment thread. Just when someone needs to act.</p>
+
+      <p>Result: Engineers know what's blocking their work without asking in Slack or standups.</p>
+
+      <h3>Anytime</h3>
+      <p>Engineers can always see which work they're blocking by checking the dashboard, the Goose desktop app, or the Slack app. Daily reminders arrive at 8-9am in each person's local timezone, so nothing gets forgotten.</p>
+
+      <p>Result: Nothing falls through the cracks.</p>
+
+      <h3>For More Information</h3>
+      <p>Technical details, architecture diagrams, and API documentation: <a href="https://docs.ready-to-review.dev/">docs.ready-to-review.dev</a></p>
+      </div>
     </div>
 
-    <hr class="text-separator" aria-hidden="true">
-
-    <h2>SCREENSHOTS</h2>
-    <p style="margin-bottom: 30px;">Ready to Review integrates seamlessly with your existing workflow through multiple notification channels. Get real-time PR status updates in Slack channels showing CI checks and reviewer assignments. View your personal dashboard directly in the Slack app home with assigned PRs and review requests. Receive native desktop notifications on macOS, Linux, or Windows via the Goose app with one-click actions. Track all pull requests across your entire organization in the centralized web dashboard with status indicators and next actions.</p>
-    <div class="screenshot-grid">
-      <figure class="screenshot-item">
-        <a href="/assets/screenshots/slack-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Slack channel notifications screenshot (opens in new tab)">
-          <picture>
-            <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
-            <img src="/assets/screenshots/slack-screenshot.png" alt="Slack channel showing Ready to Review bot posting PR status updates including CI checks and reviewer assignments" loading="lazy" />
-          </picture>
-        </a>
-        <figcaption class="screenshot-caption">Slack integration → No tool switching needed</figcaption>
-      </figure>
-      <figure class="screenshot-item">
-        <a href="/assets/screenshots/slack-screenshot-home.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Slack app home screenshot (opens in new tab)">
-          <picture>
-            <source srcset="/assets/screenshots/slack-screenshot-home.webp" type="image/webp">
-            <img src="/assets/screenshots/slack-screenshot-home.png" alt="Slack app home displaying personal dashboard with assigned PRs, review requests, and activity summary" loading="lazy" />
-          </picture>
-        </a>
-        <figcaption class="screenshot-caption">Personal dashboard → Always know what's yours</figcaption>
-      </figure>
-      <figure class="screenshot-item">
-        <a href="/assets/screenshots/goose-screenshot.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Goose desktop notifications screenshot (opens in new tab)">
-          <picture>
-            <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
-            <img src="/assets/screenshots/goose-screenshot.png" alt="Native desktop notification from Goose showing PR review request with one-click action to open in browser" loading="lazy" />
-          </picture>
-        </a>
-        <figcaption class="screenshot-caption">Desktop notifications → Stay in your flow</figcaption>
-      </figure>
-      <figure class="screenshot-item">
-        <a href="/assets/screenshots/r2r-800.png" target="_blank" rel="noopener noreferrer" aria-label="View full size Ready to Review web dashboard screenshot (opens in new tab)">
-          <picture>
-            <source srcset="/assets/screenshots/r2r-800.webp" type="image/webp">
-            <img src="/assets/screenshots/r2r-800.png" alt="Ready to Review web dashboard displaying list of pull requests with status indicators, assigned reviewers, and next action needed" loading="lazy" />
-          </picture>
-        </a>
-        <figcaption class="screenshot-caption">Org-wide visibility → Spot bottlenecks instantly</figcaption>
-      </figure>
+    <div class="product-video">
+      <h2>See It In Action</h2>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/2A72t6JKUYU"
+          title="Ready to Review Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
 
-    <hr class="text-separator" aria-hidden="true">
-
-    <h2 id="pricing-section">PRICING</h2>
+    <h2 id="pricing-section">Pricing</h2>
     <div class="pricing-grid" role="list" aria-labelledby="pricing-section">
-      <article class="pricing-tier" role="listitem" aria-labelledby="tier-grassroots">
+      <article class="pricing-tier" role="listitem">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name" id="tier-grassroots">Grass Roots</h3>
+          <h3 class="pricing-tier-name">Grass Roots</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-amount">Free</span>
           </div>
@@ -132,17 +103,16 @@ title: Ready to Review - Eliminate PR coordination overhead
           <p class="pricing-tier-description">For open-source projects</p>
           <ul class="pricing-features">
             <li>Automated reviewer assignments</li>
-            <li>Real-time notifications via app or Slack</li>
             <li>Turn-based PR tracking</li>
-            <li>Analytics</li>
-            <li>Leaderboard</li>
+            <li>Real-time notifications</li>
+            <li>Analytics & leaderboard</li>
           </ul>
         </div>
       </article>
 
-      <article class="pricing-tier pricing-tier-featured" role="listitem" aria-labelledby="tier-superfan">
+      <article class="pricing-tier pricing-tier-featured" role="listitem">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name" id="tier-superfan">Super-fan</h3>
+          <h3 class="pricing-tier-name">Super-fan</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">1</span><span class="pricing-price-period">/mo</span>
           </div>
@@ -156,17 +126,17 @@ title: Ready to Review - Eliminate PR coordination overhead
         </div>
       </article>
 
-      <article class="pricing-tier pricing-tier-featured" role="listitem" aria-labelledby="tier-mainstage">
+      <article class="pricing-tier pricing-tier-featured" role="listitem">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name" id="tier-mainstage">Main Stage</h3>
+          <h3 class="pricing-tier-name">Main Stage</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">6</span><span class="pricing-price-period">/mo</span>
           </div>
         </div>
         <div class="pricing-tier-body">
-          <p class="pricing-tier-description">For engineering teams that move fast</p>
+          <p class="pricing-tier-description">For engineering teams</p>
           <ul class="pricing-features">
-            <li><strong>Support for private repos</strong></li>
+            <li>Private repo support</li>
             <li>Org-specific workspace</li>
             <li>Team leaderboards & insights</li>
             <li>Priority support</li>
@@ -174,15 +144,15 @@ title: Ready to Review - Eliminate PR coordination overhead
         </div>
       </article>
 
-      <article class="pricing-tier" role="listitem" aria-labelledby="tier-funkmaster">
+      <article class="pricing-tier" role="listitem">
         <div class="pricing-tier-header">
-          <h3 class="pricing-tier-name" id="tier-funkmaster">Funk Master</h3>
+          <h3 class="pricing-tier-name">Funk Master</h3>
           <div class="pricing-tier-price">
             <span class="pricing-price-currency">$</span><span class="pricing-price-amount">12</span><span class="pricing-price-period">/mo</span>
           </div>
         </div>
         <div class="pricing-tier-body">
-          <p class="pricing-tier-description">Extra support for complicated orgs</p>
+          <p class="pricing-tier-description">For enterprise orgs</p>
           <ul class="pricing-features">
             <li><strong>Everything in Main Stage, plus:</strong></li>
             <li>Custom contracts & DPAs</li>
@@ -192,24 +162,29 @@ title: Ready to Review - Eliminate PR coordination overhead
       </article>
     </div>
 
-    <div class="info-box" style="margin-top: 40px;">
-      <p class="info-box-highlight">All plans are billed through the GitHub Marketplace</p>
-      <p>Start with Grass Roots (free forever) and upgrade anytime. Paid plans include a 2-week free trial. No credit card required.</p>
+    <div class="info-box" style="margin-top: 30px;">
+      <p class="info-box-highlight">All plans billed through GitHub Marketplace</p>
+      <p style="margin-bottom: 0;">Start free. Upgrade anytime. Paid plans include 2-week trial. No credit card required.</p>
     </div>
 
-    <hr class="text-separator" aria-hidden="true">
-
-    <h2>GET STARTED</h2>
-    <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px;">
-      <p style="font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--white); letter-spacing: 0.5px;">RECLAIM 10-15% OF YOUR TEAM'S THROUGHPUT.</p>
-      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">Start with one team. Or your entire org. No training. Works with your existing workflow. Free for open-source projects.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
-        <a href="https://github.com/apps/ready-to-review-beta" role="button" aria-label="Install Ready to Review GitHub App" style="display: inline-block; background: var(--cyan); color: var(--black); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);">Install on GitHub →</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" role="button" aria-label="Become a design partner" style="display: inline-block; background: var(--white); color: var(--black); padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);">Become a Design Partner</a>
+    <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px; margin-top: 50px;">
+      <p style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: var(--white);">RECLAIM 10-15% OF YOUR TEAM'S THROUGHPUT</p>
+      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">Two-minute setup. Works with your existing workflow. Free for open source.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://docs.ready-to-review.dev/getting-started/" class="cta-button cta-button--green">Get Started</a>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Schedule a Call</a>
       </div>
-      <p style="font-size: 14px; color: var(--cyan); margin-bottom: 20px;">2-minute setup • No credit card • Free for open-source</p>
-      <p style="margin-top: 30px; font-size: 16px; color: var(--white);">Want to learn more first? <a href="https://docs.ready-to-review.dev" style="color: var(--cyan); text-decoration: underline; font-weight: 600;">Read the documentation</a></p>
-      <p style="margin-top: 15px; font-size: 16px; color: var(--white);">Questions? Want a demo? <a href="mailto:go-faster@codegroove.dev" style="color: var(--cyan); text-decoration: underline;">go-faster@codegroove.dev</a></p>
     </div>
   </div>
 </section>
+
+<script>
+// Form validation and accessibility
+document.getElementById('github-org')?.addEventListener('invalid', function(e) {
+  e.target.setCustomValidity('Please enter your GitHub organization name');
+});
+
+document.getElementById('github-org')?.addEventListener('input', function(e) {
+  e.target.setCustomValidity('');
+});
+</script>
