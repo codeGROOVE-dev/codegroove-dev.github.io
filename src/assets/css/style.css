@@ -60,20 +60,20 @@ body {
     justify-content: space-between;
     align-items: center;
     background: var(--yellow);
-    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 1));
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.9));
 }
 
 .nav-accent-angle {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 11.5em;
-    height: 2.25em;
+    width: 11.1em;
+    height: calc(2.25em - 2px);
     background: var(--yellow);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     z-index: 101;
-    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 1));
-    transform: skewX(-20deg);
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.9));
+    transform: skewX(-10deg);
 }
 
 .nav-logo {
@@ -92,7 +92,7 @@ body {
     font-weight: 400;
     color: var(--black);
     text-decoration: none;
-    transform: skewX(-20deg);
+    transform: skewX(-10deg);
     display: inline-block;
     padding: 0;
     letter-spacing: 1px;
@@ -127,7 +127,7 @@ body {
 }
 
 .nav-links li:not(:last-child)::after {
-    content: "•";
+    content: "/";
     color: #888;
     opacity: 0.75;
     margin-left: 8px;
@@ -193,6 +193,7 @@ button,
     overflow: hidden;
     padding-right: 40px;
     padding-top: 80px;
+    padding-bottom: 140px;
 }
 
 .hero.hero-left {
@@ -285,19 +286,19 @@ button,
 
 .hero-button {
     display: inline-block;
-    background: var(--cyan);
+    background: var(--yellow);
     color: var(--black);
     padding: 12px 28px;
     border-radius: 8px;
     font-weight: 700;
     font-size: 16px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 12px rgba(92, 225, 230, 0.4);
+    box-shadow: 0 4px 12px rgba(255, 232, 56, 0.4);
 }
 
 .hero-clickable:hover .hero-button {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(92, 225, 230, 0.6);
+    box-shadow: 0 6px 20px rgba(255, 232, 56, 0.6);
 }
 
 /* Product Box Styles */
@@ -1239,4 +1240,23 @@ hr.text-separator {
     padding: 0;
     opacity: 0;
     overflow: hidden;
+}
+
+/* Prevent hero overlap on short viewports */
+@media (max-height: 700px) {
+    .hero {
+        padding-bottom: 160px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        padding: 24px;
+    }
+}
+
+@media (max-height: 600px) {
+    .hero {
+        padding-bottom: 180px;
+        align-items: center;
+    }
 }
