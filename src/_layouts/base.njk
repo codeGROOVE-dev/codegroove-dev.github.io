@@ -27,17 +27,70 @@
     <div class="nav-logo">
       <a href="/"><span class="logo-prefix">≡</span>codeGROOVE</a>
     </div>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
     <ul class="nav-links">
       <li><a href="/about/">about</a></li>
-      <li><a href="/products/ready-to-review/">products</a></li>
+      <li><a href="/products/ready-to-review/">Ready to Review</a></li>
       <li><a href="/support/">support</a></li>
       <li><a href="/security/">security</a></li>
       <li><a href="/opensource/">opensource</a></li>
     </ul>
   </nav>
+  <div class="nav-overlay"></div>
 
   <main id="main-content">
     {{ content | safe }}
   </main>
+
+  <script>
+    (function() {
+      const hamburger = document.querySelector('.nav-hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      const overlay = document.querySelector('.nav-overlay');
+      const body = document.body;
+
+      function toggleMenu() {
+        const isOpen = navLinks.classList.contains('nav-links--open');
+
+        if (isOpen) {
+          navLinks.classList.remove('nav-links--open');
+          overlay.classList.remove('nav-overlay--visible');
+          body.classList.remove('nav-open');
+          hamburger.classList.remove('nav-hamburger--active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        } else {
+          navLinks.classList.add('nav-links--open');
+          overlay.classList.add('nav-overlay--visible');
+          body.classList.add('nav-open');
+          hamburger.classList.add('nav-hamburger--active');
+          hamburger.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking a link
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('nav-links--open')) {
+            toggleMenu();
+          }
+        });
+      });
+
+      // Close menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('nav-links--open')) {
+          toggleMenu();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
