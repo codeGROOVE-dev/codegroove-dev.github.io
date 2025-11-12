@@ -1,20 +1,49 @@
 ---
 layout: base.njk
-title: Products
+title: Products - Code Groove Developer Tools
 permalink: /products/index.html
 eleventyExcludeFromCollections: true
 ---
 
-<script>
-  window.location.replace("/products/ready-to-review/");
-</script>
-
-<noscript>
-  <meta http-equiv="refresh" content="0; url=/products/ready-to-review/">
-</noscript>
-
 <section class="content-hero">
+  <img src="/assets/hero-bg.jpg" alt="" role="presentation" class="content-hero-bg" />
+
   <div class="content-hero-inner">
-    <p>Redirecting to <a href="/products/ready-to-review/">Ready to Review</a>...</p>
+    <h1>PRODUCTS</h1>
+
+    <div class="support-hero-card" style="margin-top: 40px;">
+      <picture style="flex-shrink: 0;">
+        <source srcset="/assets/review-goose.webp" type="image/webp">
+        <img src="/assets/review-goose.png" alt="Ready to Review" class="support-hero-image" />
+      </picture>
+      <div class="support-hero-content">
+        <h2 style="margin-top: 0;"><a href="/products/ready-to-review/" style="color: var(--cyan); text-decoration: none;">READY TO REVIEW</a></h2>
+        <p class="support-hero-text" style="font-size: 18px; margin-bottom: 20px;">Hyper-intelligent pull request notifications and automated reviewer assignments for teams that ship fast.</p>
+        <a href="/products/ready-to-review/" class="cta-button">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="support-hero-card" style="margin-top: 40px;">
+      <picture style="flex-shrink: 0;">
+        <source srcset="/assets/goose-logo-small.png" type="image/png">
+        <img src="/assets/goose-logo-small.png" alt="Goose" class="support-hero-image" />
+      </picture>
+      <div class="support-hero-content">
+        <h2 style="margin-top: 0;"><a href="/products/goose/" style="color: var(--cyan); text-decoration: none;">GOOSE</a></h2>
+        <p class="support-hero-text" style="font-size: 18px; margin-bottom: 20px;">Native menubar app for tracking PRs blocked on you - built for individuals (no permission required).</p>
+        <a href="/products/goose/" class="cta-button">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px; margin-top: 50px;">
+      <p style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: var(--white);">NOT SURE WHICH ONE IS RIGHT FOR YOU?</p>
+      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">We're here to help. Get in touch.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="find-your-fit">Email us</a>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
+      </div>
+    </div>
   </div>
 </section>
+
+<script src="/assets/js/contact.js"></script>

@@ -34,8 +34,8 @@ title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignmen
     </div>
 
     <div class="groove-card groove-card--green" style="padding: 40px; margin-top: 30px;">
-      <h2 style="margin-top: 0; color: var(--black);">Calculate What PR Delays Cost Your Team</h2>
-      <p style="color: var(--black);">See the real dollar impact. Public repos only. For private repos, run <a href="https://github.com/codeGROOVE-dev/prcost" style="color: var(--black); text-decoration: underline;">prcost</a> locally.</p>
+      <h2 style="margin-top: 0; color: var(--white);">Calculate What PR Delays Cost Your Team</h2>
+      <p style="color: var(--white);">See the real dollar impact. Public repos only. For private repos, run <a href="https://github.com/codeGROOVE-dev/prcost" style="color: var(--yellow); text-decoration: underline;">prcost</a> locally.</p>
       <form class="roi-form" action="https://cost.github.codegroove.app/" method="get" target="_blank" style="margin-top: 25px;">
         <input type="hidden" name="sample" value="50">
         <input type="hidden" name="days" value="60">
@@ -82,6 +82,11 @@ title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignmen
       </div>
     </div>
 
+    <div class="groove-card" style="padding: 40px; margin-top: 30px;">
+      <h2 style="margin-top: 0; color: var(--white);">Don't Have Permission for GitHub or Slack Apps?</h2>
+      <p style="color: var(--white); font-size: 16px; margin-bottom: 0;">Try <a href="/products/goose/" style="color: var(--cyan); text-decoration: underline; font-weight: 700;">Goose</a> - our individual contributor tool that runs entirely on your machine. No GitHub app installation. No Slack permissions. Authenticates using the GitHub CLI.</p>
+    </div>
+
     <div class="product-video">
       <h2>See It In Action</h2>
       <div style="display: flex; flex-direction: column; gap: 20px;">
@@ -90,7 +95,7 @@ title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignmen
           <a href="/assets/screenshots/slack-screenshot.png" target="_blank" style="display: block;">
             <picture>
               <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
-              <img src="/assets/screenshots/slack-screenshot.png" alt="Ready to Review Slack Integration" style="width: 100%; border: 4px solid var(--yellow); border-radius: 12px; cursor: pointer;" />
+              <img src="/assets/screenshots/slack-screenshot.png" alt="Ready to Review Slack Integration" style="width: 100%; border: 4px solid #3a3a3a; border-radius: 12px; cursor: pointer;" />
             </picture>
           </a>
         </div>
@@ -99,7 +104,7 @@ title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignmen
           <a href="/assets/screenshots/goose-screenshot.png" target="_blank" style="display: block;">
             <picture>
               <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
-              <img src="/assets/screenshots/goose-screenshot.png" alt="Ready to Review Goose Desktop App" style="width: 100%; border: 4px solid var(--yellow); border-radius: 12px; cursor: pointer;" />
+              <img src="/assets/screenshots/goose-screenshot.png" alt="Ready to Review Goose Desktop App" style="width: 100%; border: 4px solid #3a3a3a; border-radius: 12px; cursor: pointer;" />
             </picture>
           </a>
         </div>
@@ -107,20 +112,15 @@ title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignmen
     </div>
 
     <h2 id="pricing-section">Pricing</h2>
-
-<p><strong>Free until 2026!</strong> Afterwards: Free for public repos. $1/mo individuals. $6/mo/user for teams.</p>
-
-    <div class="info-box" style="margin-top: 30px;">
-      <p class="info-box-highlight">OPEN BETA FOR KUBECON - TRY IT NOW!</p>
-      <p style="margin-bottom: 0;">No credit card. 2-week trial on paid plans.</p>
-    </div>
+    <p><strong>Free forever for open-source public repositories.</strong> Starting in 2026: $1/month for individuals, $6/month/user for teams.</p>
 
     <div class="groove-card groove-card--yellow" style="text-align: center; padding: 40px; margin-top: 50px;">
-      <p style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: var(--white);">MERGE FASTER. STAY IN FLOW.</p>
-      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">One-minute setup. Free for open source.</p>
+      <p style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: var(--white);">GET STARTED IN ONE MINUTE</p>
+      <p style="margin-bottom: 30px; font-size: 18px; color: var(--white);">Open beta. Free for open source. No credit card required.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="https://docs.ready-to-review.dev/getting-started/" class="cta-button cta-button--green">Get Started</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Schedule a Call</a>
+        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="move-faster">Email us</a>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
       </div>
     </div>
   </div>
@@ -136,3 +136,5 @@ document.getElementById('github-org')?.addEventListener('input', function(e) {
   e.target.setCustomValidity('');
 });
 </script>
+
+<script src="/assets/js/contact.js"></script>

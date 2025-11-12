@@ -552,6 +552,11 @@ button,
     border-color: var(--yellow);
 }
 
+.groove-card--green {
+    background: #10b981;
+    border-color: #059669;
+}
+
 .card-title {
     font-size: 20px;
     font-weight: 700;
@@ -590,6 +595,17 @@ button,
 
 .cta-button--green:hover {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+    text-decoration: none !important;
+}
+
+.cta-button--yellow {
+    background: var(--yellow);
+    color: var(--black) !important;
+    box-shadow: 0 4px 12px rgba(255, 232, 56, 0.4);
+}
+
+.cta-button--yellow:hover {
+    box-shadow: 0 6px 20px rgba(255, 232, 56, 0.6);
     text-decoration: none !important;
 }
 
@@ -808,6 +824,18 @@ button,
 .support-hero-card a {
     color: #0066cc !important;
     font-weight: 600;
+}
+
+.support-hero-card table {
+    color: #333 !important;
+}
+
+.support-hero-card th {
+    color: #333 !important;
+}
+
+.support-hero-card td {
+    color: #333 !important;
 }
 
 .support-section {
