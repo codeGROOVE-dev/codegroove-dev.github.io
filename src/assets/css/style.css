@@ -318,7 +318,7 @@ button,
 
 .hero-content {
     position: relative;
-    max-width: 550px;
+    max-width: 700px;
     padding: calc(var(--space) * 4);
     background: var(--black);
     border: 4px solid var(--cyan);
