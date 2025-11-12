@@ -674,6 +674,93 @@ button,
     font-weight: 600;
 }
 
+/* Products Page Specific Styles */
+.products-mission {
+    font-size: clamp(18px, 2vw + 14px, 22px);
+    color: var(--cyan);
+    margin-bottom: calc(var(--space) * 4);
+    font-weight: 600;
+}
+
+.product-badge {
+    display: inline-block;
+    font-size: clamp(13px, 1vw + 11px, 14px);
+    color: #666 !important;
+    font-weight: 600;
+    margin-bottom: calc(var(--space) * 2);
+    letter-spacing: 0.3px;
+}
+
+.product-features {
+    list-style: none;
+    margin: calc(var(--space) * 2) 0 calc(var(--space) * 3) 0;
+    padding: 0;
+}
+
+.product-features li {
+    padding-left: calc(var(--space) * 3);
+    position: relative;
+    margin-bottom: calc(var(--space) * 1.5);
+    line-height: var(--leading);
+    color: #333 !important;
+}
+
+.product-features li::before {
+    content: "•";
+    position: absolute;
+    left: var(--space);
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: clamp(18px, 1.5vw + 14px, 22px);
+}
+
+.product-features a {
+    color: #0066cc !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.card--comparison {
+    background: rgba(92, 225, 230, 0.05);
+    border: 2px solid rgba(92, 225, 230, 0.3);
+    padding: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 5);
+}
+
+.card--comparison h3 {
+    margin-top: 0;
+    margin-bottom: calc(var(--space) * 2);
+    font-size: clamp(20px, 2vw + 16px, 24px);
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+.comparison-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comparison-list li {
+    padding-left: calc(var(--space) * 3);
+    position: relative;
+    margin-bottom: calc(var(--space) * 2);
+    line-height: var(--leading);
+    font-size: clamp(16px, 1vw + 14px, 18px);
+}
+
+.comparison-list li:last-child {
+    margin-bottom: 0;
+}
+
+.comparison-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-weight: 700;
+}
+
 /* Card content components - work within white cards */
 .card__image {
     width: 150px;
@@ -806,6 +893,86 @@ button,
     line-height: var(--leading);
     color: var(--black) !important;
 }
+
+/* Product Page Cards - More Professional SaaS Layout */
+.card--white {
+    padding: calc(var(--space) * 5);
+    margin-bottom: calc(var(--space) * 5);
+}
+
+.card--white .support-hero-image {
+    width: 180px;
+    height: 180px;
+}
+
+.card--white h2 {
+    margin-top: 0;
+    margin-bottom: calc(var(--space) * 2);
+    font-size: clamp(26px, 2.5vw + 20px, 32px);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card--white h2 a {
+    color: var(--cyan) !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card--white h2 a:hover {
+    color: #000 !important;
+}
+
+.card--white .support-hero-text {
+    margin-bottom: calc(var(--space) * 3);
+    font-size: clamp(17px, 1.2vw + 14px, 19px);
+    line-height: 1.6;
+    color: #333 !important;
+}
+
+.card--white .cta-button {
+    margin-top: calc(var(--space) * 1);
+    padding: calc(var(--space) * 2) calc(var(--space) * 5);
+    font-size: clamp(15px, 1vw + 13px, 17px);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* Product CTA Card Styling */
+.card--yellow {
+    padding: calc(var(--space) * 6);
+    border: 4px solid var(--yellow);
+    background: rgba(255, 232, 56, 0.1);
+}
+
+.product-card__cta-title {
+    font-size: clamp(20px, 2vw + 16px, 24px);
+    font-weight: 700;
+    margin-bottom: calc(var(--space) * 2);
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.product-card__cta-text {
+    font-size: clamp(16px, 1vw + 14px, 18px);
+    margin-bottom: calc(var(--space) * 3);
+    color: var(--white);
+}
+
+.product-card__links {
+    display: flex;
+    gap: calc(var(--space) * 2);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Utility Classes */
+.u-mt-0 { margin-top: 0 !important; }
+.u-mt-20 { margin-top: calc(var(--space) * 2.5) !important; }
+.u-mt-40 { margin-top: calc(var(--space) * 5) !important; }
+.u-mb-20 { margin-bottom: calc(var(--space) * 2.5) !important; }
+.u-mb-40 { margin-bottom: calc(var(--space) * 5) !important; }
+.u-flex-shrink-0 { flex-shrink: 0 !important; }
 
 /* White card with full-width content */
 .card--white-full h2 {
