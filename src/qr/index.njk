@@ -9,84 +9,82 @@ title: Welcome
   <div class="content-hero-inner">
     <h1>YOU'RE AWESOME!</h1>
 
-    <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-      <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-        <img src="/assets/goose-clap.png" alt="Goose clapping in recognition" style="width: 150px; height: 150px; flex-shrink: 0;" />
-        <div style="flex: 1; min-width: 250px;">
-          <p style="margin: 0 0 10px 0; font-size: 24px; font-weight: 700; color: #333;">DUDE, YOU'RE AT KUBECON TOO?</p>
-          <p style="margin: 0 0 15px 0; font-size: 18px; color: #333;">THANKS FOR SCANNING THE QR CODE.</p>
-          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #333;">Built by former Kubernetes contributors who got tired of waiting days for PR reviews. We're on a mission to eliminate code review latency—helping teams merge code 20X faster while keeping developers in flow.</p>
-        </div>
+    <div class="card card--white u-mb-30">
+      <img src="/assets/goose-clap.png" alt="Goose clapping in recognition" class="card__image" />
+      <div class="card__content">
+        <p class="card__title u-mb-10">DUDE, YOU'RE AT KUBECON TOO?</p>
+        <p class="card__text u-mb-20 u-font-bold u-font-size-18">THANKS FOR SCANNING THE QR CODE.</p>
+        <p class="card__text">Built by former Kubernetes contributors who got tired of waiting days for PR reviews. We're on a mission to eliminate code review latency—helping teams merge code 20X faster while keeping developers in flow.</p>
       </div>
     </div>
 
-    <h2 style="margin-top: 40px;">OUR PRODUCTS</h2>
+    <h2 class="u-mt-40">OUR PRODUCTS</h2>
 
-    <div style="background: var(--black); border: 8px solid var(--yellow); border-radius: 20px; padding: 40px; margin: 30px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0; color: var(--yellow); font-size: 32px;">Ready to Review</h2>
-      <p style="font-size: 20px; font-weight: 600; color: var(--cyan); margin-bottom: 20px;">Hyper-Intelligent Pull Request Notification & Assignment System - for OSS, Startups, and Enterprises alike.</p>
-      <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;">Perfectly timed, actionable notifications that keep your team in flow. The right notification, at the right time, in the right place.</p>
+    <div class="card card--yellow">
+      <h2 class="product-card__title">Ready to Review</h2>
+      <p class="product-card__subtitle">Hyper-Intelligent Pull Request Notification & Assignment System - for OSS, Startups, and Enterprises alike.</p>
+      <p class="product-card__text">Perfectly timed, actionable notifications that keep your team in flow. The right notification, at the right time, in the right place.</p>
 
-      <div style="margin: 30px 0;">
-        <h3 style="margin-bottom: 15px; color: var(--cyan); font-size: 22px;">Why Teams Choose Us</h3>
-        <ul style="font-size: 17px; line-height: 1.8; margin: 0; padding-left: 0; list-style: none;">
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">✓</span>
+      <div class="product-card__section">
+        <h3 class="product-card__section-title">Why Teams Choose Us</h3>
+        <ul class="product-card__features">
+          <li>
+            <span class="icon icon--yellow">✓</span>
             <strong>Always know whose turn it is</strong> — deterministic state tracking eliminates ambiguity
           </li>
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">✓</span>
+          <li>
+            <span class="icon icon--yellow">✓</span>
             <strong>Stay in flow</strong> — get notified only when action is needed, not for every comment
           </li>
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">✓</span>
+          <li>
+            <span class="icon icon--yellow">✓</span>
             <strong>Work your way</strong> — Slack, Desktop (menubar/tray), or command-line integrations
           </li>
-          <li style="margin-bottom: 0; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--yellow); font-weight: 700;">✓</span>
+          <li>
+            <span class="icon icon--yellow">✓</span>
             <strong>Free for open source</strong> — forever, no strings attached
           </li>
         </ul>
       </div>
 
-      <p style="font-size: 16px; line-height: 1.6; margin-top: 25px; margin-bottom: 0;">Curious how much PR latency is costing your team? <a href="https://cost.github.codegroove.app/?mode=org" style="color: var(--cyan); text-decoration: underline; font-weight: 600;">Calculate your savings</a> with our free GitHub analyzer.</p>
+      <p class="product-card__text product-card__text--16 u-mb-0 u-mt-25">Curious how much PR latency is costing your team? <a href="https://cost.github.codegroove.app/?mode=org">Calculate your savings</a> with our free GitHub analyzer.</p>
 
-      <div style="text-align: center; margin-top: 35px;">
-        <a href="/products/ready-to-review/" class="cta-button cta-button--green" style="font-size: 18px; padding: 16px 32px;">Learn More & Get Started</a>
+      <div class="product-card__cta">
+        <a href="/products/ready-to-review/" class="cta-button cta-button--green">Learn More & Get Started</a>
       </div>
     </div>
 
-    <div style="background: var(--black); border: 8px solid var(--cyan); border-radius: 20px; padding: 40px; margin: 30px 0; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);">
-      <h2 style="margin-top: 0; color: var(--cyan); font-size: 32px;">Goose</h2>
-      <p style="font-size: 20px; font-weight: 600; color: var(--yellow); margin-bottom: 20px;">Native Menubar PR Notification App - Built for Individual Contributors</p>
-      <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;">Open-source desktop app that lives in your menubar (Mac) or system tray (Windows/Linux). Honks when it's your turn to act. No team permissions required.</p>
+    <div class="card card--cyan">
+      <h2 class="product-card__title product-card__title--cyan">Goose</h2>
+      <p class="product-card__subtitle product-card__subtitle--yellow">Native Menubar PR Notification App - Built for Individual Contributors</p>
+      <p class="product-card__text">Open-source desktop app that lives in your menubar (Mac) or system tray (Windows/Linux). Honks when it's your turn to act. No team permissions required.</p>
 
-      <div style="margin: 30px 0;">
-        <h3 style="margin-bottom: 15px; color: var(--yellow); font-size: 22px;">What You Get</h3>
-        <ul style="font-size: 17px; line-height: 1.8; margin: 0; padding-left: 0; list-style: none;">
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">🪿</span>
+      <div class="product-card__section">
+        <h3 class="product-card__section-title product-card__section-title--yellow">What You Get</h3>
+        <ul class="product-card__features">
+          <li>
+            <span class="icon icon--cyan">🪿</span>
             <strong>Honk notifications</strong> — When you're blocking someone's PR
           </li>
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">✈️</span>
+          <li>
+            <span class="icon icon--cyan">✈️</span>
             <strong>Jet sounds for your PRs</strong> — CI passes, reviews arrive, ready to merge
           </li>
-          <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">🧠</span>
+          <li>
+            <span class="icon icon--cyan">🧠</span>
             <strong>Turn-based tracking</strong> — Know whose court the ball is in
           </li>
-          <li style="margin-bottom: 0; padding-left: 30px; position: relative;">
-            <span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">🔒</span>
+          <li>
+            <span class="icon icon--cyan">🔒</span>
             <strong>Privacy first</strong> — Runs locally, no telemetry, your PRs stay yours
           </li>
         </ul>
       </div>
 
-      <p style="font-size: 16px; line-height: 1.6; margin-top: 25px; margin-bottom: 0; font-style: italic;">Trusted by Kubernetes core developers. Open source forever. <a href="/opensource/" style="color: var(--cyan); text-decoration: underline; font-weight: 600;">Learn more about our OSS commitment</a></p>
+      <p class="product-card__text product-card__text--16 u-text-italic u-mb-0 u-mt-25">Trusted by Kubernetes core developers. Open source forever. <a href="/opensource/">Learn more about our OSS commitment</a></p>
 
-      <div style="text-align: center; margin-top: 35px;">
-        <a href="/products/goose/" class="cta-button cta-button--green" style="font-size: 18px; padding: 16px 32px;">Learn More & Get Started</a>
+      <div class="product-card__cta">
+        <a href="/products/goose/" class="cta-button cta-button--green">Learn More & Get Started</a>
       </div>
     </div>
 
