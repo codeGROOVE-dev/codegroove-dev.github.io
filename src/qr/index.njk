@@ -13,78 +13,74 @@ title: Welcome
       <img src="/assets/goose-clap.png" alt="Goose clapping in recognition" class="card__image" />
       <div class="card__content">
         <p class="card__title u-mb-10">DUDE, YOU'RE AT KUBECON TOO?</p>
-        <p class="card__text u-mb-20 u-font-bold u-font-size-18">THANKS FOR SCANNING THE QR CODE.</p>
-        <p class="card__text">Built by former Kubernetes contributors who got tired of waiting days for PR reviews. We're on a mission to eliminate code review latency—helping teams merge code 20X faster while keeping developers in flow.</p>
+        <p class="card__text">Former Kubernetes maintainers. Built <a href="https://github.com/google/triage-party">Triage Party</a>. Now helping teams merge code 20X faster.</p>
       </div>
     </div>
 
-    <h2 class="u-mt-40">OUR PRODUCTS</h2>
+    <div class="card card--yellow card--product">
+      <picture class="product-card__image product-card__image--white-bg">
+        <source srcset="/assets/review-goose.webp" type="image/webp">
+        <img src="/assets/review-goose.png" alt="Ready to Review" />
+      </picture>
+      <div class="product-card__content">
+        <h2><a href="/products/ready-to-review/" style="color: var(--yellow); text-decoration: none;">Ready to Review</a></h2>
+        <p class="product-card__subtitle">Built for teams, adored by individual contributors</p>
+        <p class="product-card__text"><strong>Cut PR merge time from weeks to under an hour. No more begging for reviews.</strong></p>
 
-    <div class="card card--yellow">
-      <h2 class="product-card__title">Ready to Review</h2>
-      <p class="product-card__subtitle">Hyper-Intelligent Pull Request Notification & Assignment System - for OSS, Startups, and Enterprises alike.</p>
-      <p class="product-card__text">Perfectly timed, actionable notifications that keep your team in flow. The right notification, at the right time, in the right place.</p>
-
-      <div class="product-card__section">
-        <h3 class="product-card__section-title">Why Teams Choose Us</h3>
         <ul class="product-card__features">
-          <li>
-            <span class="icon icon--yellow">✓</span>
-            <strong>Always know whose turn it is</strong> — deterministic state tracking eliminates ambiguity
-          </li>
-          <li>
-            <span class="icon icon--yellow">✓</span>
-            <strong>Stay in flow</strong> — get notified only when action is needed, not for every comment
-          </li>
-          <li>
-            <span class="icon icon--yellow">✓</span>
-            <strong>Work your way</strong> — Slack, Desktop (menubar/tray), or command-line integrations
-          </li>
-          <li>
-            <span class="icon icon--yellow">✓</span>
-            <strong>Free for open source</strong> — forever, no strings attached
-          </li>
-        </ul>
-      </div>
+        <li>
+          <span class="icon icon--yellow">✓</span>
+          <strong>Live updates</strong> — never waste time on stale or broken PRs
+        </li>
+        <li>
+          <span class="icon icon--yellow">✓</span>
+          <strong>Smart assignments</strong> — right reviewer, every time
+        </li>
+        <li>
+          <span class="icon icon--yellow">✓</span>
+          <strong>Slack, Desktop, CLI</strong> — works where you work
+        </li>
+        <li>
+          <span class="icon icon--yellow">✓</span>
+          <strong>Free for open source</strong> — forever
+        </li>
+      </ul>
 
-      <p class="product-card__text product-card__text--16 u-mb-0 u-mt-25">Curious how much PR latency is costing your team? <a href="https://cost.github.codegroove.app/?mode=org">Calculate your savings</a> with our free GitHub analyzer.</p>
+      <p class="product-card__text product-card__text--16 u-mb-0 u-mt-25"><a href="https://cost.github.codegroove.app/?mode=org">Calculate your PR latency cost</a> (free GitHub analyzer)</p>
 
       <div class="product-card__cta">
-        <a href="/products/ready-to-review/" class="cta-button cta-button--green">Learn More & Get Started</a>
+          <a href="/products/ready-to-review/" class="cta-button cta-button--green">Learn More →</a>
+        </div>
       </div>
     </div>
 
-    <div class="card card--cyan">
-      <h2 class="product-card__title product-card__title--cyan">Goose</h2>
-      <p class="product-card__subtitle product-card__subtitle--yellow">Native Menubar PR Notification App - Built for Individual Contributors</p>
-      <p class="product-card__text">Open-source desktop app that lives in your menubar (Mac) or system tray (Windows/Linux). Honks when it's your turn to act. No team permissions required.</p>
+    <div class="card card--cyan card--product">
+      <picture class="product-card__image product-card__image--white-bg">
+        <img src="/assets/goose-logo-small.png" alt="Goose" />
+      </picture>
+      <div class="product-card__content">
+        <h2><a href="/products/goose/" style="color: var(--cyan); text-decoration: none;">Goose</a></h2>
+        <p class="product-card__text"><strong>Open-source menubar app. Honks when PRs are blocked on you.</strong></p>
+        <p class="product-card__text">No special permissions required. Mac, Windows, Linux.</p>
 
-      <div class="product-card__section">
-        <h3 class="product-card__section-title product-card__section-title--yellow">What You Get</h3>
         <ul class="product-card__features">
-          <li>
-            <span class="icon icon--cyan">🪿</span>
-            <strong>Honk notifications</strong> — When you're blocking someone's PR
-          </li>
-          <li>
-            <span class="icon icon--cyan">✈️</span>
-            <strong>Jet sounds for your PRs</strong> — CI passes, reviews arrive, ready to merge
-          </li>
-          <li>
-            <span class="icon icon--cyan">🧠</span>
-            <strong>Turn-based tracking</strong> — Know whose court the ball is in
-          </li>
-          <li>
-            <span class="icon icon--cyan">🔒</span>
-            <strong>Privacy first</strong> — Runs locally, no telemetry, your PRs stay yours
-          </li>
-        </ul>
-      </div>
-
-      <p class="product-card__text product-card__text--16 u-text-italic u-mb-0 u-mt-25">Trusted by Kubernetes core developers. Open source forever. <a href="/opensource/">Learn more about our OSS commitment</a></p>
+        <li>
+          <span class="icon icon--cyan">🪿</span>
+          <strong>Honk</strong> — when you're blocking someone
+        </li>
+        <li>
+          <span class="icon icon--cyan">✈️</span>
+          <strong>Jet sounds</strong> — when your PR is ready to merge
+        </li>
+        <li>
+          <span class="icon icon--cyan">🧠</span>
+          <strong>Turn-based tracking</strong> — know whose turn it is
+        </li>
+      </ul>
 
       <div class="product-card__cta">
-        <a href="/products/goose/" class="cta-button cta-button--green">Learn More & Get Started</a>
+          <a href="/products/goose/" class="cta-button cta-button--green">Learn More →</a>
+        </div>
       </div>
     </div>
 
