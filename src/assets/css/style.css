@@ -72,7 +72,7 @@ body {
     left: 0;
     right: 0;
     z-index: 100;
-    height: 48px;
+    height: 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,8 +84,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 11.1em;
-    height: 48px;
+    width: 13em;
+    height: 2.5em;
     background: var(--yellow);
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     z-index: 101;
@@ -95,24 +95,24 @@ body {
 
 .nav-logo {
     position: absolute;
-    top: 0;
-    left: calc(var(--space) * 2);
+    top: 3px;
+    left: 13px;
     z-index: 102;
-    height: 48px;
+    height: 2em;
     display: flex;
     align-items: center;
 }
 
 .nav-logo a {
     font-family: "Passion One", cursive;
-    font-size: clamp(20px, 2vw + 16px, 24px);
+    font-size: 26px;
     font-weight: 400;
     color: var(--black);
     text-decoration: none;
     transform: skewX(-10deg);
     display: inline-block;
     padding: 0;
-    
+    letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -126,13 +126,13 @@ body {
 .nav-links {
     position: absolute;
     top: 0;
-    right: calc(var(--space) * 5);
+    right: 40px;
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: var(--space);
-    height: 48px;
+    gap: 8px;
+    height: 2em;
     align-items: center;
 }
 
@@ -148,17 +148,17 @@ body {
     color: #888;
     opacity: 0.75;
     margin-left: 8px;
-    font-size: clamp(14px, 1vw + 12px, 16px);
+    font-size: clamp(15px, 1vw + 13px, 17px);
 }
 
 .nav-links a {
-    font-size: clamp(14px, 1vw + 12px, 16px);
+    font-size: clamp(15px, 1vw + 13px, 17px);
     font-weight: 700;
     color: var(--black);
     text-decoration: none;
     transition: color 0.2s;
     display: block;
-    padding: var(--space) calc(var(--space) * 2);
+    padding: 8px 12px;
     min-height: 44px;
     display: flex;
     align-items: center;
@@ -254,9 +254,9 @@ button,
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--cyan);
+    background: var(--yellow);
     color: var(--black);
-    padding: var(--space) calc(var(--space) * 2);
+    padding: 8px 16px;
     text-decoration: none;
     font-weight: 700;
     z-index: 200;
@@ -299,7 +299,7 @@ button,
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(var(--space) * 2);
+    height: 14px;
     width: 100%;
     background: var(--yellow);
 }
