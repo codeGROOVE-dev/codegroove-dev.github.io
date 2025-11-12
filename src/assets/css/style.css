@@ -172,7 +172,7 @@ body {
 .nav-hamburger {
     display: none;
     position: absolute;
-    right: 16px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
     flex-direction: column;
@@ -190,15 +190,15 @@ body {
 
 .hamburger-line {
     width: 24px;
-    height: 2.5px;
+    height: 3px;
     background: var(--black);
-    border-radius: 1px;
+    border-radius: 1.5px;
     transition: all 0.3s ease;
     transform-origin: center;
 }
 
 .nav-hamburger--active .hamburger-line:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
 
 .nav-hamburger--active .hamburger-line:nth-child(2) {
@@ -206,7 +206,7 @@ body {
 }
 
 .nav-hamburger--active .hamburger-line:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Mobile Menu Overlay */
@@ -1656,6 +1656,25 @@ button,
 /* Lazy Loading Images - removed opacity transition since there's no JS to handle it */
 
 /* Responsive */
+
+/* Tablet adjustments - tighter spacing for nav */
+@media (max-width: 850px) and (min-width: 769px) {
+    .nav-links {
+        right: 16px;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        font-size: clamp(14px, 1vw + 12px, 15px);
+    }
+
+    .nav-links li:not(:last-child)::after {
+        margin-left: 4px;
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav {
         height: 34px;
@@ -1671,7 +1690,7 @@ button,
     }
 
     .nav-logo a {
-        font-size: 16px;
+        font-size: 24px;
         letter-spacing: 0.5px;
         transform: skewX(-10deg);
         min-height: 34px;
@@ -1680,7 +1699,7 @@ button,
     }
 
     .nav-accent-angle {
-        width: 8.5em;
+        width: 11em;
         height: 34px;
     }
 
@@ -1743,16 +1762,16 @@ button,
     }
 
     .hero {
-        justify-content: center;
-        padding: 46px 16px 46px;
+        justify-content: flex-start;
+        padding: 100px 16px 80px;
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .hero-content {
         margin: 0;
-        padding: 20px;
+        padding: 24px;
         max-width: 100%;
         border-width: 4px;
     }
@@ -1777,6 +1796,20 @@ button,
     .hero-cta {
         font-size: 18px;
         margin-top: 16px;
+    }
+
+    .hero-bottom-banner {
+        bottom: calc(var(--space) * 2);
+        width: calc(100% - calc(var(--space) * 4));
+    }
+
+    .hero-bottom-banner__content {
+        padding: calc(var(--space) * 2) calc(var(--space) * 2);
+    }
+
+    .hero-bottom-banner__text {
+        font-size: 11px;
+        line-height: 1.4;
     }
 
     .content-hero {
@@ -1832,8 +1865,8 @@ button,
     }
 
     .founder-portrait {
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
 
     .pricing-grid {
@@ -1856,9 +1889,13 @@ button,
     .cta-button,
     .hero-button,
     [role="button"] {
-        padding: 12px 24px;
+        padding: 12px 16px;
         font-size: 16px;
         min-height: 44px;
+    }
+
+    .hero-cta-wrapper {
+        text-align: center;
     }
 
     .content-hero a[style*="padding: 16px 32px"] {
