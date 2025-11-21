@@ -1,0 +1,28 @@
+---
+permalink: /blog/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>codeGROOVE Blog</title>
+  <subtitle>Updates, insights, and stories from the codeGROOVE team</subtitle>
+  <link href="https://codegroove.dev/blog/feed.xml" rel="self"/>
+  <link href="https://codegroove.dev/blog/"/>
+  <updated>{{ (collections.post | reverse)[0].date }}</updated>
+  <id>https://codegroove.dev/blog/</id>
+  <author>
+    <name>codeGROOVE Team</name>
+    <email>move-faster@codegroove.dev</email>
+  </author>
+  {%- for post in collections.post | reverse -%}
+  {% if loop.index <= 20 %}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <link href="https://codegroove.dev{{ post.url }}"/>
+    <updated>{{ post.date }}</updated>
+    <id>https://codegroove.dev{{ post.url }}</id>
+    <content type="html">{{ post.templateContent | escape }}</content>
+  </entry>
+  {% endif %}
+  {%- endfor -%}
+</feed>

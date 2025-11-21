@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+
+<section class="blog-post-content">
+  <div class="blog-post-content__container">
+    <header class="blog-post-content__header">
+      <h1 class="blog-post-content__title">{{ title }}</h1>
+      <div class="blog-post-content__meta">
+        <time class="blog-post-content__date">{{ date }}</time>
+        {% if author %}
+          <span class="blog-post-content__author">by {{ author }}</span>
+        {% endif %}
+      </div>
+    </header>
+
+    <article class="blog-post-content__body">
+      {{ content | safe }}
+    </article>
+
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 4px solid #000;">
+      <a href="/blog/" style="font-weight: 700; color: #000; text-decoration: none;">← Back to blog</a>
+    </footer>
+  </div>
+</section>
