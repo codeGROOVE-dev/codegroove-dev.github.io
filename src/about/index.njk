@@ -3,52 +3,88 @@ layout: base.njk
 title: About
 ---
 
-<section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="Abstract technical background pattern" class="content-hero-bg" />
+<section class="about-hero">
+  <div class="about-hero__container">
+    <h1 class="about-hero__title">ABOUT</h1>
+    <p class="about-hero__subtitle">Enterprise grade, startup speed.</p>
+  </div>
+</section>
 
-  <div class="content-hero-inner">
-    <h1>ABOUT</h1>
-    <p class="about-mission">We eliminate code review latency. Enterprise-grade tools. Startup speed.</p>
-
-    <div class="card card--white">
-      <img src="/assets/goose-lab-techs.png" alt="Origin story" class="card__image" />
-      <div class="card__content">
-        <p class="card__title">STARTED AT GOOGLE. FINISHED HERE.</p>
-        <p class="card__text">Ready to Review began as a prototype created by our founder while at Google. Some of its ideas were released with <a href="https://github.com/google/triage-party">Triage Party</a> (used by Kubernetes), the more difficult parts needed more time to percolate. It's time is now.</p>
+<section class="about-story">
+  <div class="about-story__container">
+    <div class="about-story__grid">
+      <div class="about-story__card about-story__card--white">
+        <div class="about-story__header">
+          <img src="/assets/goose-lab-techs.webp" alt="Origin story" class="about-story__image">
+          <h2 class="about-story__title">STARTED AT GOOGLE. FINISHED HERE.</h2>
+        </div>
+        <p class="about-story__text">Ready to Review began as a prototype created by our founder while at Google. Some of its ideas were released with <a href="https://github.com/google/triage-party" class="about-story__link">Triage Party</a> (used by Kubernetes), the more difficult parts needed more time to percolate. It's time is now.</p>
       </div>
-    </div>
 
-    <h2>FOUNDER</h2>
-
-    <div class="card card--flex card--compact">
-      <img src="/assets/tstromberg.jpg" alt="Thomas Stromberg" class="founder-portrait" />
-      <div class="founder-bio">
-        <p><strong>Thomas Stromberg</strong> — 30 years in open source. Engineering leader at Google and Equinix, Director of Security at Chainguard. Technical lead for minikube (millions of downloads), created <a href="https://github.com/google/triage-party">Triage Party</a> for Kubernetes, and <a href="https://github.com/chainguard-dev/malcontent">malcontent</a> for supply chain security.</p>
-        <p>Founded codeGROOVE to solve the code review latency problem that costs engineering teams days of productivity every week.</p>
-        <p><a href="https://www.linkedin.com/in/thomas-str%C3%B6mberg-9977261/">LinkedIn</a></p>
-      </div>
-    </div>
-
-    <h2>PRINCIPLES</h2>
-
-    <div class="about-principles">
-      <ul class="about-principles-list">
-        <li><strong>Security First</strong> OAuth-only authentication. No persistent access tokens. Your code stays with GitHub.</li>
-        <li><strong>Developer Focused</strong> Built by developers who've felt the pain of slow reviews at scale.</li>
-        <li><strong>Open Source Friendly</strong> Free tier for public repositories. We believe in giving back.</li>
-        <li><strong>Sustainably Bootstrapped</strong> No VC pressure. Building for the long term, not the exit.</li>
-      </ul>
-    </div>
-
-    <div class="about-contact-section">
-      <h2>LET'S TALK</h2>
-      <p>Want to discuss how Ready to Review can help your team?</p>
-      <div class="about-contact-links">
-        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="lets-connect">Email us</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
+      <div class="about-story__card about-story__card--yellow">
+        <div class="about-story__founder-header">
+          <img src="/assets/tstromberg.webp" alt="Thomas Stromberg" class="about-story__founder-image">
+          <div>
+            <h2 class="about-story__founder-label">FOUNDER</h2>
+            <p class="about-story__founder-name">Thomas Stromberg</p>
+          </div>
+        </div>
+        <p class="about-story__founder-bio">30 years in open source. Engineering leader at Google and Equinix, Director of Security at Chainguard. Technical lead for minikube (millions of downloads), created <a href="https://github.com/google/triage-party" class="about-story__link">Triage Party</a> for Kubernetes, and <a href="https://github.com/chainguard-dev/malcontent" class="about-story__link">malcontent</a> for supply chain security.</p>
+        <a href="https://www.linkedin.com/in/thomas-str%C3%B6mberg-9977261/" target="_blank" rel="noopener noreferrer" class="about-story__linkedin">
+          <i class="ri-linkedin-fill"></i>
+          LinkedIn
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<script src="/assets/js/contact.js"></script>
+<section class="about-principles">
+  <div class="about-principles__container">
+    <h2 class="about-principles__title">PRINCIPLES</h2>
+    <div class="about-principles__grid">
+      <div class="about-principles__card about-principles__card--yellow">
+        <div class="about-principles__icon">
+          <i class="ri-shield-check-fill"></i>
+        </div>
+        <h3 class="about-principles__card-title">Security First</h3>
+        <p class="about-principles__card-text">OAuth-only authentication. No persistent access tokens. Your code stays with GitHub.</p>
+      </div>
+
+      <div class="about-principles__card about-principles__card--white">
+        <div class="about-principles__icon">
+          <i class="ri-code-s-slash-fill"></i>
+        </div>
+        <h3 class="about-principles__card-title">Developer Focused</h3>
+        <p class="about-principles__card-text">Built by developers who've felt the pain of slow reviews at scale.</p>
+      </div>
+
+      <div class="about-principles__card about-principles__card--white">
+        <div class="about-principles__icon">
+          <i class="ri-open-source-fill"></i>
+        </div>
+        <h3 class="about-principles__card-title">Open Source Friendly</h3>
+        <p class="about-principles__card-text">Free tier for public repositories. We believe in giving back.</p>
+      </div>
+
+      <div class="about-principles__card about-principles__card--yellow">
+        <div class="about-principles__icon">
+          <i class="ri-plant-fill"></i>
+        </div>
+        <h3 class="about-principles__card-title">Sustainably Bootstrapped</h3>
+        <p class="about-principles__card-text">No VC pressure. Building for the long term, not the exit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-contact">
+  <div class="about-contact__container">
+    <h2 class="about-contact__title">LET'S TALK</h2>
+    <p class="about-contact__text">Want to discuss how Ready to Review can help your team?</p>
+    <div class="about-contact__buttons">
+      <a href="mailto:lets-connect@codegroove.dev" class="about-contact__button about-contact__button--primary">Email us</a>
+      <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" target="_blank" rel="noopener noreferrer" class="about-contact__button about-contact__button--secondary">Book a call</a>
+    </div>
+  </div>
+</section>
