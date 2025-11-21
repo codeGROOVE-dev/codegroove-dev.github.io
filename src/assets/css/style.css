@@ -3709,18 +3709,18 @@ hr.text-separator {
 
 /* R2R Hero Section */
 .r2r-hero {
-    padding: calc(var(--space) * 10) calc(var(--space) * 3);
+    padding: calc(var(--space) * 5) calc(var(--space) * 3);
     background: var(--white);
 }
 
 @media (min-width: 1024px) {
     .r2r-hero {
-        padding: calc(var(--space) * 10) calc(var(--space) * 6);
+        padding: calc(var(--space) * 5) calc(var(--space) * 6);
     }
 }
 
 .r2r-hero__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
@@ -3728,13 +3728,13 @@ hr.text-separator {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: calc(var(--space) * 6);
+    gap: calc(var(--space) * 3);
 }
 
 @media (min-width: 768px) {
     .r2r-hero__content {
         flex-direction: row;
-        gap: calc(var(--space) * 6);
+        gap: calc(var(--space) * 3);
     }
 }
 
@@ -3746,35 +3746,35 @@ hr.text-separator {
     font-size: 48px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 3);
-    letter-spacing: -0.02em;
+    margin-bottom: calc(var(--space) * 1.5);
+    letter-spacing: -0.025em;
     line-height: 1.1;
 }
 
 @media (min-width: 768px) {
     .r2r-hero__title {
-        font-size: 64px;
+        font-size: 60px;
     }
 }
 
 .r2r-hero__subtitle {
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: 24px;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-hero__description {
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: 20px;
     color: var(--gray-700);
-    margin-bottom: calc(var(--space) * 3);
+    margin-bottom: calc(var(--space) * 1.5);
     line-height: 1.6;
 }
 
 .r2r-hero__platforms {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: 18px;
     color: var(--gray-600);
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 2);
 }
 
 .r2r-hero__buttons {
@@ -3832,33 +3832,33 @@ hr.text-separator {
 
 /* R2R Problem Section */
 .r2r-problem {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 4) calc(var(--space) * 3);
     background: var(--gray-50);
 }
 
 @media (min-width: 1024px) {
     .r2r-problem {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 4) calc(var(--space) * 6);
     }
 }
 
 .r2r-problem__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
 .r2r-problem__title {
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: 36px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 2);
 }
 
 .r2r-problem__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(var(--space) * 4);
-    margin-bottom: calc(var(--space) * 4);
+    gap: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 2);
 }
 
 @media (min-width: 768px) {
@@ -3872,16 +3872,16 @@ hr.text-separator {
 }
 
 .r2r-problem__highlight {
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: 20px;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-problem__text {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: 18px;
     color: var(--gray-700);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
     line-height: 1.6;
 }
 
@@ -3889,12 +3889,12 @@ hr.text-separator {
     background: var(--yellow);
     border: 4px solid var(--black);
     border-radius: 12px;
-    padding: calc(var(--space) * 3);
+    padding: calc(var(--space) * 1.5);
     text-align: center;
 }
 
 .r2r-problem__cta-text {
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: 24px;
     font-weight: 900;
     color: var(--black);
     margin: 0;
@@ -3902,32 +3902,40 @@ hr.text-separator {
 
 /* R2R Calculator Section */
 .r2r-calculator {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 4) calc(var(--space) * 3);
     background: var(--white);
 }
 
 @media (min-width: 1024px) {
     .r2r-calculator {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 4) calc(var(--space) * 6);
     }
 }
 
 .r2r-calculator__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
 .r2r-calculator__title {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: 30px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-calculator__description {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: 16px;
     color: var(--gray-700);
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 2);
+    line-height: 1.6;
+}
+
+.r2r-calculator__note {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin-top: calc(var(--space) * 2);
+    text-align: center;
     line-height: 1.6;
 }
 
@@ -4008,39 +4016,39 @@ hr.text-separator {
 
 /* R2R How Section */
 .r2r-how {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 4) calc(var(--space) * 3);
     background: var(--gray-50);
 }
 
 @media (min-width: 1024px) {
     .r2r-how {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 4) calc(var(--space) * 6);
     }
 }
 
 .r2r-how__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
 .r2r-how__title {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: 30px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-how__subtitle {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: 16px;
     color: var(--gray-700);
-    margin-bottom: calc(var(--space) * 5);
+    margin-bottom: calc(var(--space) * 2.5);
     line-height: 1.6;
 }
 
 .r2r-how__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(var(--space) * 3);
+    gap: calc(var(--space) * 1.5);
 }
 
 @media (min-width: 768px) {
@@ -4053,7 +4061,7 @@ hr.text-separator {
     background: var(--white);
     border: 4px solid var(--black);
     border-radius: 12px;
-    padding: calc(var(--space) * 3);
+    padding: calc(var(--space) * 1.5);
 }
 
 .r2r-how__icon {
@@ -4064,7 +4072,7 @@ hr.text-separator {
     justify-content: center;
     background: var(--yellow);
     border-radius: 12px;
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-how__icon i {
@@ -4073,32 +4081,32 @@ hr.text-separator {
 }
 
 .r2r-how__card-title {
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: 20px;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 1.5);
+    margin-bottom: calc(var(--space) * 0.75);
 }
 
 .r2r-how__card-text {
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: 16px;
     color: var(--gray-700);
     line-height: 1.6;
 }
 
 /* R2R Goose CTA Section */
 .r2r-goose-cta {
-    padding: calc(var(--space) * 6) calc(var(--space) * 3);
+    padding: calc(var(--space) * 3) calc(var(--space) * 3);
     background: var(--black);
 }
 
 @media (min-width: 1024px) {
     .r2r-goose-cta {
-        padding: calc(var(--space) * 6) calc(var(--space) * 6);
+        padding: calc(var(--space) * 3) calc(var(--space) * 6);
     }
 }
 
 .r2r-goose-cta__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
@@ -4155,32 +4163,32 @@ hr.text-separator {
 
 /* R2R Screenshots Section */
 .r2r-screenshots {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 4) calc(var(--space) * 3);
     background: var(--white);
 }
 
 @media (min-width: 1024px) {
     .r2r-screenshots {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 4) calc(var(--space) * 6);
     }
 }
 
 .r2r-screenshots__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
 }
 
 .r2r-screenshots__title {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: 30px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 2);
 }
 
 .r2r-screenshots__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(var(--space) * 4);
+    gap: calc(var(--space) * 2);
 }
 
 @media (min-width: 768px) {
@@ -4192,8 +4200,8 @@ hr.text-separator {
 .r2r-screenshots__caption {
     font-weight: 600;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
-    font-size: clamp(14px, 1.5vw, 16px);
+    margin-bottom: calc(var(--space) * 1);
+    font-size: 16px;
 }
 
 .r2r-screenshots__image {
@@ -4211,33 +4219,33 @@ hr.text-separator {
 
 /* R2R Pricing Section */
 .r2r-pricing {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 4) calc(var(--space) * 3);
     background: var(--gray-50);
 }
 
 @media (min-width: 1024px) {
     .r2r-pricing {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 4) calc(var(--space) * 6);
     }
 }
 
 .r2r-pricing__container {
-    max-width: 1400px;
+    max-width: 1152px;
     margin: 0 auto;
     text-align: center;
 }
 
 .r2r-pricing__title {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: 30px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 2);
+    margin-bottom: calc(var(--space) * 1);
 }
 
 .r2r-pricing__description {
-    font-size: clamp(16px, 1.8vw, 20px);
+    font-size: 18px;
     color: var(--gray-700);
-    margin-bottom: calc(var(--space) * 5);
+    margin-bottom: calc(var(--space) * 2.5);
     line-height: 1.6;
 }
 
@@ -4250,21 +4258,21 @@ hr.text-separator {
     background: var(--yellow);
     border: 4px solid var(--black);
     border-radius: 12px;
-    padding: calc(var(--space) * 5);
+    padding: calc(var(--space) * 2.5);
     box-shadow: 6px 6px 0px 0px #000;
 }
 
 .r2r-pricing__cta-title {
-    font-size: clamp(20px, 2.5vw, 28px);
+    font-size: 24px;
     font-weight: 900;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 1);
+    margin-bottom: calc(var(--space) * 0.5);
 }
 
 .r2r-pricing__cta-text {
-    font-size: clamp(14px, 1.5vw, 16px);
+    font-size: 16px;
     color: var(--black);
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 2);
 }
 
 .r2r-pricing__buttons {
