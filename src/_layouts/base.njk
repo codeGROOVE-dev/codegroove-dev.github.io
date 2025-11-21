@@ -18,27 +18,31 @@
   <!-- Preload fonts for better performance -->
   <link rel="preload" href="/assets/fonts/PassionOne-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <nav class="nav" aria-label="Main navigation">
-    <div class="nav-accent-angle"></div>
-    <div class="nav-logo">
-      <a href="/"><span class="logo-prefix">≡</span>codeGROOVE</a>
+    <div class="nav-container">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <a href="/">codeGROOVE</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/about/">about</a></li>
+          <li><a href="/products/">products</a></li>
+          <li><a href="/support/">support</a></li>
+          <li><a href="/security/">security</a></li>
+          <li><a href="/opensource/">opensource</a></li>
+        </ul>
+        <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
     </div>
-    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="/about/">about</a></li>
-      <li><a href="/products/">products</a></li>
-      <li><a href="/support/">support</a></li>
-      <li><a href="/security/">security</a></li>
-      <li><a href="/opensource/">opensource</a></li>
-    </ul>
   </nav>
   <div class="nav-overlay"></div>
 
