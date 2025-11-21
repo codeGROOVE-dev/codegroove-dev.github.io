@@ -5621,3 +5621,138 @@ hr.text-separator {
         width: 100%;
     }
 }
+
+/* ==========================================
+   Policy Pages (Privacy, TOS, Policies, etc.)
+   Shared styles for legal/policy pages
+   ========================================== */
+
+/* Policy Hero Section */
+.privacy-hero,
+.tos-hero,
+.policies-hero {
+    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    background: var(--black);
+    color: var(--white);
+}
+
+.privacy-hero__container,
+.tos-hero__container,
+.policies-hero__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.privacy-hero__title,
+.tos-hero__title,
+.policies-hero__title {
+    font-size: clamp(40px, 5vw, 60px);
+    font-weight: 900;
+    margin-bottom: calc(var(--space) * 2);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.privacy-hero__subtitle,
+.tos-hero__subtitle,
+.policies-hero__subtitle {
+    font-size: clamp(18px, 2vw, 24px);
+    color: var(--gray-300);
+}
+
+/* Policy Content Section */
+.privacy-content,
+.tos-content,
+.policies-content {
+    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    background: var(--gray-100);
+}
+
+.privacy-content__container,
+.tos-content__container,
+.policies-content__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    gap: calc(var(--space) * 4);
+}
+
+.privacy-content__card,
+.tos-content__card,
+.policies-content__card {
+    background: var(--white);
+    border: 4px solid var(--black);
+    padding: calc(var(--space) * 4);
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.privacy-content__heading,
+.tos-content__heading,
+.policies-content__heading {
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 900;
+    margin-bottom: calc(var(--space) * 2);
+}
+
+.privacy-content__text,
+.tos-content__text,
+.policies-content__text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--gray-700);
+}
+
+.privacy-content__text {
+    margin-bottom: calc(var(--space) * 2);
+}
+
+.privacy-content__text:last-child,
+.tos-content__text,
+.policies-content__text {
+    margin-bottom: 0;
+}
+
+.privacy-content__list,
+.policies-content__list {
+    list-style: disc;
+    margin-left: calc(var(--space) * 3);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--gray-700);
+    margin-top: calc(var(--space) * 2);
+}
+
+.privacy-content__list li,
+.policies-content__list li {
+    margin-bottom: calc(var(--space) * 1);
+}
+
+.privacy-content__link,
+.tos-content__link,
+.policies-content__link {
+    color: var(--yellow-dark);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.privacy-content__link:hover,
+.tos-content__link:hover,
+.policies-content__link:hover {
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .privacy-hero__title,
+    .tos-hero__title,
+    .policies-hero__title {
+        font-size: 36px;
+    }
+
+    .privacy-content__card,
+    .tos-content__card,
+    .policies-content__card {
+        padding: calc(var(--space) * 3);
+    }
+}
