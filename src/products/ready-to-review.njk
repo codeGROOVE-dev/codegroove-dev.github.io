@@ -1,132 +1,174 @@
 ---
 layout: base.njk
-title: Ready to Review - Hyper-Intelligent Pull Request Notification & Assignment System - for OSS, Startups, and Enterprises alike
+title: Ready to Review - Pull Request Notifications for Teams That Get Things Done
 ---
 
-<section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="" role="presentation" class="content-hero-bg" />
-
-  <div class="content-hero-inner">
-    <h1>READY TO REVIEW</h1>
-
-    <div class="card card--white">
-      <picture class="u-flex-shrink-0">
-        <source srcset="/assets/review-goose.webp" type="image/webp">
-        <img src="/assets/review-goose.png" alt="Ready to Review" class="support-hero-image" />
-      </picture>
-      <div class="support-hero-content">
-        <p class="support-hero-title">PULL REQUEST NOTIFICATIONS FOR TEAMS THAT GET THINGS DONE.</p>
-        <p class="support-hero-text">PRs that merge in minutes, not days. Actionable real-time notifications and Slack channel messages. Automated reviewer assignments based on "git blame". Auto-opening PRs. Review Goose sounds. Available for Slack, Desktop, Web, and CLI.</p>
+<section class="r2r-hero">
+  <div class="r2r-hero__container">
+    <div class="r2r-hero__content">
+      <div class="r2r-hero__text">
+        <h1 class="r2r-hero__title">READY TO REVIEW</h1>
+        <p class="r2r-hero__subtitle">Pull request notifications for teams that get things done.</p>
+        <p class="r2r-hero__description">
+          PRs that merge in minutes, not days. Actionable real-time notifications and Slack channel messages. Automated reviewer assignments based on "git blame". Auto-opening PRs. Review Goose sounds.
+        </p>
+        <p class="r2r-hero__platforms">Available for Slack, Desktop, Web, and CLI.</p>
+        <div class="r2r-hero__buttons">
+          <a href="https://docs.ready-to-review.dev/getting-started/" class="r2r-hero__button r2r-hero__button--primary">Get Started</a>
+          <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="r2r-hero__button r2r-hero__button--secondary">Book a call</a>
+        </div>
+      </div>
+      <div class="r2r-hero__image">
+        <img src="/assets/review-goose.webp" alt="Ready to Review">
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="card card--white-full">
+<section class="r2r-problem">
+  <div class="r2r-problem__container">
+    <h2 class="r2r-problem__title">The Problem</h2>
+    <div class="r2r-problem__grid">
+      <div class="r2r-problem__card">
+        <p class="r2r-problem__highlight">Ever announced on Slack that a PR is ready to review?</p>
+        <p class="r2r-problem__text">YOU ARE OUR TARGET AUDIENCE.</p>
+        <p class="r2r-problem__text">We do that for you, but smarter - with explicit tagging and live-updating status.</p>
+      </div>
+      <div class="r2r-problem__card">
+        <p class="r2r-problem__highlight">Industry average: 4.5 days to merge</p>
+        <p class="r2r-problem__text">We bring it down to under an hour.</p>
+        <p class="r2r-problem__text">GitHub doesn't tell you whose work you're blocking or what needs to happen next. No clear ownership. No visibility. Just shipping delays and merge conflicts.</p>
+      </div>
+    </div>
+    <div class="r2r-problem__cta">
+      <p class="r2r-problem__cta-text">It doesn't have to be that way.</p>
+    </div>
+  </div>
+</section>
+
+<section class="r2r-calculator">
+  <div class="r2r-calculator__container">
+    <h2 class="r2r-calculator__title">Calculate Your Team's Savings</h2>
+    <p class="r2r-calculator__description">
+      See how much Ready to Review will save your team by cutting PR latency. Public repos only. For private repos, run <a href="https://github.com/codeGROOVE-dev/prcost" class="r2r-calculator__link">prcost</a> locally.
+    </p>
+    <form action="https://cost.github.codegroove.app/" method="get" target="_blank" class="r2r-calculator__form">
+      <input type="hidden" name="sample" value="50">
+      <input type="hidden" name="days" value="60">
+      <input type="hidden" name="mode" value="org">
+      <div class="r2r-calculator__field">
+        <label for="github-org" class="r2r-calculator__label">Your GitHub Organization</label>
+        <input
+          type="text"
+          id="github-org"
+          name="org"
+          class="r2r-calculator__input"
+          placeholder="kubernetes"
+          required
+          aria-label="GitHub organization name"
+        />
+      </div>
+      <button type="submit" class="r2r-calculator__button">Calculate Cost</button>
+    </form>
+  </div>
+</section>
+
+<section class="r2r-how">
+  <div class="r2r-how__container">
+    <h2 class="r2r-how__title">How Ready to Review saves your team time and money</h2>
+    <p class="r2r-how__subtitle">Tracks every PR from open to merged. Auto-assigns reviewers based on git history. Notifies the right person at the right time.</p>
+    <div class="r2r-how__grid">
+      <div class="r2r-how__card">
+        <div class="r2r-how__icon">
+          <i class="ri-user-star-line"></i>
+        </div>
+        <h3 class="r2r-how__card-title">Smart Assignment</h3>
+        <p class="r2r-how__card-text">
+          If no one's assigned, we do it automatically. Who touched this code? Who's in an active timezone? Who doesn't have 9 PRs already? The right reviewer gets it immediately.
+        </p>
+      </div>
+      <div class="r2r-how__card">
+        <div class="r2r-how__icon">
+          <i class="ri-notification-off-line"></i>
+        </div>
+        <h3 class="r2r-how__card-title">Zero Noise Notifications</h3>
+        <p class="r2r-how__card-text">
+          Notifications only when the state changes—CI fails, review requested, changes pushed. Not for every comment. Just when action is needed.
+        </p>
+      </div>
+      <div class="r2r-how__card">
+        <div class="r2r-how__icon">
+          <i class="ri-global-line"></i>
+        </div>
+        <h3 class="r2r-how__card-title">Works Everywhere</h3>
+        <p class="r2r-how__card-text">
+          Slack, Desktop (Review Goose), CLI, and Web. Daily reminders at 8-9am local time. Nothing falls through the cracks.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="r2r-goose-cta">
+  <div class="r2r-goose-cta__container">
+    <div class="r2r-goose-cta__content">
       <div>
-      <h2 class="u-mt-0" style="color: #333;">The Problem</h2>
-      <p><strong>Ever announced on Slack that a PR is ready to review? YOU ARE OUR TARGET AUDIENCE.</strong></p>
+        <h2 class="r2r-goose-cta__title">Don't Have Permission for GitHub or Slack Apps?</h2>
+        <p class="r2r-goose-cta__text">
+          Try <a href="/products/goose/" class="r2r-goose-cta__link">Review Goose</a> - our individual contributor tool that runs entirely on your machine.
+        </p>
+      </div>
+      <a href="/products/goose/" class="r2r-goose-cta__button">Try Review Goose</a>
+    </div>
+  </div>
+</section>
 
-      <p>We do that for you, but smarter - with explicit tagging and live-updating status.</p>
-
-      <p><strong>We are here to bring your PR merge latency from the industry average of 4.5 days to under an hour</strong></p>
-
-      <p>GitHub doesn't tell you whose work you're blocking or what needs to happen next. No clear ownership. No visibility. Just shipping delays and merge conflicts - it doesn't have to be that way.</p>
+<section class="r2r-screenshots">
+  <div class="r2r-screenshots__container">
+    <h2 class="r2r-screenshots__title">See It In Action</h2>
+    <div class="r2r-screenshots__grid">
+      <div class="r2r-screenshots__item">
+        <p class="r2r-screenshots__caption">Slack notifications with real-time status updates:</p>
+        <a href="/assets/screenshots/slack-screenshot.png" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
+            <img src="/assets/screenshots/slack-screenshot.png" alt="Ready to Review Slack Integration" class="r2r-screenshots__image">
+          </picture>
+        </a>
+      </div>
+      <div class="r2r-screenshots__item">
+        <p class="r2r-screenshots__caption">macOS menubar integration with auto-open:</p>
+        <a href="/assets/screenshots/goose-screenshot.png" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
+            <img src="/assets/screenshots/goose-screenshot.png" alt="Review Goose Desktop App" class="r2r-screenshots__image">
+          </picture>
+        </a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="card card--green u-mt-40">
-      <h2 class="product-card__title product-card__title--white">Calculate Your Team's Savings</h2>
-      <p class="product-card__text product-card__text--white">See how much Ready to Review will save your team by cutting PR latency. Public repos only. For private repos, run <a href="https://github.com/codeGROOVE-dev/prcost" style="color: var(--yellow); text-decoration: underline;">prcost</a> locally.</p>
-      <form class="roi-form roi-form--custom" action="https://cost.github.codegroove.app/" method="get" target="_blank">
-        <input type="hidden" name="sample" value="50">
-        <input type="hidden" name="days" value="60">
-        <input type="hidden" name="mode" value="org">
-        <div class="roi-form-group">
-          <label for="github-org" class="roi-form-label roi-form-label--white">Your GitHub Organization</label>
-          <input
-            type="text"
-            id="github-org"
-            name="org"
-            class="roi-form-input roi-form-input--white"
-            placeholder="kubernetes"
-            required
-            aria-label="GitHub organization name"
-          />
-        </div>
-        <button type="submit" class="roi-form-button roi-form-button--black">Calculate Cost</button>
-      </form>
-    </div>
-
-    <div class="card card--white-full">
-      <div>
-      <h2 class="u-mt-0" style="color: #333;">How Ready to Review saves your team time and money</h2>
-      <p>Tracks every PR from open to merged. Auto-assigns reviewers based on git history. Notifies the right person at the right time.</p>
-
-      <h3>Smart Assignment</h3>
-      <p>If no one's assigned, we do it automatically. Who touched this code? Who's in an active timezone? Who doesn't have 9 PRs already? The right reviewer gets it immediately.</p>
-
-      <h3>Zero Noise Notifications</h3>
-      <p>Every PR shows whose turn it is and what needs to happen next. Notifications only when the state changes—CI fails, review requested, changes pushed. Not for every comment. Just when action is needed.</p>
-
-      <p>No more asking "whose PR is this?" in standups. No more digging through Slack. Developers stay in flow.</p>
-
-      <h3>Works Everywhere</h3>
-      <ul class="support-hero-card li" style="font-size: 16px; line-height: 1.8; margin: 15px 0; padding-left: 0; list-style: none;">
-        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">→</span><strong>Slack</strong> — team workspace notifications</li>
-        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">→</span><strong>Desktop (Review Goose)</strong> — menubar/system tray</li>
-        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">→</span><strong>CLI</strong> — terminal status checks</li>
-        <li style="margin-bottom: 0; padding-left: 25px; position: relative;"><span style="position: absolute; left: 0; color: var(--cyan); font-weight: 700;">→</span><strong>Web</strong> — full dashboard view</li>
-      </ul>
-
-      <p>Daily reminders at 8-9am local time. Nothing falls through the cracks.</p>
-      </div>
-    </div>
-
-    <div class="card u-mt-40">
-      <h2 class="product-card__title product-card__title--white">Don't Have Permission for GitHub or Slack Apps?</h2>
-      <p class="product-card__text product-card__text--white product-card__text--16 u-mb-0">Try <a href="/products/goose/">Review Goose</a> - our individual contributor tool that runs entirely on your machine. No GitHub app installation. No Slack permissions. Authenticates using the GitHub CLI.</p>
-    </div>
-
-    <div class="product-video">
-      <h2>See It In Action</h2>
-      <div class="screenshot-wrapper">
-        <div>
-          <p class="screenshot-item__caption"><strong>Slack notifications to a team channel with real-time status updates:</strong></p>
-          <a href="/assets/screenshots/slack-screenshot.png" target="_blank" class="screenshot-item__link">
-            <picture>
-              <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
-              <img src="/assets/screenshots/slack-screenshot.png" alt="Ready to Review Slack Integration" class="screenshot-item__img" />
-            </picture>
-          </a>
-        </div>
-        <div>
-          <p class="screenshot-item__caption"><strong>macOS menubar integration with auto-open:</strong></p>
-          <a href="/assets/screenshots/goose-screenshot.png" target="_blank" class="screenshot-item__link">
-            <picture>
-              <source srcset="/assets/screenshots/goose-screenshot.webp" type="image/webp">
-              <img src="/assets/screenshots/goose-screenshot.png" alt="Review Goose Desktop App" class="screenshot-item__img" />
-            </picture>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <h2 id="pricing-section">Pricing</h2>
-    <p><strong>Free forever for open-source public repositories.</strong> Starting in 2026: $1/month for individuals, $6/month/user for teams.</p>
-
-    <div class="card card--centered card--spacious card--yellow">
-      <p class="product-card__cta-title">GET STARTED IN ONE MINUTE</p>
-      <p class="product-card__cta-text">Open beta. Free for open source. No credit card required.</p>
-      <div class="product-card__links">
-        <a href="https://docs.ready-to-review.dev/getting-started/" class="cta-button cta-button--green">Get Started</a>
-        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="move-faster">Email us</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
+<section class="r2r-pricing">
+  <div class="r2r-pricing__container">
+    <h2 class="r2r-pricing__title">Pricing</h2>
+    <p class="r2r-pricing__description">
+      <span class="r2r-pricing__highlight">Free forever for open-source public repositories.</span> Starting in 2026: $1/month for individuals, $6/month/user for teams.
+    </p>
+    <div class="r2r-pricing__cta">
+      <p class="r2r-pricing__cta-title">GET STARTED IN ONE MINUTE</p>
+      <p class="r2r-pricing__cta-text">Open beta. Free for open source. No credit card required.</p>
+      <div class="r2r-pricing__buttons">
+        <a href="https://docs.ready-to-review.dev/getting-started/" class="r2r-pricing__button r2r-pricing__button--primary">Get Started</a>
+        <a href="mailto:move-faster@codegroove.dev" class="r2r-pricing__button r2r-pricing__button--secondary">Email us</a>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="r2r-pricing__button r2r-pricing__button--secondary">Book a call</a>
       </div>
     </div>
   </div>
 </section>
 
 <script>
-// Form validation and accessibility
+// Form validation
 document.getElementById('github-org')?.addEventListener('invalid', function(e) {
   e.target.setCustomValidity('Please enter your GitHub organization name');
 });
@@ -135,5 +177,3 @@ document.getElementById('github-org')?.addEventListener('input', function(e) {
   e.target.setCustomValidity('');
 });
 </script>
-
-<script src="/assets/js/contact.js"></script>

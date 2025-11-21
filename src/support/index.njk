@@ -3,45 +3,81 @@ layout: base.njk
 title: Support
 ---
 
-<section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="Abstract technical background pattern" class="content-hero-bg" />
-
-  <div class="content-hero-inner">
-    <h1>SUPPORT</h1>
-
-    <div class="card card--white">
-      <img src="/assets/goose-support.png" alt="Support goose with headset" class="support-hero-image" />
-      <div class="support-hero-content">
-        <p class="support-hero-title">WE'RE HERE TO HELP</p>
-        <p class="support-hero-text">Whether you have questions, need technical assistance, or want to provide feedback, we've got you covered.</p>
+<section class="support-hero">
+  <div class="support-hero__container">
+    <div class="support-hero__content">
+      <div class="support-hero__text">
+        <h1 class="support-hero__title">SUPPORT</h1>
+        <p class="support-hero__subtitle">Whether you have questions, need technical assistance, or want to provide feedback, we've got you covered.</p>
       </div>
-    </div>
-
-    <div class="card support-section">
-      <h2>DOCUMENTATION</h2>
-      <p>Looking for guides, tutorials, or technical documentation? Check out our comprehensive docs:</p>
-      <div class="support-links">
-        <a href="https://docs.ready-to-review.dev" class="cta-button">View Documentation</a>
-      </div>
-    </div>
-
-    <div class="card card--yellow support-section">
-      <h2>GET SUPPORT</h2>
-      <p>Need help with an issue? Have a feature request? We use GitHub Issues to track support requests and ensure nothing falls through the cracks.</p>
-      <div class="support-links">
-        <a href="https://github.com/codeGROOVE-dev/support/issues/new?template=support-request.md" class="cta-button">Create Support Request</a>
-      </div>
-    </div>
-
-    <div class="about-contact-section">
-      <h2>WANT TO TALK?</h2>
-      <p>For general inquiries or to discuss your team's needs:</p>
-      <div class="about-contact-links">
-        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="we-got-you">Email us</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
+      <div class="support-hero__image">
+        <img src="/assets/goose-headphones-384.png" alt="Support goose with headset">
       </div>
     </div>
   </div>
 </section>
 
-<script src="/assets/js/contact.js"></script>
+<section class="support-cards">
+  <div class="support-cards__container">
+    <div class="support-cards__grid">
+      <div class="support-cards__card support-cards__card--white">
+        <div class="support-cards__header">
+          <div class="support-cards__icon support-cards__icon--yellow">
+            <i class="ri-book-open-fill"></i>
+          </div>
+          <h2 class="support-cards__title">Documentation</h2>
+        </div>
+        <p class="support-cards__text">Comprehensive guides, tutorials, and technical documentation to get you started quickly.</p>
+        <a href="https://docs.ready-to-review.dev/" target="_blank" rel="noopener noreferrer" class="support-cards__button support-cards__button--primary">View Docs</a>
+      </div>
+
+      <div class="support-cards__card support-cards__card--yellow">
+        <div class="support-cards__header">
+          <div class="support-cards__icon support-cards__icon--black">
+            <i class="ri-github-fill"></i>
+          </div>
+          <h2 class="support-cards__title">Get Support</h2>
+        </div>
+        <p class="support-cards__text">Need help with an issue or have a feature request? We track everything through GitHub Issues.</p>
+        <a href="https://github.com/codeGROOVE-dev/support/issues/new?template=support-request.md" target="_blank" rel="noopener noreferrer" class="support-cards__button support-cards__button--secondary">Create Request</a>
+      </div>
+
+      <div class="support-cards__card support-cards__card--yellow">
+        <div class="support-cards__header">
+          <div class="support-cards__icon support-cards__icon--black">
+            <i class="ri-mail-fill"></i>
+          </div>
+          <h2 class="support-cards__title">Email Us</h2>
+        </div>
+        <p class="support-cards__text">For general inquiries or to discuss your team's specific needs and requirements.</p>
+        <a href="mailto:we-got-you@codegroove.dev" class="support-cards__button support-cards__button--secondary">Send Email</a>
+      </div>
+
+      <div class="support-cards__card support-cards__card--white">
+        <div class="support-cards__header">
+          <div class="support-cards__icon support-cards__icon--yellow">
+            <i class="ri-calendar-fill"></i>
+          </div>
+          <h2 class="support-cards__title">Book a Call</h2>
+        </div>
+        <p class="support-cards__text">Want to talk through your workflow or see a demo? Schedule a time that works for you.</p>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" target="_blank" rel="noopener noreferrer" class="support-cards__button support-cards__button--primary">Schedule</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="support-links">
+  <div class="support-links__container">
+    <h3 class="support-links__title">Quick Links</h3>
+    <div class="support-links__list">
+      <a href="https://docs.ready-to-review.dev/getting-started/" target="_blank" rel="noopener noreferrer" class="support-links__link">Getting Started Guide</a>
+      <span class="support-links__separator">•</span>
+      <a href="https://docs.ready-to-review.dev/faq/" target="_blank" rel="noopener noreferrer" class="support-links__link">FAQ</a>
+      <span class="support-links__separator">•</span>
+      <a href="https://github.com/codeGROOVE-dev" target="_blank" rel="noopener noreferrer" class="support-links__link">GitHub</a>
+      <span class="support-links__separator">•</span>
+      <a href="/security/" class="support-links__link">Security</a>
+    </div>
+  </div>
+</section>

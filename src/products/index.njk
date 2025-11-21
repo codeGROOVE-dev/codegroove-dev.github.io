@@ -1,65 +1,114 @@
 ---
 layout: base.njk
-title: Products - Code Groove Developer Tools
-permalink: /products/index.html
-eleventyExcludeFromCollections: true
+title: Products
 ---
 
-<section class="content-hero">
-  <img src="/assets/hero-bg.jpg" alt="" role="presentation" class="content-hero-bg" />
+<section class="products-hero">
+  <div class="products-hero__container">
+    <h1 class="products-hero__title">PRODUCTS</h1>
+    <p class="products-hero__subtitle">Code review latency kills velocity. We fix it.</p>
+  </div>
+</section>
 
-  <div class="content-hero-inner">
-    <h1>PRODUCTS</h1>
-    <p class="products-mission">Code review latency kills velocity. We fix it.</p>
-
-    <div class="card card--white u-mt-40">
-      <picture class="u-flex-shrink-0">
-        <source srcset="/assets/review-goose.webp" type="image/webp">
-        <img src="/assets/review-goose.png" alt="Ready to Review" class="support-hero-image" />
-      </picture>
-      <div class="support-hero-content">
-        <h2><a href="/products/ready-to-review/">READY TO REVIEW</a></h2>
-        <p class="product-badge">Public Beta • For Teams • GitHub</p>
-        <p class="support-hero-text">
-          Cut PR merge time from days to under an hour. Saves senior engineers 5+ hours/week.
-          No more begging for reviews or forgotten pull requests.
+<section class="products-main">
+  <div class="products-main__container">
+    <div class="products-main__grid">
+      <div class="products-main__card">
+        <div class="products-main__header">
+          <img src="/assets/review-goose.webp" alt="Ready to Review" class="products-main__image">
+          <div>
+            <h2 class="products-main__title">
+              <a href="/products/ready-to-review/">READY TO REVIEW</a>
+            </h2>
+            <p class="products-main__badge">Public Beta • For Teams • GitHub</p>
+          </div>
+        </div>
+        <p class="products-main__description">
+          Cut PR merge time from days to under an hour. Saves senior engineers 5+ hours/week. No more begging for reviews or forgotten pull requests.
         </p>
-        <ul class="product-features">
-          <li>Live updates prevent wasted work on stale or broken PRs</li>
-          <li>Context-driven assignments that prevent bottlenecks</li>
-          <li>Works in Slack, Web, and Desktop</li>
-          <li>Built by the team behind <a href="https://github.com/google/triage-party">Triage Party</a> (used by Kubernetes)</li>
+        <ul class="products-main__features">
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Live updates prevent wasted work on stale or broken PRs</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Context-driven assignments that prevent bottlenecks</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Works in Slack, Web, and Desktop</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Built by the team behind <a href="https://github.com/google/triage-party" class="products-main__link">Triage Party</a> (used by Kubernetes)</span>
+          </li>
         </ul>
-        <a href="/products/ready-to-review/" class="cta-button">See how it works →</a>
+        <a href="/products/ready-to-review/" class="products-main__button">See how it works →</a>
       </div>
-    </div>
 
-    <div class="card card--white">
-      <picture class="u-flex-shrink-0">
-        <source srcset="/assets/goose-logo-small.png" type="image/png">
-        <img src="/assets/goose-logo-small.png" alt="Review Goose" class="support-hero-image" />
-      </picture>
-      <div class="support-hero-content">
-        <h2><a href="/products/goose/">REVIEW GOOSE</a></h2>
-        <p class="product-badge">Individual • No Permission Required • Open Source</p>
-        <p class="support-hero-text">
-          Lightweight menubar app for individual developers.
-          Track PRs blocked on you without requiring team buy-in.
-          Supports Linux, macOS, Windows, and FreeBSD.
+      <div class="products-main__card">
+        <div class="products-main__header">
+          <img src="/assets/goose-logo-small.png" alt="Review Goose" class="products-main__image">
+          <div>
+            <h2 class="products-main__title">
+              <a href="/products/goose/">REVIEW GOOSE</a>
+            </h2>
+            <p class="products-main__badge">Individual • No Permission Required • Open Source</p>
+          </div>
+        </div>
+        <p class="products-main__description">
+          Lightweight menubar app for individual developers. Track PRs blocked on you without requiring team buy-in. Supports Linux, macOS, Windows, and FreeBSD.
         </p>
-        <a href="/products/goose/" class="cta-button">Learn more →</a>
-      </div>
-    </div>
-
-    <div class="card card--centered card--yellow">
-      <p class="product-card__cta-title">QUESTIONS?</p>
-      <p class="product-card__cta-text">Let's talk about your code review workflow.</p>
-      <div class="product-card__links">
-        <a href="#" class="cta-button cta-button--yellow" id="email-contact" data-email-prefix="find-your-fit">Email us</a>
-        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" class="cta-button">Book a call</a>
+        <ul class="products-main__features">
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Zero setup for individual developers</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Desktop notifications with sound effects</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>Cross-platform support</span>
+          </li>
+          <li>
+            <div class="products-main__check">
+              <i class="ri-check-line"></i>
+            </div>
+            <span>100% open source</span>
+          </li>
+        </ul>
+        <a href="/products/goose/" class="products-main__button">Learn more →</a>
       </div>
     </div>
   </div>
 </section>
 
-<script src="/assets/js/contact.js"></script>
+<section class="products-cta">
+  <div class="products-cta__container">
+    <div class="products-cta__box">
+      <h2 class="products-cta__title">QUESTIONS?</h2>
+      <p class="products-cta__text">Let's talk about your code review workflow.</p>
+      <div class="products-cta__buttons">
+        <a href="mailto:find-your-fit@codegroove.dev" class="products-cta__button products-cta__button--primary">Email us</a>
+        <a href="https://calendar.app.google/TbQmeX8iWnvx6Ci89" target="_blank" rel="noopener noreferrer" class="products-cta__button products-cta__button--secondary">Book a call</a>
+      </div>
+    </div>
+  </div>
+</section>
