@@ -4796,6 +4796,74 @@ hr.text-separator {
     }
 }
 
+/* Open Source Pledge Section */
+.opensource-pledge {
+    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    background: var(--yellow);
+}
+
+@media (min-width: 1024px) {
+    .opensource-pledge {
+        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+    }
+}
+
+.opensource-pledge__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.opensource-pledge__title {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 900;
+    margin-bottom: calc(var(--space) * 4);
+    text-transform: uppercase;
+}
+
+.opensource-pledge__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: calc(var(--space) * 3);
+    margin-bottom: calc(var(--space) * 4);
+}
+
+.opensource-pledge__item {
+    background: var(--white);
+    border: 3px solid var(--black);
+    padding: calc(var(--space) * 3);
+}
+
+.opensource-pledge__item-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: calc(var(--space) * 1);
+    text-transform: uppercase;
+}
+
+.opensource-pledge__item-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--gray-700);
+    margin: 0;
+}
+
+.opensource-pledge__support {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--gray-800);
+    margin: 0;
+}
+
+.opensource-pledge__support a {
+    color: var(--black);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.opensource-pledge__support a:hover {
+    color: var(--gray-600);
+}
+
 /* Open Source Content Section */
 .opensource-content {
     padding: calc(var(--space) * 8) calc(var(--space) * 3);
