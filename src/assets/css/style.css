@@ -120,6 +120,8 @@ body {
     color: var(--black);
     text-decoration: none;
     letter-spacing: 1px;
+    display: inline-block;
+    transform: rotate(-3deg) skewX(-8deg);
 }
 
 .nav-links {
@@ -2939,6 +2941,7 @@ hr.text-separator {
     color: var(--black);
     text-decoration: none;
     letter-spacing: 1px;
+    transform: rotate(-3deg) skewX(-8deg);
 }
 
 .footer-brutal__brand-text {
@@ -3079,140 +3082,132 @@ hr.text-separator {
 
 /* About Story Section */
 .about-story {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    padding: calc(var(--space) * 6) calc(var(--space) * 3);
     background: var(--white);
 }
 
 @media (min-width: 1024px) {
     .about-story {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+        padding: calc(var(--space) * 6) calc(var(--space) * 6);
     }
 }
 
 .about-story__container {
-    max-width: 1400px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
-.about-story__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: calc(var(--space) * 4);
-}
-
-@media (min-width: 768px) {
-    .about-story__grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.about-story__card {
-    border: 1px solid var(--gray-200);
-    border-radius: 8px;
-    padding: calc(var(--space) * 4);
-}
-
-.about-story__card--white {
-    background: var(--white);
-}
-
-.about-story__card--yellow {
-    background: var(--yellow);
-    border-color: var(--yellow);
-}
-
-.about-story__header {
-    display: flex;
-    align-items: flex-start;
-    gap: calc(var(--space) * 3);
-    margin-bottom: calc(var(--space) * 3);
-}
-
-.about-story__image {
-    width: 96px;
-    height: 96px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.about-story__title {
-    font-size: clamp(22px, 2.5vw, 28px);
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.about-story__text {
-    color: var(--gray-700);
-    line-height: 1.6;
-}
-
-.about-story__link {
-    color: var(--black);
-    font-weight: 700;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-
-.about-story__link:hover {
-    color: var(--yellow-dark);
-}
-
-.about-story__founder-header {
-    display: flex;
-    align-items: flex-start;
-    gap: calc(var(--space) * 3);
+.about-story__content p {
+    font-size: clamp(17px, 2vw, 19px);
+    line-height: 1.7;
     margin-bottom: calc(var(--space) * 2);
 }
 
-.about-story__founder-image {
-    width: 96px;
-    height: 96px;
+.about-story__content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-story__content a {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.about-story__content a:hover {
+    color: var(--gray-600);
+}
+
+/* About Founder Section */
+.about-founder {
+    padding: calc(var(--space) * 6) calc(var(--space) * 3);
+    background: var(--yellow);
+}
+
+@media (min-width: 1024px) {
+    .about-founder {
+        padding: calc(var(--space) * 6) calc(var(--space) * 6);
+    }
+}
+
+.about-founder__container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-founder__card {
+    display: flex;
+    gap: calc(var(--space) * 4);
+    align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+    .about-founder__card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.about-founder__image {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 2px solid var(--gray-300);
+    border: 3px solid var(--black);
     object-fit: cover;
     flex-shrink: 0;
 }
 
-.about-story__founder-label {
-    font-size: clamp(20px, 2vw, 24px);
-    font-weight: 600;
-    color: var(--gray-500);
+.about-founder__info {
+    flex: 1;
+}
+
+.about-founder__name {
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 900;
     margin-bottom: calc(var(--space) * 0.5);
 }
 
-.about-story__founder-name {
-    font-size: clamp(18px, 2vw, 24px);
-    font-weight: 700;
-    color: var(--black);
+.about-founder__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: calc(var(--space) * 2);
 }
 
-.about-story__founder-bio {
-    color: var(--gray-900);
+.about-founder__bio {
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: calc(var(--space) * 2);
 }
 
-.about-story__linkedin {
+.about-founder__bio a {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.about-founder__bio a:hover {
+    color: var(--gray-700);
+}
+
+.about-founder__linkedin {
     display: inline-flex;
     align-items: center;
     gap: calc(var(--space) * 1);
     background: var(--black);
     color: var(--white);
     padding: calc(var(--space) * 1.5) calc(var(--space) * 3);
-    border: none;
-    border-radius: 4px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s;
-    white-space: nowrap;
 }
 
-.about-story__linkedin:hover {
+.about-founder__linkedin:hover {
     background: var(--gray-800);
 }
 
-.about-story__linkedin i {
-    font-size: 20px;
+.about-founder__linkedin i {
+    font-size: 18px;
 }
 
 /* About Principles Section */
@@ -4796,146 +4791,88 @@ hr.text-separator {
     }
 }
 
-/* Open Source Pledge Section */
-.opensource-pledge {
+/* Open Source Manifesto Section */
+.opensource-manifesto {
     padding: calc(var(--space) * 8) calc(var(--space) * 3);
     background: var(--yellow);
 }
 
 @media (min-width: 1024px) {
-    .opensource-pledge {
+    .opensource-manifesto {
         padding: calc(var(--space) * 8) calc(var(--space) * 6);
     }
 }
 
-.opensource-pledge__container {
-    max-width: var(--max-width);
+.opensource-manifesto__container {
+    max-width: 720px;
     margin: 0 auto;
 }
 
-.opensource-pledge__title {
+.opensource-manifesto__title {
     font-size: clamp(24px, 3vw, 32px);
     font-weight: 900;
-    margin-bottom: calc(var(--space) * 4);
+    margin-bottom: calc(var(--space) * 3);
     text-transform: uppercase;
 }
 
-.opensource-pledge__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: calc(var(--space) * 3);
-    margin-bottom: calc(var(--space) * 4);
+.opensource-manifesto__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 calc(var(--space) * 3) 0;
 }
 
-.opensource-pledge__item {
-    background: var(--white);
-    border: 3px solid var(--black);
-    padding: calc(var(--space) * 3);
+.opensource-manifesto__list li {
+    font-size: clamp(17px, 2vw, 19px);
+    line-height: 1.6;
+    padding: calc(var(--space) * 1.5) 0;
+    padding-left: calc(var(--space) * 3);
+    position: relative;
 }
 
-.opensource-pledge__item-title {
-    font-size: 18px;
-    font-weight: 900;
-    margin-bottom: calc(var(--space) * 1);
-    text-transform: uppercase;
+.opensource-manifesto__list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    font-weight: 700;
 }
 
-.opensource-pledge__item-text {
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--gray-700);
-    margin: 0;
+.opensource-manifesto__list strong {
+    font-weight: 700;
 }
 
-.opensource-pledge__support {
+.opensource-manifesto__support {
     font-size: 15px;
     line-height: 1.6;
     color: var(--gray-800);
-    margin: 0;
 }
 
-.opensource-pledge__support a {
+.opensource-manifesto__support a {
     color: var(--black);
     text-decoration: underline;
     transition: color 0.2s;
 }
 
-.opensource-pledge__support a:hover {
+.opensource-manifesto__support a:hover {
     color: var(--gray-600);
 }
 
-/* Open Source Content Section */
-.opensource-content {
-    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+/* Open Source Projects Section */
+.opensource-projects {
+    padding: calc(var(--space) * 6) calc(var(--space) * 3);
     background: var(--white);
 }
 
 @media (min-width: 1024px) {
-    .opensource-content {
-        padding: calc(var(--space) * 8) calc(var(--space) * 6);
+    .opensource-projects {
+        padding: calc(var(--space) * 6) calc(var(--space) * 6);
     }
 }
 
-.opensource-content__container {
-    max-width: var(--max-width);
+.opensource-projects__container {
+    max-width: 720px;
     margin: 0 auto;
 }
 
-.opensource-content__grid {
-    display: grid;
-    gap: calc(var(--space) * 4);
-}
-
-@media (min-width: 1024px) {
-    .opensource-content__grid {
-        grid-template-columns: 2fr 3fr;
-        gap: calc(var(--space) * 4);
-    }
-}
-
-/* Why We Do This Box */
-.opensource-why-box {
-    background: var(--yellow);
-    border: 1px solid var(--gray-200);
-    border-radius: 8px;
-    padding: calc(var(--space) * 4);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    height: 100%;
-}
-
-.opensource-why-box__title {
-    font-size: clamp(20px, 2.5vw, 24px);
-    font-weight: 900;
-    margin-bottom: calc(var(--space) * 2);
-    text-transform: uppercase;
-}
-
-.opensource-why-box__text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--gray-900);
-    margin-bottom: calc(var(--space) * 2);
-}
-
-.opensource-why-box__support {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--gray-800);
-    font-weight: 500;
-    margin: 0;
-}
-
-.opensource-why-box__link {
-    color: var(--black);
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-
-.opensource-why-box__link:hover {
-    color: var(--gray-700);
-}
-
-/* Projects Section */
 .opensource-projects__title {
     font-size: clamp(20px, 2.5vw, 24px);
     font-weight: 900;
@@ -4943,66 +4880,49 @@ hr.text-separator {
     text-transform: uppercase;
 }
 
-.opensource-projects__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: calc(var(--space) * 2);
+.opensource-projects__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 calc(var(--space) * 3) 0;
 }
 
-@media (max-width: 640px) {
-    .opensource-projects__grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.opensource-project-card {
-    background: var(--white);
-    border: 3px solid var(--black);
-    padding: calc(var(--space) * 3);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    text-decoration: none;
-    transition: all 0.2s;
-}
-
-.opensource-project-card:hover {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    transform: translateY(-1px);
-}
-
-.opensource-project-card__title {
+.opensource-projects__list li {
+    padding: calc(var(--space) * 1.5) 0;
+    border-bottom: 1px solid var(--gray-200);
     font-size: 16px;
-    font-weight: 700;
+    line-height: 1.5;
+}
+
+.opensource-projects__list li:first-child {
+    padding-top: 0;
+}
+
+.opensource-projects__list li:last-child {
+    border-bottom: none;
+}
+
+.opensource-projects__list a {
     color: var(--black);
-    margin-bottom: calc(var(--space) * 1);
-    transition: color 0.2s;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-.opensource-project-card:hover .opensource-project-card__title {
-    color: var(--yellow-dark);
+.opensource-projects__list a:hover {
+    text-decoration: underline;
 }
 
-.opensource-project-card__desc {
-    font-size: 14px;
-    color: var(--gray-600);
+.opensource-projects__more {
     margin: 0;
 }
 
-.opensource-project-card--view-all {
-    background: var(--gray-100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.opensource-project-card__view-all-text {
-    font-size: 16px;
-    font-weight: 700;
+.opensource-projects__more a {
     color: var(--black);
-    transition: color 0.2s;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.opensource-project-card--view-all:hover .opensource-project-card__view-all-text {
-    color: var(--yellow-dark);
+.opensource-projects__more a:hover {
+    text-decoration: underline;
 }
 
 /* Open Source CTA Section */
