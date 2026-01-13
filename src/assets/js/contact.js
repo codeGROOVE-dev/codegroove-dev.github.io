@@ -16,7 +16,7 @@
     const emailLink = document.getElementById('email-contact');
     if (emailLink) {
       // Get custom email prefix from data attribute, or use default
-      const prefix = emailLink.getAttribute('data-email-prefix') || 'move-faster';
+      const prefix = emailLink.getAttribute('data-email-prefix') || 'honk';
 
       // Obfuscated email parts to avoid spam bots
       const parts = [prefix, 'codegroove', 'dev'];

@@ -1,0 +1,242 @@
+---
+layout: base.njk
+title: reviewGOOSE Slack Integration
+---
+
+<section class="rg-slack-hero">
+  <div class="rg-slack-hero__container">
+    <div class="rg-slack-hero__content">
+      <div class="rg-slack-hero__text">
+        <h1 class="rg-slack-hero__title">Slack Integration</h1>
+        <p class="rg-slack-hero__headline">PR updates where your team already works.</p>
+        <p class="rg-slack-hero__description">
+          Auto-threads PRs in your channels. Smart DMs that don't spam. Daily reminders in your timezone. No more asking "is anyone looking at this?"
+        </p>
+        <div class="rg-slack-hero__buttons">
+          <a href="https://docs.codegroove.dev/slack/" class="rg-slack-hero__button rg-slack-hero__button--primary">Setup Guide</a>
+          <a href="https://slack.com/apps" class="rg-slack-hero__button rg-slack-hero__button--secondary">Install Slack App</a>
+        </div>
+      </div>
+      <div class="rg-slack-hero__image">
+        <i class="ri-slack-fill"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-demo">
+  <div class="rg-slack-demo__container">
+    <h2 class="rg-slack-demo__title">See It In Action</h2>
+    <p class="rg-slack-demo__description">PRs posted to channels with live status updates:</p>
+    <a href="/assets/screenshots/slack-screenshot.png" target="_blank" rel="noopener noreferrer">
+      <picture>
+        <source srcset="/assets/screenshots/slack-screenshot.webp" type="image/webp">
+        <img src="/assets/screenshots/slack-screenshot.png" alt="reviewGOOSE Slack Integration Screenshot" class="rg-slack-demo__screenshot">
+      </picture>
+    </a>
+  </div>
+</section>
+
+<section class="rg-slack-features">
+  <div class="rg-slack-features__container">
+    <h2 class="rg-slack-features__title">Features</h2>
+    <div class="rg-slack-features__grid">
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🧵</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Auto-Threading</h3>
+            <p class="rg-slack-features__card-description">Each PR gets its own thread. Status updates appear as replies. No channel clutter.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🎯</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Smart DM Delays</h3>
+            <p class="rg-slack-features__card-description">If you're in the channel, DM waits 65 minutes. Not in the channel? Immediate DM. No spam.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🌅</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Daily Reminders</h3>
+            <p class="rg-slack-features__card-description">Summary of PRs waiting on you, delivered 8-9am in your local timezone. Start your day informed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">✨</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Emoji Status</h3>
+            <p class="rg-slack-features__card-description">Visual indicators: 🧪 tests running, 🪳 tests broken, ⏳ awaiting review, ✅ approved, 🚀 merged.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🔄</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Auto-Discovery</h3>
+            <p class="rg-slack-features__card-description">Repos automatically map to same-named channels. `backend` repo posts to #backend. Zero config.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">👥</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">User Mapping</h3>
+            <p class="rg-slack-features__card-description">Matches GitHub users to Slack users via email. @mentions work automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-status">
+  <div class="rg-slack-status__container">
+    <h2 class="rg-slack-status__title">Status Indicators</h2>
+    <p class="rg-slack-status__description">See PR state at a glance:</p>
+    <div class="rg-slack-status__grid">
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">🧪</span>
+        <span class="rg-slack-status__label">Tests Running</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">🪳</span>
+        <span class="rg-slack-status__label">Tests Broken</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">⏳</span>
+        <span class="rg-slack-status__label">Awaiting Review</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">🪚</span>
+        <span class="rg-slack-status__label">Needs Work</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">✅</span>
+        <span class="rg-slack-status__label">Approved</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">🚀</span>
+        <span class="rg-slack-status__label">Merged</span>
+      </div>
+      <div class="rg-slack-status__item">
+        <span class="rg-slack-status__emoji">❌</span>
+        <span class="rg-slack-status__label">Closed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-setup">
+  <div class="rg-slack-setup__container">
+    <h2 class="rg-slack-setup__title">Setup Guide</h2>
+    <div class="rg-slack-setup__steps">
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">1</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Install reviewGOOSE Real-Time</h3>
+          <p class="rg-slack-setup__step-text">Add the reviewGOOSE Real-Time GitHub App to your organization's repos.</p>
+          <a href="https://github.com/apps/reviewgoose-real-time" class="rg-slack-setup__link">Install reviewGOOSE Real-Time GitHub App</a>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">2</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Install Slack App</h3>
+          <p class="rg-slack-setup__step-text">Add reviewGOOSE to your Slack workspace.</p>
+          <a href="https://docs.codegroove.dev/slack/" class="rg-slack-setup__link">Install Slack App</a>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">3</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Invite Bot to Channels</h3>
+          <p class="rg-slack-setup__step-text">Invite @goose to any channels where you want PR updates.</p>
+          <code class="rg-slack-setup__code">/invite @goose</code>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">4</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Optional: Configure Mapping</h3>
+          <p class="rg-slack-setup__step-text">By default, repos map to same-named channels. For custom mapping, add a config file.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-config">
+  <div class="rg-slack-config__container">
+    <h2 class="rg-slack-config__title">Configuration</h2>
+    <p class="rg-slack-config__description">Optional: Create <code>.codeGROOVE/slack.yaml</code> in your org for custom settings:</p>
+    <div class="rg-slack-config__code">
+      <pre><code>global:
+  team_id: T09CJ7X7T7Y          # Your Slack workspace ID
+  email_domain: yourcompany.com  # For GitHub→Slack user mapping
+  reminder_dm_delay: 65          # Minutes before DM (0 = disabled)
+  daily_reminders: true          # 8-9am local time summary
+
+channels:
+  engineering:                   # Channel name
+    repos:
+      - backend
+      - frontend
+      - api
+
+  all-prs:
+    repos:
+      - "*"                      # Wildcard: all repos
+
+  staging:
+    mute: true                   # Disable auto-discovery</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-commands">
+  <div class="rg-slack-commands__container">
+    <h2 class="rg-slack-commands__title">Slash Commands</h2>
+    <div class="rg-slack-commands__grid">
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/r2r dashboard</code>
+        <p class="rg-slack-commands__description">Open your PR dashboard</p>
+      </div>
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/r2r report</code>
+        <p class="rg-slack-commands__description">Get your daily PR summary now</p>
+      </div>
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/r2r help</code>
+        <p class="rg-slack-commands__description">Show available commands</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-cta">
+  <div class="rg-slack-cta__container">
+    <div class="rg-slack-cta__box">
+      <h2 class="rg-slack-cta__title">Want desktop notifications too?</h2>
+      <p class="rg-slack-cta__text">The <a href="/reviewgoose/desktop">desktop app</a> gives you menubar notifications with honk sounds. Use both for complete coverage.</p>
+      <a href="/reviewgoose/" class="rg-slack-cta__button">Back to reviewGOOSE</a>
+    </div>
+  </div>
+</section>
