@@ -19,102 +19,27 @@ title: Security
 
 <section class="security-principles">
   <div class="security-principles__container">
-    <h2 class="security-principles__title">Our Security Principles</h2>
-    <div class="security-principles__grid">
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-shield-check-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">Zero Trust</strong>
-        </div>
-        <p class="security-principles__text">Hardware-backed cryptographic identity and encryption are our security perimeter</p>
-      </div>
-
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-stack-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">Defense in Depth</strong>
-        </div>
-        <p class="security-principles__text">Every layer fails—we rely on overlapping controls (<a href="https://en.wikipedia.org/wiki/Swiss_cheese_model" class="security-principles__link">swiss cheese model</a>)</p>
-      </div>
-
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-key-2-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">Ephemeral Secrets</strong>
-        </div>
-        <p class="security-principles__text">All secrets leak eventually. We prefer <a href="https://openid.net/developers/how-connect-works/" class="security-principles__link">OIDC</a> and runtime KMS</p>
-      </div>
-
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-database-2-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">Minimal Data</strong>
-        </div>
-        <p class="security-principles__text">Less data = less risk. Metadata cache only (21-day TTL), 0 persistent user data</p>
-      </div>
-
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-links-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">Minimal Supply Chain</strong>
-        </div>
-        <p class="security-principles__text">Most services have 0-1 external deps. We use <a href="https://github.com/ko-build/ko" class="security-principles__link">ko</a>+<a href="https://images.chainguard.dev/" class="security-principles__link">Chainguard</a></p>
-      </div>
-
-      <div class="security-principles__card">
-        <div class="security-principles__header">
-          <div class="security-principles__icon-box">
-            <i class="ri-hand-heart-fill"></i>
-          </div>
-          <strong class="security-principles__card-title">No Data Monetization</strong>
-        </div>
-        <p class="security-principles__text">We never sell your data. Third-party sharing limited to operational requirements</p>
-      </div>
-    </div>
-
-    <div class="security-principles__special">
-      <div class="security-principles__special-header">
-        <div class="security-principles__special-icon-box">
-          <i class="ri-eye-fill"></i>
-        </div>
-        <div>
-          <strong class="security-principles__special-title">Radical Transparency</strong>
-          <span class="security-principles__special-text"> — Audit our code anytime. If it's not open-source yet, just ask!</span>
-        </div>
-      </div>
-    </div>
+    <h2 class="security-principles__title">Our Principles</h2>
+    <ul class="security-principles__list">
+      <li><strong>Zero Trust.</strong> Hardware-backed cryptographic identity and encryption are our security perimeter.</li>
+      <li><strong>Defense in Depth.</strong> Every layer fails—we rely on overlapping controls (<a href="https://en.wikipedia.org/wiki/Swiss_cheese_model">swiss cheese model</a>).</li>
+      <li><strong>Ephemeral Secrets.</strong> All secrets leak eventually. We prefer <a href="https://openid.net/developers/how-connect-works/">OIDC</a> and runtime KMS.</li>
+      <li><strong>Minimal Data.</strong> Less data = less risk. Metadata cache only (21-day TTL), zero persistent user data.</li>
+      <li><strong>Minimal Supply Chain.</strong> Most services have 0-1 external deps. We use <a href="https://github.com/ko-build/ko">ko</a> + <a href="https://images.chainguard.dev/">Chainguard</a>.</li>
+      <li><strong>No Data Monetization.</strong> We never sell your data. Third-party sharing limited to operational requirements.</li>
+      <li><strong>Radical Transparency.</strong> Audit our code anytime. If it's not open-source yet, just ask.</li>
+    </ul>
   </div>
 </section>
 
 <section class="security-compliance">
   <div class="security-compliance__container">
-    <div class="security-compliance__grid">
-      <div>
-        <h2 class="security-compliance__title">Compliance & Policies</h2>
-        <ul class="security-compliance__list">
-          <li><a href="/policies/" class="security-compliance__link">Corporate Security Policies</a></li>
-          <li><a href="/privacy/" class="security-compliance__link">Privacy Policy</a></li>
-          <li><a href="/tos/" class="security-compliance__link">Terms of Service</a></li>
-        </ul>
-        <p class="security-compliance__note">We're engineering our security controls to meet SOC 2 standards from day one.</p>
-      </div>
-
-      <div>
-        <h2 class="security-compliance__title">Vulnerability Disclosure</h2>
-        <p class="security-compliance__text">Found a security issue? Check out our <a href="/.well-known/security.txt" class="security-compliance__link">security.txt</a> for reporting instructions.</p>
-        <p class="security-compliance__note">We take all reports seriously and will respond promptly.</p>
-      </div>
-    </div>
+    <h2 class="security-compliance__title">Policies & Compliance</h2>
+    <ul class="security-principles__list">
+      <li><strong>SOC 2.</strong> Engineering our controls to meet SOC 2 standards from day one.</li>
+      <li><strong>Policies.</strong> <a href="/policies/">Corporate Security</a>, <a href="/privacy/">Privacy</a>, <a href="/tos/">Terms of Service</a>.</li>
+      <li><strong>Vulnerability Disclosure.</strong> Found something? See <a href="/.well-known/security.txt">security.txt</a>. We respond promptly.</li>
+    </ul>
   </div>
 </section>
 
