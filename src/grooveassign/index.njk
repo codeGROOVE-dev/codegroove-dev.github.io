@@ -1,0 +1,245 @@
+---
+layout: base.njk
+title: grooveASSIGN - Automatic PR Reviewer Assignment
+---
+
+<section class="ga-hero">
+  <div class="ga-hero__container">
+    <div class="ga-hero__content">
+      <div class="ga-hero__text">
+        <h1 class="ga-hero__title">grooveASSIGN</h1>
+        <p class="ga-hero__headline">The right reviewer, every time.</p>
+        <p class="ga-hero__description">
+          Stop guessing who should review your PR. grooveASSIGN automatically assigns the developers who actually know the code. Line-level blame analysis, not just file history.
+        </p>
+        <p class="ga-hero__beta-badge">Open Beta - Free through January 2026</p>
+        <p class="ga-hero__social-proof">Installs in 30 seconds. Works across your entire org.</p>
+        <div class="ga-hero__buttons">
+          <a href="https://github.com/apps/grooveassign" class="ga-hero__button ga-hero__button--primary">Install Free</a>
+          <a href="#pricing" class="ga-hero__button ga-hero__button--secondary">View Pricing</a>
+        </div>
+      </div>
+      <div class="ga-hero__image">
+        <img src="/assets/grooveassign-logo.png" alt="grooveASSIGN" class="ga-hero__logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-problem">
+  <div class="ga-problem__container">
+    <h2 class="ga-problem__title">The Problem</h2>
+    <div class="ga-problem__grid">
+      <div class="ga-problem__card">
+        <span class="ga-problem__emoji">🎯</span>
+        <h3 class="ga-problem__card-title">Wrong Reviewers</h3>
+        <p class="ga-problem__card-text">CODEOWNERS assigns based on paths. But who actually wrote the code you're changing? Often someone else entirely.</p>
+      </div>
+      <div class="ga-problem__card">
+        <span class="ga-problem__emoji">⏰</span>
+        <h3 class="ga-problem__card-title">Manual Assignment</h3>
+        <p class="ga-problem__card-text">Tech leads spend hours every week triaging PRs and finding the right reviewers. That's not where they should spend their time.</p>
+      </div>
+      <div class="ga-problem__card">
+        <span class="ga-problem__emoji">😩</span>
+        <h3 class="ga-problem__card-title">Overloaded Seniors</h3>
+        <p class="ga-problem__card-text">Without workload balancing, the same people get assigned everything. They become bottlenecks while others sit idle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-how">
+  <div class="ga-how__container">
+    <h2 class="ga-how__title">How It Works</h2>
+    <div class="ga-how__grid">
+      <div class="ga-how__step">
+        <div class="ga-how__number">1</div>
+        <h3 class="ga-how__step-title">Install</h3>
+        <p class="ga-how__step-text">Add the GitHub App to your org. Takes 30 seconds. Zero config required to start.</p>
+      </div>
+      <div class="ga-how__step">
+        <div class="ga-how__number">2</div>
+        <h3 class="ga-how__step-title">Analyze</h3>
+        <p class="ga-how__step-text">When a PR is opened, we analyze git blame, file history, directory activity, and recent contributions.</p>
+      </div>
+      <div class="ga-how__step">
+        <div class="ga-how__number">3</div>
+        <h3 class="ga-how__step-title">Assign</h3>
+        <p class="ga-how__step-text">The most qualified reviewers are assigned automatically. Respects workload limits and CI status.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-features">
+  <div class="ga-features__container">
+    <h2 class="ga-features__title">Why It's Better</h2>
+    <div class="ga-features__grid">
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">🔬</span>
+          <div>
+            <h3 class="ga-features__card-title">Line-Level Analysis</h3>
+            <p class="ga-features__card-description">We use git blame to find who last touched the exact lines you're changing. Not just file-level, not just directory-level.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">⚖️</span>
+          <div>
+            <h3 class="ga-features__card-title">Workload Balancing</h3>
+            <p class="ga-features__card-description">Tracks open PRs per reviewer. Applies penalties to overloaded developers so work spreads evenly across the team.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">🚦</span>
+          <div>
+            <h3 class="ga-features__card-title">CI-Aware</h3>
+            <p class="ga-features__card-description">Waits for tests to pass before assigning. Configurable grace periods for pending and failing builds. No wasted reviews.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">📊</span>
+          <div>
+            <h3 class="ga-features__card-title">Multi-Signal Scoring</h3>
+            <p class="ga-features__card-description">Combines 6+ signals: blame overlap, file history, directory activity, recent PRs, timing patterns, and explicit assignees.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">🤖</span>
+          <div>
+            <h3 class="ga-features__card-title">Bot Filtering</h3>
+            <p class="ga-features__card-description">Automatically excludes bots, the PR author, and users without write access. Only valid reviewers are considered.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ga-features__card">
+        <div class="ga-features__card-content">
+          <span class="ga-features__emoji">⚙️</span>
+          <div>
+            <h3 class="ga-features__card-title">Fully Configurable</h3>
+            <p class="ga-features__card-description">Exclude users, paths, set max reviewers, tune grace periods. All via a simple YAML file in your repo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-config">
+  <div class="ga-config__container">
+    <h2 class="ga-config__title">Simple Configuration</h2>
+    <p class="ga-config__subtitle">Drop a YAML file in your repo. Or use defaults and skip this entirely.</p>
+    <div class="ga-config__code">
+      <pre><code># .codeGROOVE/assigner.yaml
+max_reviewers: 2              # Reviewers per PR
+max_prs_per_reviewer: 9       # Workload limit
+pending_test_grace: 20        # Minutes while tests pending
+failing_test_grace: 90        # Minutes while tests failing
+
+excluded_users:
+  - renovate-bot
+  - dependabot
+
+excluded_paths:
+  - "vendor/**"
+  - "**/*.generated.go"</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="ga-tiers" id="pricing">
+  <div class="ga-tiers__container">
+    <h2 class="ga-tiers__title">Pricing</h2>
+    <p class="ga-tiers__subtitle">Open beta through January 2026 - everything is free. After beta: free for open source, $1/user for private repos.</p>
+    <div class="ga-tiers__grid">
+      <div class="ga-tiers__card">
+        <div class="ga-tiers__header">
+          <h3 class="ga-tiers__name">Free</h3>
+          <p class="ga-tiers__price">$0<span class="ga-tiers__period">/forever</span></p>
+        </div>
+        <p class="ga-tiers__audience">Open source projects deserve great tooling too.</p>
+        <ul class="ga-tiers__features">
+          <li><i class="ri-check-line"></i> Public repositories</li>
+          <li><i class="ri-check-line"></i> All features included</li>
+          <li><i class="ri-check-line"></i> Unlimited PRs</li>
+          <li><i class="ri-check-line"></i> Unlimited repos</li>
+        </ul>
+        <a href="https://github.com/apps/grooveassign" class="ga-tiers__button">Install Free</a>
+      </div>
+
+      <div class="ga-tiers__card ga-tiers__card--featured">
+        <div class="ga-tiers__header">
+          <h3 class="ga-tiers__name">Team</h3>
+          <p class="ga-tiers__price">$1<span class="ga-tiers__period">/user/month</span></p>
+        </div>
+        <p class="ga-tiers__audience">Private repos. Billed through GitHub Marketplace.</p>
+        <ul class="ga-tiers__features">
+          <li><i class="ri-check-line"></i> Public + private repos</li>
+          <li><i class="ri-check-line"></i> All features included</li>
+          <li><i class="ri-check-line"></i> Unlimited PRs</li>
+          <li><i class="ri-check-line"></i> GitHub Marketplace billing</li>
+        </ul>
+        <a href="https://github.com/marketplace/grooveassign" class="ga-tiers__button ga-tiers__button--featured">Get Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-faq">
+  <div class="ga-faq__container">
+    <h2 class="ga-faq__title">FAQ</h2>
+    <div class="ga-faq__grid">
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">How is this different from CODEOWNERS?</h4>
+        <p class="ga-faq__answer">CODEOWNERS assigns based on file paths. grooveASSIGN looks at who actually wrote the code you're changing, using git blame at the line level. It also balances workload and respects CI status.</p>
+      </div>
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">What if no qualified reviewers are found?</h4>
+        <p class="ga-faq__answer">The PR won't have reviewers auto-assigned. You can still assign manually. This prevents random assignments that waste everyone's time.</p>
+      </div>
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">Does it work with small teams?</h4>
+        <p class="ga-faq__answer">Yes. It auto-detects 1-2 person projects and handles them specially. No configuration needed.</p>
+      </div>
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">What permissions does it need?</h4>
+        <p class="ga-faq__answer">Read access to pull requests, issues, and repository contents (for blame analysis). Write access to assign reviewers. No access to secrets or actions.</p>
+      </div>
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">Can I exclude certain paths or users?</h4>
+        <p class="ga-faq__answer">Yes. Add <code>excluded_users</code> and <code>excluded_paths</code> to your config file. Supports glob patterns.</p>
+      </div>
+      <div class="ga-faq__item">
+        <h4 class="ga-faq__question">Does it respect draft PRs?</h4>
+        <p class="ga-faq__answer">Yes. Draft PRs are skipped. Reviewers are only assigned when the PR is ready for review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ga-cta">
+  <div class="ga-cta__container">
+    <div class="ga-cta__box">
+      <h2 class="ga-cta__title">Stop playing reviewer roulette</h2>
+      <p class="ga-cta__text">Free for public repos. Install in 30 seconds.</p>
+      <div class="ga-cta__buttons">
+        <a href="https://github.com/apps/grooveassign" class="ga-cta__button ga-cta__button--primary">Install grooveASSIGN</a>
+        <a href="mailto:honk@codegroove.dev" class="ga-cta__button ga-cta__button--secondary">Questions? Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
