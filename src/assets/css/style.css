@@ -97,7 +97,7 @@ body {
 
 .nav-container {
     width: 100%;
-    padding: 0 calc(var(--space) * 6);
+    padding: 0 calc(var(--space) * 6) 0 calc(var(--space) * 3);
     max-width: none;
 }
 
@@ -105,7 +105,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 48px;
 }
 
 .nav-logo {
@@ -115,10 +115,12 @@ body {
 
 .nav-logo a {
     font-family: "Passion One", cursive;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 400;
     color: var(--black);
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--black);
+    text-underline-offset: 4px;
     letter-spacing: 1px;
     display: inline-block;
     transform: rotate(-3deg) skewX(-8deg);
@@ -157,7 +159,7 @@ body {
     }
 
     .nav-container {
-        padding: 0 calc(var(--space) * 6);
+        padding: 0 calc(var(--space) * 6) 0 calc(var(--space) * 3);
     }
 }
 
