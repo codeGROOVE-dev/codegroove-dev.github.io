@@ -27,7 +27,7 @@ We're actively working on new features and improvements based on feedback from e
 
 ## Get Started
 
-Ready to speed up your code review process? Check out our [products page](/products/) to learn more, or [get started](https://docs.reviewgoose.dev/getting-started/) with reviewGOOSE today.
+Ready to speed up your code review process? Check out our [products page](/products/) to learn more, or [get started](https://docs.codegroove.dev/reviewgoose/) with reviewGOOSE today.
 
 Want to chat? We'd love to hear from you - [book a call](https://calendar.app.google/TbQmeX8iWnvx6Ci89) or [email us](mailto:honk@codegroove.dev).
 
