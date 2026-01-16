@@ -1,0 +1,201 @@
+---
+layout: base.njk
+title: reviewGOOSE:Discord Integration
+---
+
+<section class="rg-slack-hero">
+  <div class="rg-slack-hero__container">
+    <div class="rg-slack-hero__content">
+      <div class="rg-slack-hero__text">
+        <h1 class="rg-slack-hero__title">Discord Integration <span style="font-size: 0.5em; color: #888;">(Preview)</span></h1>
+        <p class="rg-slack-hero__headline">PR updates where your team already works.</p>
+        <p class="rg-slack-hero__description">
+          Auto-threads PRs in forum channels. Smart notifications in your timezone. No more asking "is anyone looking at this?"
+        </p>
+        <div class="rg-slack-hero__buttons">
+          <a href="https://docs.codegroove.dev/reviewgoose/discord/" class="rg-slack-hero__button rg-slack-hero__button--primary">Setup Guide</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=1461368540190871831&permissions=2147485696&scope=bot%20applications.commands" class="rg-slack-hero__button rg-slack-hero__button--secondary">Install Discord Bot</a>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9em; color: #666;">
+          <strong>Preview:</strong> Discord support is currently in preview. DM notifications and daily reports are not fully tested yet.
+        </p>
+      </div>
+      <div class="rg-slack-hero__image">
+        <i class="ri-discord-fill"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-features">
+  <div class="rg-slack-features__container">
+    <h2 class="rg-slack-features__title">Features</h2>
+    <div class="rg-slack-features__grid">
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🧵</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Forum Threads</h3>
+            <p class="rg-slack-features__card-description">Each PR gets its own thread in forum channels. Status updates appear as replies. Clean organization.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🎯</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Smart DM Delays</h3>
+            <p class="rg-slack-features__card-description">If you're in the channel, DM waits 65 minutes. Not in the channel? Immediate DM. Reduces noise.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🌅</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Daily Reminders</h3>
+            <p class="rg-slack-features__card-description">Summary of PRs waiting on you, delivered 6-11:30am in your local timezone. Start your day informed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">🔄</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Auto-Discovery</h3>
+            <p class="rg-slack-features__card-description">Repos automatically map to same-named channels. `backend` repo posts to #backend. Zero config.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">👥</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">User Mapping</h3>
+            <p class="rg-slack-features__card-description">Maps GitHub users to Discord users via username matching or explicit configuration. @mentions work automatically.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rg-slack-features__card">
+        <div class="rg-slack-features__card-content">
+          <span class="rg-slack-features__emoji">💬</span>
+          <div>
+            <h3 class="rg-slack-features__card-title">Text & Forum Channels</h3>
+            <p class="rg-slack-features__card-description">Works with both forum channels (threaded) and text channels (flat messages). Choose what fits your workflow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-setup">
+  <div class="rg-slack-setup__container">
+    <h2 class="rg-slack-setup__title">Setup Guide</h2>
+    <div class="rg-slack-setup__steps">
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">1</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Install reviewGOOSE:GitHub</h3>
+          <p class="rg-slack-setup__step-text">Add the reviewGOOSE:GitHub App to your organization's repos.</p>
+          <a href="https://github.com/apps/reviewgoose" class="rg-slack-setup__link">Install reviewGOOSE:GitHub App</a>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">2</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Install Discord Bot</h3>
+          <p class="rg-slack-setup__step-text">Add reviewGOOSE to your Discord server.</p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1461368540190871831&permissions=2147485696&scope=bot%20applications.commands" class="rg-slack-setup__link">Add to Discord</a>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">3</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Get Discord IDs</h3>
+          <p class="rg-slack-setup__step-text">Enable Developer Mode (Settings → Advanced), then right-click server name → Copy Server ID. Right-click users to get User IDs.</p>
+        </div>
+      </div>
+
+      <div class="rg-slack-setup__step">
+        <div class="rg-slack-setup__number">4</div>
+        <div class="rg-slack-setup__content">
+          <h3 class="rg-slack-setup__step-title">Add Configuration</h3>
+          <p class="rg-slack-setup__step-text">Create <code>.codeGROOVE/discord.yaml</code> in your org with your server ID and user mappings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-config">
+  <div class="rg-slack-config__container">
+    <h2 class="rg-slack-config__title">Configuration</h2>
+    <p class="rg-slack-config__description">Create <code>.codeGROOVE/discord.yaml</code> in your org:</p>
+    <div class="rg-slack-config__code">
+      <pre><code>global:
+  guild_id: "1234567890123456789"    # Your Discord server ID
+  reminder_dm_delay: 65              # Minutes before DM (0 = disabled)
+
+users:
+  alice: "111111111111111111"        # GitHub username → Discord user ID
+  bob: "222222222222222222"
+  # Unmapped users: bot attempts username match
+
+channels:
+  engineering:                       # Channel name
+    repos:
+      - backend
+      - frontend
+      - api
+
+  all-prs:
+    repos:
+      - "*"                          # Wildcard: all repos
+
+  staging:
+    mute: true                       # Disable notifications</code></pre>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-commands">
+  <div class="rg-slack-commands__container">
+    <h2 class="rg-slack-commands__title">Slash Commands</h2>
+    <div class="rg-slack-commands__grid">
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/goose status</code>
+        <p class="rg-slack-commands__description">Show bot connection status</p>
+      </div>
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/goose report</code>
+        <p class="rg-slack-commands__description">Get your daily PR summary now</p>
+      </div>
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/goose dashboard</code>
+        <p class="rg-slack-commands__description">Open your PR dashboard</p>
+      </div>
+      <div class="rg-slack-commands__item">
+        <code class="rg-slack-commands__command">/goose help</code>
+        <p class="rg-slack-commands__description">Show available commands</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rg-slack-cta">
+  <div class="rg-slack-cta__container">
+    <div class="rg-slack-cta__box">
+      <h2 class="rg-slack-cta__title">Want desktop notifications too?</h2>
+      <p class="rg-slack-cta__text">The <a href="/reviewgoose/desktop">desktop app</a> gives you menubar notifications with honk sounds. Use both for complete coverage.</p>
+      <a href="/reviewgoose/" class="rg-slack-cta__button">Back to reviewGOOSE</a>
+    </div>
+  </div>
+</section>
