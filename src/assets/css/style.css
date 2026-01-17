@@ -7243,6 +7243,44 @@ hr.text-separator {
     box-shadow: 10px 10px 0px 0px var(--black);
 }
 
+/* Slack/Discord Screenshot Section */
+.rg-slack-screenshot {
+    padding: calc(var(--space) * 8) calc(var(--space) * 3);
+    background: var(--gray-100);
+}
+
+.rg-slack-screenshot__container {
+    max-width: 1152px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rg-slack-screenshot__title {
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 900;
+    margin-bottom: calc(var(--space) * 4);
+}
+
+.rg-slack-screenshot__image-wrapper {
+    margin-bottom: calc(var(--space) * 2);
+}
+
+.rg-slack-screenshot__image {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 8px 8px 0px 0px var(--yellow);
+}
+
+.rg-slack-screenshot__caption {
+    color: var(--gray-600);
+    font-size: 16px;
+    margin-top: calc(var(--space) * 2);
+}
+
 /* Slack Features */
 .rg-slack-features {
     padding: calc(var(--space) * 8) calc(var(--space) * 3);
@@ -7469,7 +7507,7 @@ hr.text-separator {
 }
 
 .rg-slack-config__code code {
-    color: var(--gray-300);
+    color: var(--gray-100);
     font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.6;

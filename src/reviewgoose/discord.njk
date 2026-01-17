@@ -151,28 +151,21 @@ title: reviewGOOSE:Discord Integration
     <p class="rg-slack-config__description">Create <code>.codeGROOVE/discord.yaml</code> in your org:</p>
     <div class="rg-slack-config__code">
       <pre><code>global:
-  guild_id: "1234567890123456789"    # Your Discord server ID
-  reminder_dm_delay: 65              # Minutes before DM (0 = disabled)
+  guild_id: "your-server-id-here"    # Your Discord server ID
 
 users:
-  alice: "111111111111111111"        # GitHub username → Discord user ID
-  bob: "222222222222222222"
-  # Unmapped users: bot attempts username match
+  alice: "alice_discord"             # GitHub username → Discord username
+  bob: "bob_discord"
 
 channels:
   engineering:                       # Channel name
     repos:
       - backend
-      - frontend
-      - api
-
-  all-prs:
-    repos:
-      - "*"                          # Wildcard: all repos
-
-  staging:
-    mute: true                       # Disable notifications</code></pre>
+      - frontend</code></pre>
     </div>
+    <p class="rg-slack-config__description" style="margin-top: calc(var(--space) * 4);">
+      For complete configuration options and advanced features, see the <a href="https://docs.codegroove.dev/reviewgoose/discord/" style="color: var(--black); font-weight: 600; text-decoration: underline;">official documentation</a>.
+    </p>
   </div>
 </section>
 
